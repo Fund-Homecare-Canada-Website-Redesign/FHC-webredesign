@@ -2,9 +2,9 @@
 
 Welcome to the FHC Web Redesign project! This README will guide developers through setting up the development environment, installing dependencies, and getting started with writing code.
 
-### React Project Setup Guide
+## React Project Setup Guide
 
-Prerequisites
+### Prerequisites
 
 Install these before doing anything:
 
