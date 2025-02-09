@@ -31,6 +31,7 @@ npm install
 ```
 npm start
 ```
+**Note**: this won't work if you aren't in the same directory where your node modules are installed. MAke sure to do `cd fhc-webred` before you run `npm start` in your terminal
 4. Creating New Components
 
 All reusable UI components should be placed inside `src/components/`. Follow these steps to create a new component:
