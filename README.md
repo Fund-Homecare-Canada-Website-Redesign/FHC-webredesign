@@ -57,7 +57,7 @@ git checkout -b feature-name
 
 Commit your changes:
 ```
-git add . (for every change file)
+git add . (for every changed file in your current directory and subdirectories)
 
 OR
 
@@ -71,4 +71,10 @@ Push to GitHub:
 git push origin feature-name
 ```
 
-**IMPORTANT**: Open a pull request and request a review after doing the above steps.
+**IMPORTANT**: 
+Open a Pull Request on GitHub:
+
+- Go to your repository on GitHub.
+- Click Pull Requests > New Pull Request.
+- Select `<feature-name>` as the compare branch and main as the base branch.
+- Add a title and description, then request a review.
