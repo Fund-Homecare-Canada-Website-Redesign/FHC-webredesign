@@ -1,11 +1,15 @@
+const colours = require("./src/assets/styles/BrandColours.js"); 
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
-    "./src/index.html"
+    "./public/index.html"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colours,
+    },
   },
   plugins: [],
 };
