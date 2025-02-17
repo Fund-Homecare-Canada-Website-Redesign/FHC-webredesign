@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
 import './App.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+      <header className="text-center bg-red-500 text-white p-6 rounded-lg shadow-lg">
+        <p className="mt-4 text-lg font-bold text-gray-200">
+          Tailwind is working if this text is styled!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
 }
 
 export default App;
+
