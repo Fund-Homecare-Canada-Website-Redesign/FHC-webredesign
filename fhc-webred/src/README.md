@@ -27,7 +27,7 @@ const CustomButton = ({ text, bgColor }) => {
 
 export default CustomButton;
 ```
-### Then in a page you can pass the props paramters into a Button:
+### Then in a page you can pass the props paramaters into a Button:
 ```
 <CustomButton text="Learn More" bgColor="REBECCA_PURPLE" />
 ```
