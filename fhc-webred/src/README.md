@@ -31,3 +31,34 @@ export default CustomButton;
 ```
 <CustomButton text="Learn More" bgColor="REBECCA_PURPLE" />
 ```
+
+## Using a component from React Bootstrap ()
+
+### Call the component in a component directory file --> customize it --> Apply to pages as necessary
+
+```
+import Form from 'react-bootstrap/Form';
+
+function FormControlDisabledExample() {
+  return (
+    <>
+      <Form.Control
+        type="text"
+        placeholder="Disabled input"
+        aria-label="Disabled input example"
+        disabled
+        readOnly
+      />
+      <br />
+      <Form.Control
+        type="text"
+        placeholder="Disabled readonly input"
+        aria-label="Disabled input example"
+        readOnly
+      />
+    </>
+  );
+}
+
+export default FormControlDisabledExample;
+```
