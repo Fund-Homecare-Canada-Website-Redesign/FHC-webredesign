@@ -2,7 +2,7 @@
 
 ### Example Using a colour from `/assets/styles/BrandColours.js`:
 
-```
+```jsx
 import React from "react";
 import colours from "../assets/styles/BrandColours";
 
@@ -28,15 +28,15 @@ const CustomButton = ({ text, bgColor }) => {
 export default CustomButton;
 ```
 ### Then in a page you can pass the props paramaters into a Button:
-```
+```jsx
 <CustomButton text="Learn More" bgColor="REBECCA_PURPLE" />
 ```
 
-## Using a component from React Bootstrap ()
+## Using a component from React Bootstrap
 
 ### Call the component in a component directory file --> customize it --> Apply to pages as necessary
 
-```
+```jsx
 import Form from 'react-bootstrap/Form';
 
 function FormControlDisabledExample() {
