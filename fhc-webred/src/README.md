@@ -219,7 +219,7 @@ export default MainPage;
 
 ```
 
-#### Now put the page in the app ()
+#### Now put the page in the app
 
 ```jsx
 import React from 'react';
