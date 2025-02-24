@@ -1,5 +1,36 @@
 # FrontEnd Specific Notes
 
+## TailwindCSS Design Standards
+
+*feel free to alter to what you think looks better, but chnage it here for other devs to see with a descriptive commit message*
+
+###  Border Radius Standards
+| Component | Tailwind Class |
+|-----------|--------------|
+| **Buttons** | `rounded-md` | 
+| **Cards / Sections** | `rounded-lg` | 
+| **Modals & Containers** | `rounded-lg` | 
+| **Avatars** | `rounded-xl` | 
+| **Icons** | `rounded-xl` |
+
+###  Typography Standards
+- anything `font-montserrat` bold where necessary, semi-bold where necessary
+
+### Responsive Design Standards
+- implement as necessary, use `sm:, md:, lg:, xl:, 2xl:` breakpoints where you see fit for your component
+
+#### Example
+```html
+<div class="p-4 md:p-8 lg:p-12">
+  This padding increases on larger screens.
+</div>
+```
+
+
+
+## React Examples 
+
+
 ### Example Using a colour from `/assets/styles/BrandColours.js`:
 
 ```jsx
