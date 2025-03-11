@@ -1,16 +1,22 @@
 import React from "react";
-import colours from "../assets/styles/BrandColours";
+// import colours from "../assets/styles/BrandColours"
+//change with your logic import React from "react";
+import { MotionConfig } from "framer-motion";
+import MainTopSection from "./components/MainTopSection.jsx";
 
-//chnage with your logic import React from "react";
-// import MyComponent from "./components/MyComponent";
+export const MyContext = React.createContext();
 
-// const TestPage = () => {
-//   return (
-//     <div>
-//       <h1>Testing Components</h1>
-//       <MyComponent />
-//     </div>
-//   );
-// };
+const TestPage = () => {
+  const contextValue = "Hello from Context"; // Example value
 
-// export default TestPage;
+  return (
+    <div>
+      <h1>Testing Components</h1>
+     <MotionConfig>
+      <MainTopSection slider={true}/> 
+      </MotionConfig>
+    </div>
+  );
+};
+
+export default TestPage;
