@@ -3,6 +3,7 @@ import React from "react";
 //change with your logic import React from "react";
 import { MotionConfig } from "framer-motion";
 import MainTopSection from "./components/MainTopSection.jsx";
+import PastEventsCard from "./components/PastEventsCard.jsx"
 
 export const MyContext = React.createContext();
 
@@ -11,10 +12,14 @@ const TestPage = () => {
 
   return (
     <div>
-      <h1>Testing Components</h1>
-     <MotionConfig>
+      {/* <h1>Testing Components</h1> */}
+
+      
+     {/* <MotionConfig>
       <MainTopSection slider={true}/> 
-      </MotionConfig>
+      </MotionConfig> */}
+
+      <PastEventsCard/>
     </div>
   );
 };
