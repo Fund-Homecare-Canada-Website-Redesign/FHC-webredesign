@@ -1,16 +1,16 @@
 import React from "react";
-import colours from "../assets/styles/BrandColours";
+//import colours from "../assets/styles/BrandColours";
 
 //chnage with your logic import React from "react";
-// import MyComponent from "./components/MyComponent";
+import Footer from "./components/Footer";
 
-// const TestPage = () => {
-//   return (
-//     <div>
-//       <h1>Testing Components</h1>
-//       <MyComponent />
-//     </div>
-//   );
-// };
+const TestPage = () => {
+  return (
+    <div>
+      <h1>Testing Components</h1>
+      <Footer />
+    </div>
+  );
+};
 
-// export default TestPage;
+export default TestPage;
