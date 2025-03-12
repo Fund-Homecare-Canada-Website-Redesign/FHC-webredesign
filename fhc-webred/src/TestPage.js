@@ -4,6 +4,7 @@ import React from "react";
 import { MotionConfig } from "framer-motion";
 import MainTopSection from "./components/MainTopSection.jsx";
 import PastEventsCard from "./components/PastEventsCard.jsx"
+import UpcomingEventsCard from "./components/UpcomingEventsCardNoFormIntegration.jsx";
 
 export const MyContext = React.createContext();
 
@@ -19,6 +20,8 @@ const TestPage = () => {
       <MainTopSection slider={true}/> 
       </MotionConfig> */}
 
+      <MainTopSection/>
+      <UpcomingEventsCard/>
       <PastEventsCard/>
     </div>
   );
