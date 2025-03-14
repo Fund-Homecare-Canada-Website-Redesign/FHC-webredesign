@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import OurTeamCard from "./components/OurTeamCard"
+import NavBarComponent from "./components/Navbar"
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import colours from "../assets/styles/BrandColours";
 
@@ -9,10 +9,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const TestPage = () => {
     return (
-        <div>  
-            <OurTeamCard/> 
-        </div>
-    );
+        <Router>
+            <NavBarComponent/>
+            <Routes>
+            </Routes>
+        </Router>
+      );
 };
 
 export default TestPage;
