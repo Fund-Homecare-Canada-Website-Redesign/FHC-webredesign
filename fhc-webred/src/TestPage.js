@@ -1,16 +1,20 @@
 import React from "react";
-import colours from "../assets/styles/BrandColours";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NavBarComponent from "./components/Navbar"
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import colours from "../assets/styles/BrandColours";
 
-//chnage with your logic import React from "react";
+// change with your logic import React from "react";
 // import MyComponent from "./components/MyComponent";
 
-// const TestPage = () => {
-//   return (
-//     <div>
-//       <h1>Testing Components</h1>
-//       <MyComponent />
-//     </div>
-//   );
-// };
+const TestPage = () => {
+    return (
+        <Router>
+            <NavBarComponent/>
+            <Routes>
+            </Routes>
+        </Router>
+      );
+};
 
-// export default TestPage;
+export default TestPage;
