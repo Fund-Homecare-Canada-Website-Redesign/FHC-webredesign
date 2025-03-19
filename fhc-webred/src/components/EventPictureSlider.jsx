@@ -1,16 +1,19 @@
+import React from "react";
+import colours from "../assets/styles/BrandColours";
+
 import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 // Import images from assets directory
-import image1 from "../assets/images/MainPage/Home_Why-Cancer.png";
-import image2 from "../assets/images/MainPage/Home_Hero-1.png";
-import image3 from "../assets/images/MainPage/Home_Why-Cancer.png";
-import image4 from "../assets/images/MainPage/Home_Personal-Stories.png";
-import image5 from "../assets/images/MainPage/Home_Why-Cancer.png";
+import image1 from "./Home_Hero-1.png";
+import image2 from "./Home_Personal-Stories.png";
+import image3 from "./Home_Hero-1.png";
+import image4 from "./Home_Personal-Stories.png";
+import image5 from "./Home_Hero-1.png";
 
 const images = [image1, image2, image3, image4, image5];
 
-const ImageSlider = () => {
+const EventPictureSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
@@ -39,17 +42,22 @@ const ImageSlider = () => {
       </button>
 
       {/* Image Slider */}
-      <div className="relative w-full h-96 flex items-center justify-center overflow-hidden">
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`Slide ${index + 1}`}
-            className={`absolute w-full h-full object-cover rounded-lg transition-opacity duration-500 ease-in-out ${
-              index === currentIndex ? "opacity-100" : "opacity-0"
-            }`}
-          />
-        ))}
+      <div
+        className="w-full h-full flex items-center justify-center"
+        style={{
+          width: "100%",
+          height: "500px",
+          margin: "0 auto",
+          overflow: "hidden",
+          borderRadius: "8px",
+          position: "relative",
+        }}
+      >
+        <img
+          src={images[currentIndex]}
+          alt={`Slide ${currentIndex + 1}`}
+          className="w-full h-full object-cover rounded-lg transition-opacity duration-500 ease-in-out"
+        />
       </div>
 
       {/* Right Arrow */}
@@ -78,4 +86,4 @@ const ImageSlider = () => {
   );
 };
 
-export default ImageSlider;
+export default EventPictureSlider;
