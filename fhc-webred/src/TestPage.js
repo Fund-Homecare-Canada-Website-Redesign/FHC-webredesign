@@ -5,7 +5,7 @@ import { MotionConfig } from "framer-motion";
 import MainTopSection from "./components/MainTopSection.jsx";
 import PastEventsCard from "./components/PastEventsCard.jsx"
 import UpcomingEventsCard from "./components/UpcomingEventsCardNoFormIntegration.jsx";
-
+import MainEventsPage from "./pages/MainEvents.jsx";
 export const MyContext = React.createContext();
 
 const TestPage = () => {
@@ -21,6 +21,8 @@ const TestPage = () => {
       </MotionConfig> */}
 
       <MainTopSection/>
+    
+      <MainEventsPage/>
       <UpcomingEventsCard/>
       <PastEventsCard/>
     </div>
