@@ -1,31 +1,30 @@
 import React from "react";
-// import colours from "../assets/styles/BrandColours"
-//change with your logic import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import { MotionConfig } from "framer-motion";
+import Footer from "./components/Footer.jsx";
+import Navbar from "./components/Navbar.jsx";
 import MainTopSection from "./components/MainTopSection.jsx";
-import PastEventsCard from "./components/PastEventsCard.jsx"
+import PastEventsCard from "./components/PastEventsCard.jsx";
 import UpcomingEventsCard from "./components/UpcomingEventsCardNoFormIntegration.jsx";
-import MainEventsPage from "./pages/MainEvents.jsx";
+import MainEvents from "./pages/MainEvents.jsx";
+import UpcomingEventsPage from "./pages/UpcomingEvents.jsx";
+import PastEventsPage from "./pages/PastEvents.jsx";
+
 export const MyContext = React.createContext();
 
 const TestPage = () => {
-  const contextValue = "Hello from Context"; // Example value
+  const contextValue = "Hello from Context";
 
   return (
-    <div>
-      {/* <h1>Testing Components</h1> */}
-
-      
-     {/* <MotionConfig>
-      <MainTopSection slider={true}/> 
-      </MotionConfig> */}
-
-      <MainTopSection/>
-    
-      <MainEventsPage/>
-      <UpcomingEventsCard/>
-      <PastEventsCard/>
-    </div>
+    <Router>
+      <div>
+        <UpcomingEventsPage/>
+        {/* <MainEvents/> */}
+        
+        {/* <PastEventsPage/> */}
+        
+      </div>
+    </Router>
   );
 };
 
