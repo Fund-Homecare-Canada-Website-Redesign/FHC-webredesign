@@ -19,9 +19,8 @@ const TestPage = () => {
     <Router>
       <div>
         <UpcomingEventsPage/>
-        {/* <MainEvents/> */}
-        
-        {/* <PastEventsPage/> */}
+        <MainEvents/>
+        <PastEventsPage/>
         
       </div>
     </Router>

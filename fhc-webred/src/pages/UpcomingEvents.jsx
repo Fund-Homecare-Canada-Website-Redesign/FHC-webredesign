@@ -1,6 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import UpcomingEventsCardWithFormIntegration from "../components/UpcomingEventsCardWithFormIntegration";
+import UpcomingEventsCard from "../components/UpcomingEventsCardNoFormIntegration.jsx";
+import NavBar from "../components/Navbar.jsx";
+import Footer from "../components/Footer.jsx";
+import PageHeaderSection from "../components/PageHeaderSection.jsx";
+
+
 
 const UpcomingEvents = () => {
   // Sample data - replace with actual data from your backend
@@ -26,31 +31,30 @@ const UpcomingEvents = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="flex justify-between items-center mb-8">
-        <h1 className="text-3xl font-bold">Upcoming Events</h1>
-        <Link 
-          to="/events" 
-          className="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors"
-        >
-          Back to Events
-        </Link>
+    <>
+      <NavBar />
+      <PageHeaderSection/>
+
+      
+      <div className="container mx-auto px-4 py-8">
+        <div className="flex justify-between items-center mb-8">
+          <Link 
+            to="/events" 
+            className="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors"
+          >
+            Back to Events
+          </Link>
+        </div>
+
+        <div className="space-y-6">
+          {upcomingEvents.map((event) => (
+            <UpcomingEventsCard key={event.id} event={event} />
+          ))}
+        </div>
       </div>
       
-      <div className="space-y-6">
-        {upcomingEvents.map((event) => (
-          <UpcomingEventsCardWithFormIntegration
-            key={event.id}
-            eventName={event.name}
-            eventDate={event.date}
-            eventTime={event.time}
-            eventLocation={event.location}
-            eventDescription={event.description}
-            eventImage={event.image}
-          />
-        ))}
-      </div>
-    </div>
+      <Footer/>
+    </>
   );
 };
 
