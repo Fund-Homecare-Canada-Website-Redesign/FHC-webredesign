@@ -37,6 +37,24 @@ const UpcomingEvents = () => {
 
       
       <div className="container mx-auto px-4 py-8">
+      <div className="text-center max-w-3xl mx-auto mb-12">
+          <h2 className="text-2xl font-semibold mb-4 text-gray-800">Make an Impact</h2>
+          <p className="text-gray-700 leading-relaxed">
+            All proceeds from the event will go toward supporting palliative cancer patients—
+            giving them comfort, dignity, and precious time with their loved ones. Over the years,
+            our galas have raised an average of $20,000 per event, enabling us to provide essential
+            PSW (Personal Support Worker) services to 15 beneficiaries. This year, we aim to go even
+            further—with your support, we can make a greater impact.
+          </p>
+        </div>
+        
+
+        <div className="space-y-6">
+          {upcomingEvents.map((event) => (
+            <UpcomingEventsCard key={event.id} event={event} />
+          ))}
+        </div>
+
         <div className="flex justify-between items-center mb-8">
           <Link 
             to="/events" 
@@ -44,12 +62,6 @@ const UpcomingEvents = () => {
           >
             Back to Events
           </Link>
-        </div>
-
-        <div className="space-y-6">
-          {upcomingEvents.map((event) => (
-            <UpcomingEventsCard key={event.id} event={event} />
-          ))}
         </div>
       </div>
       

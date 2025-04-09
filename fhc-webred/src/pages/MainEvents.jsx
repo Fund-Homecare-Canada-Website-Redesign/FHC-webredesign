@@ -1,74 +1,74 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { FaCalendarAlt, FaHistory, FaEnvelope } from "react-icons/fa";
+import NavBar from "../components/Navbar.jsx";
+import Footer from "../components/Footer.jsx";
+import PageHeaderSection from "../components/PageHeaderSection.jsx";
+import image from "../assets/images/MainPage/Home_Hero-1.png"
 
 const MainEvents = () => {
   const navigate = useNavigate();
 
-  const handleCardClick = (path) => {
-    navigate(path);
-  };
+  const sections = [
+    {
+      id: 1,
+      title: "Upcoming Events",
+      image: "../assets/images/MainPage/Home_Hero-1.png",
+      path: "/events/upcoming",
+    },
+    {
+      id: 2,
+      title: "Past Events",
+      image: "../assets/images/MainPage/Home_Hero-1.png",
+      path: "/events/past",
+    },
+    {
+      id: 3,
+      title: "Newsletter",
+      image: "../assets/images/MainPage/Home_Hero-1.png",
+      path: "/events/newsletter",
+    },
+  ];
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <h1 className="text-3xl md:text-4xl font-bold text-center mb-12">Events</h1>
+    <>
+      <NavBar />
+      <PageHeaderSection title="Main Events" backgroundImage="/path/to/image.jpg" />
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        {/* Upcoming Events Card */}
-        <div 
-          className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition-transform hover:scale-105"
-          onClick={() => handleCardClick("/events/upcoming")}
-        >
-          <div className="bg-blue-600 h-2"></div>
-          <div className="p-6 flex flex-col items-center text-center">
-            <div className="bg-blue-100 p-4 rounded-full mb-4">
-              <FaCalendarAlt className="text-blue-600 text-3xl" />
-            </div>
-            <h2 className="text-xl font-bold mb-2">Upcoming Events</h2>
-            <p className="text-gray-600 mb-4">View our upcoming events and register to participate.</p>
-            <button className="mt-auto bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-              View Events
-            </button>
-          </div>
+      <div className="container mx-auto px-4 py-12">
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <h2 className="text-2xl font-semibold mb-4 text-gray-800">Stay Connected</h2>
+          <p className="text-gray-700 leading-relaxed">
+            Discover what we’re doing year-round! Whether you're planning to attend an upcoming
+            fundraiser, explore highlights from past gatherings, or simply stay in the loop with
+            our newsletter—we’ve got something for you.
+          </p>
         </div>
 
-        {/* Past Events Card */}
-        <div 
-          className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition-transform hover:scale-105"
-          onClick={() => handleCardClick("/events/past")}
-        >
-          <div className="bg-green-600 h-2"></div>
-          <div className="p-6 flex flex-col items-center text-center">
-            <div className="bg-green-100 p-4 rounded-full mb-4">
-              <FaHistory className="text-green-600 text-3xl" />
+        <div className="space-y-10">
+          {sections.map((section) => (
+            <div
+              key={section.id}
+              className="relative w-full h-96 rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+              onClick={() => navigate(section.path)}
+              style={{
+                backgroundImage: `url(${section.image})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                <h3 className="text-3xl md:text-4xl text-white font-semibold">
+                  {section.title}
+                </h3>
+              </div>
             </div>
-            <h2 className="text-xl font-bold mb-2">Past Events</h2>
-            <p className="text-gray-600 mb-4">Explore our past events and see the impact we've made.</p>
-            <button className="mt-auto bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
-              View Events
-            </button>
-          </div>
-        </div>
-
-        {/* Newsletter Card */}
-        <div 
-          className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform transition-transform hover:scale-105"
-          onClick={() => handleCardClick("/events/newsletter")}
-        >
-          <div className="bg-purple-600 h-2"></div>
-          <div className="p-6 flex flex-col items-center text-center">
-            <div className="bg-purple-100 p-4 rounded-full mb-4">
-              <FaEnvelope className="text-purple-600 text-3xl" />
-            </div>
-            <h2 className="text-xl font-bold mb-2">Newsletter</h2>
-            <p className="text-gray-600 mb-4">Subscribe to our newsletter for updates and announcements.</p>
-            <button className="mt-auto bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">
-              Subscribe
-            </button>
-          </div>
+          ))}
         </div>
       </div>
-    </div>
+
+      <Footer />
+    </>
   );
 };
 

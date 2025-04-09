@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import image1 from "../assets/images/CommunityEvents/GarageSale2024.jpg"; // import the image
 import image2 from "../assets/images/Logos/FHC_Black_Logo.png";
+import SponsorSlider from "./SponsorSlider.jsx";
+import PastEventsPictureSlider from "./PastEventsPictureSlider.jsx";
+import GoogleMapComponent from "./GoogleMap.jsx";
 import { FaArrowDown } from "react-icons/fa"; // import the down arrow icon
 
 function UpcomingEventsCard() {
@@ -13,80 +16,58 @@ function UpcomingEventsCard() {
   };
 
   return (
-    <div
-      className="relative flex flex-row items-start border shadow-lg p-5 m-2 text-left max-w-[66%] inline-block rounded-lg transition-all duration-300"
-      style={{ backgroundColor: "#a3cdd7" }} // set background color to #3A92A0
-    >
-      {/* Main Content */}
-      <div className="flex-1">
-        <h2
-          className="text-lg font-bold mb-1"
-          style={{ color: "#000000" }} // Set text color to white for contrast
-        >
-          Event Name
-        </h2>
-        <h3
-          className="text-lg font-bold"
-          style={{ color: "#797979" }} // Set text color to white for contrast
-        >
-          Date + Time
-        </h3>
-        <p className="text-gray-600 text-sm">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-        <p className="text-gray-600 text-sm mt-4">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        
-        {/* Expandable Content */}
-        <div
-          className={`transition-all duration-300 ${isExpanded ? "max-h-[1000px]" : "max-h-0"} overflow-hidden`}
-        >
-          
-          {/* Centered image in expanded section */}
-          <div className="flex justify-center mt-4">
-            <img src={image2} alt="Seating" className="w-24 h-auto border rounded-md shadow-md" />
-          </div>
-        </div>
-
-        {/* Button Container */}
-        <div className="flex flex-row gap-2 mt-2">
-          {/* Toggle Button */}
-          <button
-            className="flex flex-row items-center text-white outline-none px-4 py-2 rounded-lg transition-colors hover:bg-blue-700 shadow-md hover:shadow-lg"
-            style={{
-              backgroundColor: "#54749D", // BLUE_YONDER
-            }}
-            onClick={toggleExpand}
-          >
-            {isExpanded ? "View Less Details" : "View More Details"}
-            <FaArrowDown
-              className={`text-white text-xl ml-2 ${
-                isExpanded ? "transform rotate-180" : ""
-              } transition-transform duration-300`}
-            />
-          </button>
-
-          {/* Buy Now Button */}
-          <button
-            className="flex flex-row items-center text-white outline-none px-4 py-2 rounded-lg transition-colors hover:bg-green-700 shadow-md hover:shadow-lg"
-            style={{
-              backgroundColor: "#54749D", // Green color for Buy Now
-            }}
-            onClick={() => alert("Buy Now clicked!")} // Add your Buy Now logic here
-          >
-            Buy Now
-          </button>
-        </div>
-      </div>
-
-      {/* Event Logo Image - Centered in a flex column */}
-      <div className="flex flex-col justify-center items-center h-full ml-3">
+    <div className="w-full flex justify-center px-4">
+      <div
+        className="flex flex-col items-center bg-[#a3cdd7] border shadow-lg rounded-lg p-6 w-full max-w-4xl text-center"
+      >
+        {/* Image */}
         <img
           src={image1}
-          alt="Event Logo"
-          className="max-h-[300px] ml-20 w-auto border rounded-md shadow-lg" // Add shadow-lg
+          alt="Event"
+          className="w-24 h-24 border shadow-md rounded-md object-cover mb-4"
         />
+
+        {/* Content */}
+        <div className="flex flex-col items-center">
+          <h2 className="text-lg font-bold text-black mb-1">Event Name</h2>
+          <h3 className="text-sm font-semibold text-gray-700 mb-2">Date + Time</h3>
+          <p className="text-sm text-gray-700 mb-3 max-w-2xl">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+
+          {/* Expandable Content */}
+          <div className={`overflow-hidden transition-all duration-300 w-full ${isExpanded ? "max-h-[2000px] pt-3" : "max-h-0"}`}>
+            <p className="text-sm text-gray-700 mb-3 max-w-2xl mx-auto">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <div className="space-y-4">
+              <div className="w-full">
+                <PastEventsPictureSlider />
+              </div>
+              <div className="w-full">
+                <GoogleMapComponent />
+              </div>
+              <div className="w-full">
+                <SponsorSlider />
+              </div>
+            </div>
+          </div>
+
+          {/* Expand Button */}
+          <div className="mt-4">
+            <button
+              onClick={toggleExpand}
+              className="flex items-center bg-[#54749D] text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors shadow-md"
+            >
+              {isExpanded ? "View Less Details" : "View More Details"}
+              <FaArrowDown
+                className={`ml-2 transition-transform duration-300 ${
+                  isExpanded ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
