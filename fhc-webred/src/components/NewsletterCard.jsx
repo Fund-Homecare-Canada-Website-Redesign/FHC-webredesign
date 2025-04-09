@@ -11,11 +11,11 @@ const NewsletterCard = ({date, pdfUrl}) => {
       <div className="bg-[#ABCCD6] rounded-lg shadow-lg overflow-hidden w-[839px]">
         {/* Month Year Header */}
         <div className="bg-[#54749D] text-white text-center py-3 mr-[145px] ml-[145px] mt-12 rounded-lg">
-          <h2 className="text-lg font-[Montserrat] text-[38px]">{date}</h2>
+          <h2 className="text-lg font-[Montserrat] text-[36px]">{date}</h2>
         </div>
 
         {/* Poster PDF Viewer */}
-        <div className="flex flex-col items-center p-4">
+        <div className="flex flex-col items-center p-4 mb-12">
           <iframe src={pdfUrl} width="600" height="700" style={{ border: 'none' }}></iframe>
         </div>
       </div>
