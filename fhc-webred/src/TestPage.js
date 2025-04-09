@@ -8,7 +8,7 @@ const TestPage = () => {
   return (
     <div>
       <h1>Testing Components</h1>
-      <NewsletterCard />
+      <NewsletterCard date="August 2024" pdfUrl="../../newsletters/FHCNewsletterAug24.pdf"/>
     </div>
   );
 };
