@@ -3,7 +3,6 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion"
 import colours from "../assets/styles/BrandColours";
 import ProgressBar from "./DonationProgressBar";
-import StripeIntegration from "./StripeIntegration";
 
 const BeneficiaryCard = ({ beneficiary }) => {
     const [expand, setExpand] = useState(false);
@@ -32,7 +31,6 @@ const BeneficiaryCard = ({ beneficiary }) => {
           </div>
           <div className="beneficiary-donate-buttons flex gap-4">
             <button onClick={expandOnClick} className="bg-[#54749D] text-white p-2 w-20 rounded-full hover:opacity-75">Donate</button>
-            <button className="bg-[#54749D] text-white p-2 w-20 rounded-full hover:opacity-75">Share</button>
           </div>
         </div>
         <AnimatePresence>
@@ -50,7 +48,6 @@ const BeneficiaryCard = ({ beneficiary }) => {
                 }
                 transition={{ duration: 0.1 }}
               >
-                <StripeIntegration/>
               </motion.section>
             )
           }
