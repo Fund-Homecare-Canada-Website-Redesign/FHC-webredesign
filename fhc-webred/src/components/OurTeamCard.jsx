@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Card from 'react-bootstrap/Card';
 import Modal from 'react-bootstrap/Modal';
 import colours from "../assets/styles/BrandColours";
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function OurTeamCard ({name, role, image, bio}) {
     // modal state
@@ -56,7 +56,7 @@ function OurTeamCard ({name, role, image, bio}) {
             <div className="flex-1 max-h-96 overflow-y-auto p-2">
                 <h2 style={{fontFamily: 'Montserrat'}}className="text-4xl font-bold text-gray-900">{name}</h2>
                 <p style={{fontFamily: 'Montserrat'}} className="text-gray-600 italic text-lg mb-3">{role}</p>
-                <p style={{fontFamily: 'Montserrat'}} className="text-gray-800 text-sm leading-relaxed">
+                <p style={{fontFamily: 'Montserrat'}} className="text-gray-800 text-sm leading-relaxed whitespace-pre-line">
                 {bio}
                 </p>
             </div>
