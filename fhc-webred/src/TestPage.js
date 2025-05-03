@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AboutUs from "./pages/AboutUs"
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -15,4 +14,3 @@ const TestPage = () => {
       );
 };
 export default TestPage;
-

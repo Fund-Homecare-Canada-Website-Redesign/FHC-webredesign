@@ -1,10 +1,7 @@
 import React from "react";
 import colours from "../assets/styles/BrandColours";
-
 import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-
-// Import images from assets directory
 import image1 from "./Home_Hero-1.png";
 import image2 from "./Home_Personal-Stories.png";
 import image3 from "./Home_Hero-1.png";

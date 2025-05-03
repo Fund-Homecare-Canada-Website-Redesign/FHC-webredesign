@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { Navbar, Nav, Button, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-
 function NavbarComponent() {
   const navbarStyle = {
     fontFamily: 'Montserrat'

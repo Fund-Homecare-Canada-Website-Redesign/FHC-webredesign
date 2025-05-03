@@ -1,5 +1,6 @@
 import React from "react";
 import colours from "../assets/styles/BrandColours";
+// import image1 from "../assets/images/Logos/FHC_Black_Logo.png";
 
 import { useEffect, useRef } from 'react';
 
