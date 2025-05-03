@@ -1,15 +1,15 @@
 import React from "react";
 import colours from "../assets/styles/BrandColours";
-import image1 from "../assets/images/Logos/FHC_Black_Logo.png";
+// import image1 from "../assets/images/Logos/FHC_Black_Logo.png";
 
 import { useEffect, useRef } from 'react';
 
 const SponsorSlider = () => {
   const sponsors = [
-    image1,
-    image1,
-    image1,
-    image1
+    '/path-to-sponsor1.png',
+    '/path-to-sponsor2.png',
+    '/path-to-sponsor3.png',
+    '/path-to-sponsor4.png',
   ];
 
   const sliderRef = useRef(null);

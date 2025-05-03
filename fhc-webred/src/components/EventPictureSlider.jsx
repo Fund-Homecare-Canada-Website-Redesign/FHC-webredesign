@@ -1,17 +1,14 @@
-
+import React from "react";
+import colours from "../assets/styles/BrandColours";
 import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import image1 from "./Home_Hero-1.png";
+import image2 from "./Home_Personal-Stories.png";
+import image3 from "./Home_Hero-1.png";
+import image4 from "./Home_Personal-Stories.png";
+import image5 from "./Home_Hero-1.png";
 
-// Import images from assets directory
-// import image1 from "./Home_Hero-1.png";
-// import image2 from "./Home_Personal-Stories.png";
-// import image3 from "./Home_Hero-1.png";
-// import image4 from "./Home_Personal-Stories.png";
-// import image5 from "./Home_Hero-1.png";
-import image1 from "../assets/images/Logos/FHC_Black_Logo.png";
-
-
-const images = [image1, image1, image1, image1, image1];
+const images = [image1, image2, image3, image4, image5];
 
 const EventPictureSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

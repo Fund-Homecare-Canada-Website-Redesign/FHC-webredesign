@@ -1,9 +1,8 @@
-import React from 'react';
+import React from "react";
+import colours from "../assets/styles/BrandColours";
 import { Link } from 'react-router-dom';
 import { Navbar, Nav, Button, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
-// import colours from "../assets/styles/BrandColours";
-
 
 function NavbarComponent() {
   const navbarStyle = {

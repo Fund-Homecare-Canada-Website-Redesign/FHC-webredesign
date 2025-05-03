@@ -1,30 +1,16 @@
-import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-import { MotionConfig } from "framer-motion";
-import Footer from "./components/Footer.jsx";
-import Navbar from "./components/Navbar.jsx";
-import MainTopSection from "./components/MainTopSection.jsx";
-import PastEventsCard from "./components/PastEventsCard.jsx";
-import UpcomingEventsCard from "./components/UpcomingEventsCardNoFormIntegration.jsx";
-import MainEvents from "./pages/MainEvents.jsx";
-import UpcomingEventsPage from "./pages/UpcomingEvents.jsx";
-import PastEventsPage from "./pages/PastEvents.jsx";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AboutUs from "./pages/AboutUs"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-export const MyContext = React.createContext();
+
+// change with your logic import React from "react";
+// import MyComponent from "./components/MyComponent";
 
 const TestPage = () => {
-  const contextValue = "Hello from Context";
-
-  return (
-    <Router>
-      <div>
-        <UpcomingEventsPage/>
-        <MainEvents/>
-        <PastEventsPage/>
-        
-      </div>
-    </Router>
-  );
+    return (
+        <div>
+            <AboutUs/>
+        </div>
+      );
 };
-
 export default TestPage;
