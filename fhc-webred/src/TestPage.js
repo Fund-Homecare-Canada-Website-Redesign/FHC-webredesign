@@ -1,16 +1,16 @@
-import React from "react";
-//import colours from "../assets/styles/BrandColours";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import AboutUs from "./pages/AboutUs"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-//chnage with your logic import React from "react";
-import NewsletterCard from "./components/NewsletterCard";
+
+// change with your logic import React from "react";
+// import MyComponent from "./components/MyComponent";
 
 const TestPage = () => {
-  return (
-    <div>
-      <h1>Testing Components</h1>
-      <NewsletterCard date="August 2024" pdfUrl="../../newsletters/FHCNewsletterAug24.pdf"/>
-    </div>
-  );
+    return (
+        <div>
+//             <AboutUs/>
+        </div>
+      );
 };
-
 export default TestPage;

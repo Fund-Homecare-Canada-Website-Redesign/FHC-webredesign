@@ -1,2 +1,59 @@
 import React from "react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion"
 import colours from "../assets/styles/BrandColours";
+import ProgressBar from "./DonationProgressBar";
+
+const BeneficiaryCard = ({ beneficiary }) => {
+    const [expand, setExpand] = useState(false);
+
+    const expandOnClick = () => {
+      setExpand((prev) => !prev);
+    }
+
+    return (
+      <div className={`beneficiary-card font-[Montserrat] w-5/6 mx-auto bg-[#3A92A0]/30 rounded-lg shadow-[10px_10px_0_rgba(0,0,0,0.25)] p-4 flex flex-column gap-4`}>
+        <div className="beneficiary-info flex flex-col lg:flex-row bg-[#D9D9D9]/50 p-4 justify-center items-start gap-4">
+          <div className="beneficiary-info-left w-full lg:w-1/2">
+            <img src={beneficiary.imageSrc} className="min-w-full min-h-full object-cover"></img>
+          </div>
+          <div className="beneficiary-info-right w-full lg:w-1/2">
+            <h1 className="font-[Frutiger]">{beneficiary.fundName}</h1> 
+            <h2 className="text-[#757575] font-[Frutiger]">{beneficiary.beneficiaryName}</h2>
+            <p>{beneficiary.description}</p>
+          </div>
+        </div>
+        <ProgressBar fraction={`${beneficiary.progress}`}/>
+        <div className="beneficiary-donate-div flex flex-column gap-2">
+          <div className="benefiary-donate-info">
+            <h1 className="font-[Frutiger]">${beneficiary.raised} Raised</h1>
+            <h2 className="text-[#757575] font-[Frutiger]">${beneficiary.goal} Goal · {beneficiary.donations} Donations</h2>
+          </div>
+          <div className="beneficiary-donate-buttons flex gap-4">
+            <button onClick={expandOnClick} className="bg-[#54749D] text-white p-2 w-20 rounded-full hover:opacity-75">Donate</button>
+          </div>
+        </div>
+        <AnimatePresence>
+          {expand && (
+              <motion.section
+                key="content"
+                initial="collapsed"
+                animate="open"
+                exit="collapsed"
+                variants={
+                  {
+                    open: { opacity: 1, height: "auto" },
+                    collapsed: { opacity: 0, height: 0 }
+                  }
+                }
+                transition={{ duration: 0.1 }}
+              >
+              </motion.section>
+            )
+          }
+        </AnimatePresence>
+      </div>
+    );
+};
+
+export default BeneficiaryCard;
