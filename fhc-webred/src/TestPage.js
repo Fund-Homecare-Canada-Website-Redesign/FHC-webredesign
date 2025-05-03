@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import AboutUs from "./pages/AboutUs"
+// import AboutUs from "./pages/AboutUs"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const TestPage = () => {
     return (
         <div>
-            <AboutUs/>
+//             <AboutUs/>
         </div>
       );
 };
