@@ -8,15 +8,9 @@ import Footer from "../components/Footer";
 const Newlestter = () => {
     return (
         <div className="bg-[#CFE6EF]">
-        {/* <div>
-            <NavbarComponent />
-        </div> */}
-        <div className="flex justify-center">
-            <NewsletterCard poster="../assets/images/CommunityEvents/CateringForACause.jpeg" date="August 2024"/>
-        </div>
-        <div>
-            <Footer/>
-        </div>
+            <div className="flex justify-center">
+                <NewsletterCard poster="../assets/images/CommunityEvents/CateringForACause.jpeg" date="August 2024" />
+            </div>
         </div>
     );
 };

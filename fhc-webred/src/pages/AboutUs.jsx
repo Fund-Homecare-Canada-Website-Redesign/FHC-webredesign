@@ -16,20 +16,21 @@ import Sangeeta from "../assets/images/AboutUs/WhoAreWe/Sangeeta.png";
 
 import Footer from "../components/Footer";
 
-function AboutUs () {
-    return(
-        // <div> 
-        //     <NavbarComponent/>
-        // </div>
+function AboutUs() {
+    return (
+
         <div>
+            {/* <div>
+                <NavbarComponent />
+            </div> */}
             <div className="bg-[#CFE6EF] pt-10 pb-10">
                 {/* Who We Are Section */}
                 <section className="bg-[#54749D] text-white p-6 md:p-10 rounded-[40px] mb-10 max-w-4xl mx-auto">
                     <h2 className="text-3xl md:text-4xl font-[Montserrat]font-bold mb-4">Who We Are</h2>
                     <p className="text-base md:text-lg font-[Montserrat] leading-relaxed">
-                    Fund Homecare Canada is a Canadian registered charitable, not-for-profit organization dedicated to making in-home care accessible to palliative cancer patients—a critical and prevalent need that is unfortunately out of reach for many.
-                    <br /><br />
-                    We created Fund Homecare Canada to address this discrepancy by providing financial support to help cancer patients and their families with in-home palliative care needs. Our funding goes towards personal care, housekeeping services, meals, nursing, and shopping assistance.
+                        Fund Homecare Canada is a Canadian registered charitable, not-for-profit organization dedicated to making in-home care accessible to palliative cancer patients—a critical and prevalent need that is unfortunately out of reach for many.
+                        <br /><br />
+                        We created Fund Homecare Canada to address this discrepancy by providing financial support to help cancer patients and their families with in-home palliative care needs. Our funding goes towards personal care, housekeeping services, meals, nursing, and shopping assistance.
                     </p>
                 </section>
 
@@ -40,34 +41,34 @@ function AboutUs () {
                     <div className="space-y-6">
                         {/* Goal 1 */}
                         <div className="flex items-start gap-4">
-                        <img src={homeIcon} alt="home icon" className="w-10 h-10 mt-1" />
-                        <p className="text-base md:text-lg font-[Montserrat] leading-relaxed">
-                            Funding <strong>home-based palliative care</strong> for cancer patients residing in Ontario.
-                        </p>
+                            <img src={homeIcon} alt="home icon" className="w-10 h-10 mt-1" />
+                            <p className="text-base md:text-lg font-[Montserrat] leading-relaxed">
+                                Funding <strong>home-based palliative care</strong> for cancer patients residing in Ontario.
+                            </p>
                         </div>
 
                         {/* Goal 2 */}
                         <div className="flex items-start gap-4">
-                        <img src={visibilityIcon} alt="360 visibility icon" className="w-12 h-12 mt-1" />
-                        <p className="text-base md:text-lg font-[Montserrat] leading-relaxed">
-                            Maintain a 360 degree monitoring mechanism to <strong>provide visibility</strong> for our sponsors and clients.
-                        </p>
+                            <img src={visibilityIcon} alt="360 visibility icon" className="w-12 h-12 mt-1" />
+                            <p className="text-base md:text-lg font-[Montserrat] leading-relaxed">
+                                Maintain a 360 degree monitoring mechanism to <strong>provide visibility</strong> for our sponsors and clients.
+                            </p>
                         </div>
 
                         {/* Goal 3 */}
                         <div className="flex items-start gap-4">
-                        <img src={fundingIcon} alt="funding icon" className="w-12 h-12 mt-1" />
-                        <p className="text-base md:text-lg font-[Montserrat] leading-relaxed">
-                            Channel funding specifically toward <strong>palliative cancer patients</strong> who do not qualify for government or any other funding for home-based care.
-                        </p>
+                            <img src={fundingIcon} alt="funding icon" className="w-12 h-12 mt-1" />
+                            <p className="text-base md:text-lg font-[Montserrat] leading-relaxed">
+                                Channel funding specifically toward <strong>palliative cancer patients</strong> who do not qualify for government or any other funding for home-based care.
+                            </p>
                         </div>
 
                         {/* Goal 4 */}
                         <div className="flex items-start gap-4">
-                        <img src={communicationIcon} alt="communication icon" className="w-10 h-10 mt-1" />
-                        <p className="text-base md:text-lg font-[Montserrat] leading-relaxed">
-                            Utilize <strong>communication channels</strong> including direct outreach, social media campaigns, and fundraising events to encourage corporate giving, crowdfunding, and personal donations.
-                        </p>
+                            <img src={communicationIcon} alt="communication icon" className="w-10 h-10 mt-1" />
+                            <p className="text-base md:text-lg font-[Montserrat] leading-relaxed">
+                                Utilize <strong>communication channels</strong> including direct outreach, social media campaigns, and fundraising events to encourage corporate giving, crowdfunding, and personal donations.
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -75,7 +76,7 @@ function AboutUs () {
 
             <div className="bg-[#307694] py-20 px-20">
                 <h2 className="text-white font-[Montserrat] text-5xl font-bold mb-10">Meet Our Team</h2>
-                
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     <OurTeamCard
                         name="Rohit Bhalla"
@@ -122,10 +123,6 @@ function AboutUs () {
                         During this time she also completed her CPA, CA designation in Canada. Sangeeta is currently a Senior Director, Supplier Management Office for the Technology and Operations within Royal Bank of Canada responsible for the risk and relationship management for ~1000 technology vendors."
                     />
                 </div>
-            </div>
-
-            <div>
-                <Footer />
             </div>
         </div>
     )

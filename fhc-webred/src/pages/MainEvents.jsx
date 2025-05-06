@@ -32,9 +32,8 @@ const MainEvents = () => {
 
   return (
     <>
-      <NavBar />
       <PageHeaderSection title="Main Events" backgroundImage="/path/to/image.jpg" />
-      
+
       <div className="container mx-auto px-4 py-12">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-2xl font-semibold mb-4 text-gray-800">Stay Connected</h2>
@@ -66,8 +65,6 @@ const MainEvents = () => {
           ))}
         </div>
       </div>
-
-      <Footer />
     </>
   );
 };

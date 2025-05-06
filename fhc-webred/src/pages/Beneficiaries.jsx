@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import BeneficiaryCard from "../components/BeneficiaryCard";
 import CustomizableButton from "../components/CustomizableButton";
 
@@ -16,17 +17,17 @@ const beneficiaryObject = {
 const Beneficiary = () => {
   return (
     <>
-    <div className="h-full font-[Montserrat]">
-      <div className="bg-[url('assets/images/Beneficiary/beneficiary.png')] bg-no-repeat bg-center bg-cover h-screen flex justify-center items-center">
-        <div className="w-1/2 h-25 bg-[#D9D9D9]/80 flex flex-column justify-center items-center rounded-5">
-          <h1 className="text-white text-center font-bold">Our Beneficiaries</h1>
-          <button className="bg-[#54749D] text-white p-2.5 w-42 rounded-5 hover:opacity-75">Apply to be a Beneficiary</button>
+      <div className="h-full font-[Montserrat]">
+        <div className="bg-[url('assets/images/Beneficiary/beneficiary.png')] bg-no-repeat bg-center bg-cover h-screen flex justify-center items-center">
+          <div className="w-1/2 h-25 bg-[#D9D9D9]/80 flex flex-column justify-center items-center rounded-5">
+            <h1 className="text-white text-center font-bold">Our Beneficiaries</h1>
+            <Link to="/beneficiaries/apply" className="bg-[#54749D] text-white p-2.5 w-42 rounded-5 hover:opacity-75">Apply to be a Beneficiary</Link>
+          </div>
+        </div>
+        <div className="pt-5 pb-5">
+          <BeneficiaryCard beneficiary={beneficiaryObject} />
         </div>
       </div>
-      <div className="pt-5 pb-5">
-        <BeneficiaryCard beneficiary={beneficiaryObject} />
-      </div>
-    </div>
     </>
   );
 };

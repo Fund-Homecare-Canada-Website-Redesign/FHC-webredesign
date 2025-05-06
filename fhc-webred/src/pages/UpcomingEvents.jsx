@@ -32,12 +32,9 @@ const UpcomingEvents = () => {
 
   return (
     <>
-      <NavBar />
-      <PageHeaderSection/>
-
-      
+      <PageHeaderSection />
       <div className="container mx-auto px-4 py-8">
-      <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-2xl font-semibold mb-4 text-gray-800">Make an Impact</h2>
           <p className="text-gray-700 leading-relaxed">
             All proceeds from the event will go toward supporting palliative cancer patients—
@@ -47,7 +44,7 @@ const UpcomingEvents = () => {
             further—with your support, we can make a greater impact.
           </p>
         </div>
-        
+
 
         <div className="space-y-6">
           {upcomingEvents.map((event) => (
@@ -56,16 +53,14 @@ const UpcomingEvents = () => {
         </div>
 
         <div className="flex justify-between items-center mb-8">
-          <Link 
-            to="/events" 
+          <Link
+            to="/events"
             className="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors"
           >
             Back to Events
           </Link>
         </div>
       </div>
-      
-      <Footer/>
     </>
   );
 };
