@@ -1,29 +1,44 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-//delete in production
-import TestPage from "./TestPage";
 
-//ignore default code below
-
-// function App() {
-//   return (
-//     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-//       <header className="text-center bg-red-500 text-white p-6 rounded-lg shadow-lg">
-//         <p className="mt-4 text-lg font-bold text-gray-200">
-//           Tailwind is working if this text is styled!
-//         </p>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
+// Import navbar
+import NavbarComponent from './components/Navbar';
+import Footer from './components/Footer';
+// Import pages
+import AboutUs from './pages/AboutUs';
+import Admin from './pages/Admin';
+import MainEvents from './pages/MainEvents';
+import Beneficiaries from './pages/Beneficiaries';
+import UpcomingEvents from './pages/UpcomingEvents';
+import PastEvents from './pages/PastEvents';
+import Newlestter from './pages/Newlestter';
+import ApplyToBeBeneficiary from './pages/ApplyToBeBeneficiary';
+import ContactUs from './pages/ContactUs';
+import Donate from './pages/Donate';
+import MainPage from './pages/MainPage';
 
 function App() {
-  return <TestPage />;
+  return (
+    <Router>
+      <NavbarComponent />
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/events" element={<MainEvents />} />
+        <Route path="/events/upcoming" element={<UpcomingEvents />} />
+        <Route path="/events/past" element={<PastEvents />} />
+        <Route path="/events/newsletter" element={<Newlestter />} />
+        <Route path="/beneficiaries" element={<Beneficiaries />} />
+        <Route path="/beneficiaries/apply" element={<ApplyToBeBeneficiary />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/donate" element={<Donate />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );
 }
 
 export default App;
-
