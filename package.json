@@ -1,17 +1,50 @@
 {
-  "name": "fhc-webredesign",
-  "version": "1.0.0",
-  "description": "Welcome to the FHC Web Redesign project! This README will guide developers through setting up the development environment, installing dependencies, and getting started with writing code.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "name": "fhc-webred",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "framer-motion": "^12.4.10",
+    "@react-google-maps/api": "^2.20.6",
+    "@tailwindcss/cli": "^4.0.6",
+    "bootstrap": "^5.3.3",
+    "cra-template": "1.2.0",
+    "framer-motion": "^4.1.17",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-bootstrap": "^2.10.9",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "react-pdf": "^9.2.1",
+    "react-router-dom": "^7.1.5",
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^4.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.2",
+    "postcss-loader": "^8.1.1",
+    "tailwindcss": "^4.0.6"
   }
 }
