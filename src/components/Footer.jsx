@@ -43,7 +43,7 @@ const Footer = () => (
 
       {/* Row 2: Social Media + TSI */}
       <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 border-t border-gray-400 pt-6">
-        <div className="flex flex-col items-center md:items-start md:w-13 space-y-2">
+        <div className="flex flex-col items-center md:items-start md:w-2/3 space-y-2">
           <h3 className="font-semibold mb-2">Follow Us on Social Media</h3>
           <a href="https://www.instagram.com/fundhomecareca/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 no-underline text-white">
             <img src={insta} alt="Instagram" className="w-5 h-5" /> Instagram
