@@ -27,6 +27,10 @@ cd FHC-webredesign
 ```bash
 npm install
 ```
+- install emailjs
+```bash
+npm install @emailjs/browser
+```
 3. Start the Development Server
 ```bash
 npm start
