@@ -125,7 +125,7 @@ const ApplyToBeBeneficiary = () => {
         e.preventDefault();
         if (validateForm()) {
             emailjs.send(
-                'service_fs5lb2u', // service ID
+                'service_kxpsis4', // service ID
                 'template_4rou2e5', // template ID
                 {
                     contactPref: formData.contactPref,
