@@ -97,7 +97,7 @@ const MainPage = () => {
                             </div>
                         </div>
 
-                        <div className="flex-1 pl-8 font-roboto font-normal text-[23px] leading-normal text-black text-right">
+                        <div className="flex-1 pl-8 font-roboto font-normal text-[23px] leading-10 text-black text-right">
                             <p>In-home palliative care can have a profound impact on patients' end of life experience, offering a more comfortable and dignified quality of life. Unfortunately, the high cost of homecare puts it out of reach for many in need. We believe that palliative homecare should be accessible for all, which is why we created Fund Homecare Canada: a Canadian registered charitable, non-profit organization that provides financial support to cancer patients with in-home palliative care needs.</p>
                         </div>
                     </div>
