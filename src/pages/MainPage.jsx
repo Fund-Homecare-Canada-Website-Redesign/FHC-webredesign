@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import colours from "../assets/styles/BrandColours";
 
 const MainPage = () => {
+    useEffect(() => {
+        document.title = "Home";
+    }, []);
     return (
         <div>
             <h1>Main Page</h1>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import UpcomingEventsCard from "../components/UpcomingEventsCardNoFormIntegration.jsx";
 import NavBar from "../components/Navbar.jsx";
@@ -29,6 +29,10 @@ const UpcomingEvents = () => {
       image: "/path/to/image2.jpg"
     }
   ];
+
+  useEffect(() => {
+    document.title = "Upcoming Events";
+  }, []);
 
   return (
     <>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaCalendarAlt, FaHistory, FaEnvelope } from "react-icons/fa";
 import NavBar from "../components/Navbar.jsx";
@@ -7,6 +7,9 @@ import PageHeaderSection from "../components/PageHeaderSection.jsx";
 import image from "../assets/images/MainPage/Home_Hero-1.png"
 
 const MainEvents = () => {
+  useEffect(() => {
+    document.title = "Events";
+  }, []);
   const navigate = useNavigate();
 
   const sections = [
