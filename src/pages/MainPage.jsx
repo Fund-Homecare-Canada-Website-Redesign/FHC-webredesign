@@ -50,7 +50,7 @@ const MainPage = () => {
                         {/* "Our Events" button */}
                         <button
                             onClick={handleNavigateToEvents}
-                            className="font-roboto font-medium text-[10px] md:text-[17.78px] leading-none tracking-[0.44%] border-3 border-white rounded-[10px] bg-transparent w-[87px] h-[25px] md:w-[163px] md:h-[50px] flex items-center justify-center mt-1 cursor-pointer p-0 relative z-20 text-white transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-white hover:bg-opacity-10 active:scale-95 group"
+                            className="font-roboto font-medium text-[10px] md:text-[17.78px] leading-none tracking-[0.44%] border-3 border-white rounded-[10px] bg-transparent w-[87px] h-[25px] md:w-[163px] md:h-[50px] flex items-center justify-center mt-4 cursor-pointer p-0 relative z-20 text-white transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-white hover:bg-opacity-10 active:scale-95 group"
                         >
                             <span className="transition-transform duration-300 group-hover:translate-x-1">
                                 Our Events →
