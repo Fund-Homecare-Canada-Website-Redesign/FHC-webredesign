@@ -35,7 +35,7 @@ const Footer = () => (
             />
           </div>
 
-          <button className="flex-none bg-[#c1c7cd] hover:bg-blue-700 active:bg-gray-500 text-white px-4 py-2 rounded-r-md text-sm">
+          <button className="flex-none bg-[#c1c7cd] hover:bg-blue-700 active:bg-gray-500 text-white px-4 py-2 rounded-r-md text-sm transition-all duration-300 ease-in-out">
             Subscribe
           </button>
         </div>
@@ -45,13 +45,13 @@ const Footer = () => (
       <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 border-t border-gray-400 pt-6">
         <div className="flex flex-col items-center md:items-start md:w-2/3 space-y-2">
           <h3 className="font-semibold mb-2">Follow Us on Social Media</h3>
-          <a href="https://www.instagram.com/fundhomecareca/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 no-underline text-white">
+          <a href="https://www.instagram.com/fundhomecareca/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 no-underline text-white hover:text-blue-300 relative pb-1 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-[#30AFAA] before:transition-all before:duration-300 hover:before:w-full">
             <img src={insta} alt="Instagram" className="w-5 h-5" /> Instagram
           </a>
-          <a href="https://www.facebook.com/FundHomecareCanada/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 no-underline text-white">
+          <a href="https://www.facebook.com/FundHomecareCanada/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 no-underline text-white hover:text-blue-300 relative pb-1 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-[#30AFAA] before:transition-all before:duration-300 hover:before:w-full">
             <img src={fb} alt="Facebook" className="w-5 h-5" /> Facebook
           </a>
-          <a href="https://www.linkedin.com/company/fund-homecare-canada/?originalSubdomain=ca" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 no-underline text-white">
+          <a href="https://www.linkedin.com/company/fund-homecare-canada/?originalSubdomain=ca" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 no-underline text-white hover:text-blue-300 relative pb-1 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-[#30AFAA] before:transition-all before:duration-300 hover:before:w-full">
             <img src={linkedin} alt="LinkedIn" className="w-5 h-5" /> LinkedIn
           </a>
         </div>
