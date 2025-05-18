@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import colours from "../assets/styles/BrandColours";
 import NavbarComponent from "../components/Navbar"
 
@@ -17,6 +17,9 @@ import Sangeeta from "../assets/images/AboutUs/WhoAreWe/Sangeeta.png";
 import Footer from "../components/Footer";
 
 function AboutUs() {
+    useEffect(() => {
+        document.title = "About Us";
+    }, []);
     return (
 
         <div>

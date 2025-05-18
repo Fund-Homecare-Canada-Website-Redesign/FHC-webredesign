@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import PastEventsCard from "../components/PastEventsCard";
 import NavBar from "../components/Navbar.jsx";
@@ -7,6 +7,9 @@ import PageHeaderSection from "../components/PageHeaderSection.jsx";
 
 
 const PastEvents = () => {
+  useEffect(() => {
+    document.title = "Past Events";
+  }, []);
   // Sample data - replace with actual data from your backend
   const pastEvents = [
     {
