@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import colours from "../assets/styles/BrandColours";
 import image_section_1 from "../assets/images/MainPage/Home_Hero-2.png";
+import image_section_3 from "../assets/images/MainPage/img_sec3.png";
 import fhcLogo from "../assets/images/Logos/FHC_NoBgrd_Logo.png";
 
 const MainPage = () => {
@@ -16,12 +17,17 @@ const MainPage = () => {
         navigate("/events");
     };
 
+    // Handler for Donate Today button click
+    const handleNavigateToDonate = () => {
+        navigate("/donate");
+    };
+
     return (
         <div>
             {/* First section */}
             <section>
                 <div
-                    className="w-full h-[60vh] bg-cover bg-center relative"
+                    className="w-full h-[66.7vh] bg-cover bg-center relative"
                     style={{ backgroundImage: `url(${image_section_1})` }}
                 >
                     {/* Blue overlay with transparency */}
@@ -82,7 +88,7 @@ const MainPage = () => {
                     </div>
                 </div>
                 {/* Desktop layout - hidden on small screens */}
-                <div className="hidden md:block w-full bg-white">
+                <div className="hidden md:block w-full bg-white min-h-[40vh]">
                     <div className="max-w-7xl mx-auto px-4 py-16 h-full flex items-center">
 
                         <div className="max-w-[40%] my-auto">
@@ -103,6 +109,96 @@ const MainPage = () => {
                     </div>
                 </div>
 
+            </section>
+
+            {/* Third section - different layouts for mobile/desktop */}
+            <section>
+                {/* Mobile layout - only visible on small screens */}
+                <div className="block md:hidden w-full bg-[#3A92A0] py-8 px-5">
+                    <div className="flex flex-col items-center">
+                        {/* Title: We need your help */}
+                        <h2 className="font-montserrat font-medium text-[36px] leading-[150%] text-white text-center">
+                            We Need Your Help
+                        </h2>
+
+                        {/* Divider line */}
+                        <div className="h-[1px] w-3/4 bg-white my-4"></div>
+
+                        {/* Subtitle: Supporting Those In Need */}
+                        <h3 className="font-montserrat font-normal text-[20px] leading-[150%] text-white text-center mb-6">
+                            Supporting Those In Need
+                        </h3>
+
+                        {/* Description text */}
+                        <p className="font-roboto font-normal text-[14px] leading-[150%] text-white text-center mb-6">
+                            Many of the individuals we serve are elderly, facing serious health challenges while living alone, with limited income from government assistance (such as Old Age Security or CPP) covering only basic needs. Your donation helps provide crucial Personal Support Worker (PSW) care, offering comfort and dignity in their final days.
+                        </p>
+
+                        {/* Image */}
+                        <div className="mb-3 w-full px-6">
+                            <div className="max-w-[300px] mx-auto">
+                                <img
+                                    src={image_section_3}
+                                    alt="Beneficiary"
+                                    className="w-full aspect-[399/343] object-cover rounded-[25px] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.2)]"
+                                />
+                            </div>
+                        </div>
+
+                        {/* Beneficiary details withheld for privacy reasons */}
+                        <p className="font-roboto font-normal text-[13px] text-white mb-8 text-center">
+                            Beneficiary details withheld for privacy reasons
+                        </p>
+
+                        {/* Donate Today button */}
+                        <button
+                            onClick={handleNavigateToDonate}
+                            className="font-roboto font-medium text-[17px] leading-none tracking-[0.44%] border-2 border-white rounded-[10px] bg-transparent w-[180px] h-[50px] flex items-center justify-center cursor-pointer text-white transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-white hover:bg-opacity-10 active:scale-95 group"
+                        >
+                            <span className="transition-transform duration-300 group-hover:translate-x-1">
+                                Donate Today →
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                {/* Desktop layout - hidden on small screens */}
+                <div className="hidden md:block w-full bg-[#3A92A0] min-h-[61.3vh]">
+                    {/* Title: We need your help */}
+                    <div className="max-w-7xl mx-auto px-4 py-8 h-full flex flex-col">
+                        <h2 className="font-roboto font-medium text-[50px] leading-[150%] tracking-[0%] text-center text-white mb-4">We need your help</h2>
+                        <div className="flex-1 flex justify-center">
+                            <div className="w-1/3">
+                                {/* Image */}
+                                <div className="mb-3">
+                                    <img src={image_section_3} alt="Beneficiary" className="w-full max-w-[399px] aspect-[399/343] object-cover rounded-[25px] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.2)]" />
+                                </div>
+                                {/* Beneficiary details withheld for privacy reasons */}
+                                <div>
+                                    <p className="font-roboto font-normal text-[15px] leading-[150%] tracking-[0%] text-white mb-4 text-left">Beneficiary details withheld for privacy reasons</p>
+                                </div>
+                            </div>
+                            <div className="w-2/3 pl-8">
+                                <div>
+                                    <p className="font-roboto font-normal text-[20px] leading-[150%] tracking-[0%] text-white mb-4 text-left">Many of the individuals we serve are elderly and facing serious health challenges, often while living alone. For those in palliative care, access to Personal Support Worker (PSW) services can be crucial—yet financial constraints sometimes make this care difficult to obtain.</p>
+                                </div>
+                                <div>
+                                    <p className="font-roboto font-normal text-[20px] leading-[150%] tracking-[0%] text-white mb-4 text-left">Some rely solely on government assistance (such as Old Age Security or CPP), which may cover only basic living expenses, leaving little for essential care. Your donation helps bridge this gap, providing comfort and dignity in their final days.</p>
+                                </div>
+                                {/* Donate Today button */}
+                                <div className="flex justify-end mt-6">
+                                    <button
+                                        onClick={handleNavigateToDonate}
+                                        className="font-roboto font-medium text-[10px] md:text-[17.78px] leading-none tracking-[0.44%] border-3 border-white rounded-[10px] bg-transparent w-[100px] h-[30px] md:w-[187px] md:h-[61px] flex items-center justify-center cursor-pointer p-0 relative z-20 text-white transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-white hover:bg-opacity-10 active:scale-95 group"
+                                    >
+                                        <span className="transition-transform duration-300 group-hover:translate-x-1">
+                                            Donate Today →
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     );
