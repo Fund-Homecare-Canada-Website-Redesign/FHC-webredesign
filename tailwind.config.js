@@ -1,4 +1,4 @@
-const colours = require("./src/assets/styles/BrandColours.js"); 
+const colours = require("./src/assets/styles/BrandColours.js");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -9,6 +9,9 @@ module.exports = {
   theme: {
     extend: {
       colours,
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+      },
     },
   },
   plugins: [],
