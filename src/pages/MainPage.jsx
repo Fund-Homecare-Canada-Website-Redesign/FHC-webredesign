@@ -117,8 +117,8 @@ const MainPage = () => {
                 {/* Mobile layout - only visible on small screens */}
                 <div className="block md:hidden w-full bg-[#3A92A0] py-8 px-5">
                     <div className="flex flex-col items-center">
-                        {/* Title: We need your help */}
-                        <h2 className="font-montserrat font-medium text-[36px] leading-[150%] text-white text-center">
+                        {/* Title: We need your help - reduced size for mobile */}
+                        <h2 className="font-montserrat font-medium text-[32px] sm:text-[36px] leading-[150%] text-white text-center">
                             We Need Your Help
                         </h2>
 
@@ -126,12 +126,12 @@ const MainPage = () => {
                         <div className="h-[1px] w-3/4 bg-white my-4"></div>
 
                         {/* Subtitle: Supporting Those In Need */}
-                        <h3 className="font-montserrat font-normal text-[20px] leading-[150%] text-white text-center mb-6">
+                        <h3 className="font-montserrat font-normal text-[22px] sm:text-[24px] leading-[150%] text-white text-center mb-6">
                             Supporting Those In Need
                         </h3>
 
                         {/* Description text */}
-                        <p className="font-roboto font-normal text-[14px] leading-[150%] text-white text-center mb-6">
+                        <p className="font-roboto font-light text-[16px] sm:text-[18px] leading-[150%] text-white text-center mb-6">
                             Many of the individuals we serve are elderly, facing serious health challenges while living alone, with limited income from government assistance (such as Old Age Security or CPP) covering only basic needs. Your donation helps provide crucial Personal Support Worker (PSW) care, offering comfort and dignity in their final days.
                         </p>
 
@@ -147,14 +147,14 @@ const MainPage = () => {
                         </div>
 
                         {/* Beneficiary details withheld for privacy reasons */}
-                        <p className="font-roboto font-normal text-[13px] text-white mb-8 text-center">
+                        <p className="font-roboto font-light text-[14px] sm:text-[15px] text-white mb-8 text-center">
                             Beneficiary details withheld for privacy reasons
                         </p>
 
                         {/* Donate Today button */}
                         <button
                             onClick={handleNavigateToDonate}
-                            className="font-roboto font-medium text-[17px] leading-none tracking-[0.44%] border-2 border-white rounded-[10px] bg-transparent w-[180px] h-[50px] flex items-center justify-center cursor-pointer text-white transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-white hover:bg-opacity-10 active:scale-95 group"
+                            className="font-roboto font-medium text-[16px] sm:text-[17px] leading-none tracking-[0.44%] border-2 border-white rounded-[10px] bg-transparent w-[180px] h-[50px] flex items-center justify-center cursor-pointer text-white transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-white hover:bg-opacity-10 active:scale-95 group"
                         >
                             <span className="transition-transform duration-300 group-hover:translate-x-1">
                                 Donate Today →
@@ -166,7 +166,7 @@ const MainPage = () => {
                 <div className="hidden md:block w-full bg-[#3A92A0] min-h-[61.3vh]">
                     {/* Title: We need your help */}
                     <div className="max-w-7xl mx-auto px-4 py-8 h-full flex flex-col">
-                        <h2 className="font-roboto font-medium text-[50px] leading-[150%] tracking-[0%] text-center text-white mb-4">We need your help</h2>
+                        <h2 className="font-roboto font-medium text-[40px] md:text-[45px] lg:text-[50px] leading-[150%] tracking-[0%] text-center text-white mb-4">We need your help</h2>
                         <div className="flex-1 flex justify-center">
                             <div className="w-1/3">
                                 {/* Image */}
@@ -180,16 +180,16 @@ const MainPage = () => {
                             </div>
                             <div className="w-2/3 pl-8">
                                 <div>
-                                    <p className="font-roboto font-normal text-[20px] leading-[150%] tracking-[0%] text-white mb-4 text-left">Many of the individuals we serve are elderly and facing serious health challenges, often while living alone. For those in palliative care, access to Personal Support Worker (PSW) services can be crucial—yet financial constraints sometimes make this care difficult to obtain.</p>
+                                    <p className="font-roboto font-normal text-[18px] md:text-[19px] lg:text-[20px] leading-[150%] tracking-[0%] text-white mb-4 text-left">Many of the individuals we serve are elderly and facing serious health challenges, often while living alone. For those in palliative care, access to Personal Support Worker (PSW) services can be crucial—yet financial constraints sometimes make this care difficult to obtain.</p>
                                 </div>
                                 <div>
-                                    <p className="font-roboto font-normal text-[20px] leading-[150%] tracking-[0%] text-white mb-4 text-left">Some rely solely on government assistance (such as Old Age Security or CPP), which may cover only basic living expenses, leaving little for essential care. Your donation helps bridge this gap, providing comfort and dignity in their final days.</p>
+                                    <p className="font-roboto font-normal text-[18px] md:text-[19px] lg:text-[20px] leading-[150%] tracking-[0%] text-white mb-4 text-left">Some rely solely on government assistance (such as Old Age Security or CPP), which may cover only basic living expenses, leaving little for essential care. Your donation helps bridge this gap, providing comfort and dignity in their final days.</p>
                                 </div>
                                 {/* Donate Today button */}
                                 <div className="flex justify-end mt-6">
                                     <button
                                         onClick={handleNavigateToDonate}
-                                        className="font-roboto font-medium text-[10px] md:text-[17.78px] leading-none tracking-[0.44%] border-3 border-white rounded-[10px] bg-transparent w-[100px] h-[30px] md:w-[187px] md:h-[61px] flex items-center justify-center cursor-pointer p-0 relative z-20 text-white transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-white hover:bg-opacity-10 active:scale-95 group"
+                                        className="font-roboto font-medium text-[16px] md:text-[17px] lg:text-[18px] leading-none tracking-[0.44%] border-2 md:border-3 border-white rounded-[10px] bg-transparent w-[160px] md:w-[175px] lg:w-[187px] h-[50px] md:h-[55px] lg:h-[61px] flex items-center justify-center cursor-pointer p-0 relative z-20 text-white transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-white hover:bg-opacity-10 active:scale-95 group"
                                     >
                                         <span className="transition-transform duration-300 group-hover:translate-x-1">
                                             Donate Today →
