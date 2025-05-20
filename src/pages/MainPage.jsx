@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import colours from "../assets/styles/BrandColours";
 import image_section_1 from "../assets/images/MainPage/Home_Hero-2.png";
 import image_section_3 from "../assets/images/MainPage/img_sec3.png";
+import image_section_6 from "../assets/images/MainPage/img_sec6.png";
 import fhcLogo from "../assets/images/Logos/FHC_NoBgrd_Logo.png";
 
 const MainPage = () => {
@@ -195,6 +196,124 @@ const MainPage = () => {
                                         </span>
                                     </button>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Fourth section */}
+
+            {/* Fifth section - Why Palliative? */}
+            <section>
+                {/* Mobile layout - only visible on small screens */}
+                <div className="block md:hidden w-full bg-[#307694] py-8 px-5">
+                    <div className="flex flex-col items-center">
+                        {/* Title */}
+                        <h2
+                            className="font-roboto font-medium text-[60px] leading-[150%] text-white text-center"
+                            style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }}
+                        >
+                            Why Palliative?
+                        </h2>
+
+                        {/* Divider line */}
+                        <div className="h-[1px] w-3/4 bg-white my-4"></div>
+
+                        {/* Content */}
+                        <div className="w-full max-w-[500px] mx-auto">
+                            <p className="font-roboto font-normal text-[23px] leading-[150%] text-white text-left mb-4">
+                                Palliative care can significantly enhance the quality of life of patients with progressive, life-altering illness, offering them comfort and dignity in a place of their choosing. Furthermore, research shows that assistance with palliative care not only gives respite to the patient, but alleviates the degree of emotional, social and financial stress for loved ones who may care for a patient. Unfortunately, Canada's patchwork of palliative care services is costly and inconsistent, which harms patients and the sustainability of our healthcare system.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Desktop layout - hidden on small screens */}
+                <div className="hidden md:block w-full bg-[#307694] min-h-[40.2vh]">
+                    <div className="max-w-7xl mx-auto px-4 py-8 h-full flex flex-col">
+                        <h2
+                            className="font-roboto font-medium text-[50px] leading-[150%] tracking-[0%] text-left text-white mb-4"
+                            style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }}
+                        >
+                            Why Palliative?
+                        </h2>
+                        <div>
+                            <p className="font-roboto font-normal text-[20px] leading-[150%] tracking-[0%] text-white mb-4 text-left">
+                                Palliative care can significantly enhance the quality of life of patients with progressive, life-altering illness, offering them comfort and dignity in a place of their choosing. Furthermore, research shows that assistance with palliative care not only gives respite to the patient, but alleviates the degree of emotional, social and financial stress for loved ones who may care for a patient. Unfortunately, Canada's patchwork of palliative care services is costly and inconsistent, which harms patients and the sustainability of our healthcare system.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Sixth section */}
+            <section>
+                {/* Mobile layout */}
+                <div className="block md:hidden w-full bg-white py-8 px-5">
+                    <div className="flex flex-col items-center">
+                        {/* Title */}
+                        <h2
+                            className="font-roboto font-medium text-[60px] leading-[150%] text-[#307694] text-center"
+                            style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }}
+                        >
+                            Why Homecare?
+                        </h2>
+
+                        {/* Divider line */}
+                        <div className="h-[1px] w-3/4 bg-[#307694] my-4"></div>
+
+                        {/* Content */}
+                        <div className="w-full max-w-[500px] mx-auto">
+                            <p className="font-roboto font-normal text-[23px] leading-[150%] text-[#307694] text-left mb-4">
+                                Homecare provides patients with a level of comfort and privacy that are hard to come by in an external care environment. However, about 80% of care is typically provided by informal caregivers like family, friends and neighbors<sup>1</sup>, and they simply don't have the time or financial resources to make prolonged homecare a reality. While 75% of Canadians state that they would prefer to die at home, 42% ultimately die in acute care hospitals<sup>2</sup>.
+                            </p>
+                        </div>
+
+                        {/* Mobile layout - image and citations */}
+                        <div className="mt-8 w-full px-4 flex flex-col">
+                            <img
+                                src={image_section_6}
+                                alt="Homecare illustration"
+                                className="w-full h-auto"
+                            />
+                            <div className="mt-2 text-center">
+                                <p className="font-roboto font-normal text-[16px] text-[#307694] inline-block text-left">
+                                    <sup>1</sup> Fast, 2009<br />
+                                    <sup>2</sup> Canadian Home Care Association, 2018
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Desktop layout - hidden on small screens */}
+                <div className="hidden md:block w-full bg-white min-h-[40.2vh]">
+                    <div className="max-w-7xl mx-auto px-4 py-8 h-full flex flex-col items-center">
+                        <h2
+                            className="font-roboto font-medium text-[50px] leading-[150%] tracking-[0%] text-center text-[#307694] mb-4"
+                            style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }}
+                        >
+                            Why Homecare?
+                        </h2>
+                        <div className="w-full max-w-[75%]">
+                            <p className="font-roboto font-normal text-[20px] leading-[150%] tracking-[0%] text-[#307694] mb-4 text-left">
+                                Homecare provides patients with a level of comfort and privacy that are hard to come by in an external care environment. However, about 80% of care is typically provided by informal caregivers like family, friends and neighbors<sup>1</sup>, and they simply don't have the time or financial resources to make prolonged homecare a reality. While 75% of Canadians state that they would prefer to die at home, 42% ultimately die in acute care hospitals<sup>2</sup>.
+                            </p>
+                        </div>
+
+                        {/* Desktop layout - image and citations */}
+                        <div className="mt-8 flex flex-col items-center w-full">
+                            <img
+                                src={image_section_6}
+                                alt="Homecare illustration"
+                                className="max-w-[95%] h-auto"
+                            />
+                            <div className="w-full max-w-[75%] mt-2">
+                                <p className="font-roboto font-normal text-[16px] text-[#307694] text-left">
+                                    <sup>1</sup> Fast, 2009<br />
+                                    <sup>2</sup> Canadian Home Care Association, 2018
+                                </p>
                             </div>
                         </div>
                     </div>
