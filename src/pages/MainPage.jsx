@@ -254,18 +254,18 @@ const MainPage = () => {
                     <div className="flex flex-col items-center">
                         {/* Title */}
                         <h2
-                            className="font-roboto font-medium text-[36px] sm:text-[42px] leading-[150%] text-[#307694] text-center mb-2"
+                            className="font-roboto font-medium text-[36px] sm:text-[42px] leading-[150%] text-[#54749D] text-center mb-2"
                             style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }}
                         >
                             Why Homecare?
                         </h2>
 
-                        {/* Divider line */}
-                        <div className="h-[1px] w-3/4 bg-[#307694] mt-1 mb-4"></div>
+                        {/* Divider line - also changed color */}
+                        <div className="h-[1px] w-3/4 bg-[#54749D] mt-1 mb-3"></div>
 
                         {/* Content */}
                         <div className="w-full max-w-[500px] mx-auto">
-                            <p className="font-roboto font-normal text-[16px] sm:text-[18px] leading-[150%] text-[#307694] text-center mb-6">
+                            <p className="font-roboto font-normal text-[16px] sm:text-[18px] leading-[150%] text-[#54749D] text-center mb-6">
                                 Homecare provides patients with a level of comfort and privacy that are hard to come by in an external care environment. However, about 80% of care is typically provided by informal caregivers like family, friends and neighbors<sup>1</sup>, and they simply don't have the time or financial resources to make prolonged homecare a reality. While 75% of Canadians state that they would prefer to die at home, 42% ultimately die in acute care hospitals<sup>2</sup>.
                             </p>
                         </div>
@@ -278,9 +278,9 @@ const MainPage = () => {
                                 className="w-full h-auto rounded-lg shadow-md"
                             />
                             <div className="mt-3 text-center">
-                                <p className="font-roboto font-normal text-[14px] sm:text-[16px] text-[#307694] inline-block text-left">
-                                    <sup>1</sup> Fast, 2009<br />
-                                    <sup>2</sup> Canadian Home Care Association, 2018
+                                <p className="font-roboto font-normal text-[14px] sm:text-[16px] text-[#54749D] inline-block text-center">
+                                    1 Fast, 2009<br />
+                                    2 Canadian Home Care Association, 2018
                                 </p>
                             </div>
                         </div>
@@ -291,7 +291,7 @@ const MainPage = () => {
                 <div className="hidden md:block w-full bg-white min-h-[40.2vh]">
                     <div className="max-w-7xl mx-auto px-4 md:py-8 lg:py-10 h-full flex flex-col items-center">
                         <h2
-                            className="font-roboto font-medium text-[40px] md:text-[45px] lg:text-[50px] leading-[150%] tracking-[0%] text-center text-[#307694] mb-4 md:mb-6 lg:mb-8 w-full"
+                            className="font-roboto font-medium text-[40px] md:text-[45px] lg:text-[50px] leading-[150%] tracking-[0%] text-center text-[#54749D] mb-4 md:mb-6 lg:mb-8 w-full"
                             style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }}
                         >
                             Why Homecare?
@@ -301,7 +301,7 @@ const MainPage = () => {
                         <div className="flex flex-row w-full relative">
                             {/* Text content - on the left */}
                             <div className="w-[55%] pr-4 md:pr-5 lg:pr-6">
-                                <p className="font-roboto font-normal text-[17px] md:text-[18px] lg:text-[20px] leading-[150%] tracking-[0%] text-[#307694] mb-4 text-left">
+                                <p className="font-roboto font-normal text-[17px] md:text-[18px] lg:text-[20px] leading-[150%] tracking-[0%] text-[#54749D] mb-4 text-left">
                                     Homecare provides patients with a level of comfort and privacy that are hard to come by in an external care environment. However, about 80% of care is typically provided by informal caregivers like family, friends and neighbors<sup>1</sup>, and they simply don't have the time or financial resources to make prolonged homecare a reality. While 75% of Canadians state that they would prefer to die at home, 42% ultimately die in acute care hospitals<sup>2</sup>.
                                 </p>
                             </div>
@@ -319,9 +319,9 @@ const MainPage = () => {
 
                             {/* Citations positioned at bottom right */}
                             <div className="absolute bottom-0 right-0 pb-1 md:pb-2 pr-1 md:pr-2">
-                                <p className="font-roboto font-normal text-[14px] md:text-[15px] lg:text-[16px] text-[#307694] text-left">
-                                    <sup>1</sup> Fast, 2009<br />
-                                    <sup>2</sup> Canadian Home Care Association, 2018
+                                <p className="font-roboto font-normal text-[14px] md:text-[15px] lg:text-[16px] text-[#54749D] text-left">
+                                    1 Fast, 2009<br />
+                                    2 Canadian Home Care Association, 2018
                                 </p>
                             </div>
                         </div>
