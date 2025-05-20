@@ -473,11 +473,11 @@ const MainPage = () => {
 
                             {/* Right side container with flex to position image */}
                             <div className="w-[45%] pl-3 md:pl-4 flex flex-col justify-center">
-                                <div className="mb-16 md:mb-20 flex justify-center"> {/* Center horizontally and add space below */}
+                                <div className="mb-8 md:mb-10 flex justify-end"> {/* Right align but reduce bottom margin */}
                                     <img
                                         src={image_section_6}
                                         alt="Homecare illustration"
-                                        className="w-[90%] md:w-[85%] lg:w-[80%] h-auto rounded-lg shadow-md"
+                                        className="w-[95%] md:w-[85%] lg:w-[75%] h-auto rounded-lg shadow-md"
                                     />
                                 </div>
                             </div>
