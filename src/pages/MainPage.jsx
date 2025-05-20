@@ -254,31 +254,31 @@ const MainPage = () => {
                     <div className="flex flex-col items-center">
                         {/* Title */}
                         <h2
-                            className="font-roboto font-medium text-[60px] leading-[150%] text-[#307694] text-center"
+                            className="font-roboto font-medium text-[36px] sm:text-[42px] leading-[150%] text-[#307694] text-center mb-2"
                             style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }}
                         >
                             Why Homecare?
                         </h2>
 
                         {/* Divider line */}
-                        <div className="h-[1px] w-3/4 bg-[#307694] my-4"></div>
+                        <div className="h-[1px] w-3/4 bg-[#307694] mt-1 mb-4"></div>
 
                         {/* Content */}
                         <div className="w-full max-w-[500px] mx-auto">
-                            <p className="font-roboto font-normal text-[23px] leading-[150%] text-[#307694] text-left mb-4">
+                            <p className="font-roboto font-normal text-[16px] sm:text-[18px] leading-[150%] text-[#307694] text-center mb-6">
                                 Homecare provides patients with a level of comfort and privacy that are hard to come by in an external care environment. However, about 80% of care is typically provided by informal caregivers like family, friends and neighbors<sup>1</sup>, and they simply don't have the time or financial resources to make prolonged homecare a reality. While 75% of Canadians state that they would prefer to die at home, 42% ultimately die in acute care hospitals<sup>2</sup>.
                             </p>
                         </div>
 
                         {/* Mobile layout - image and citations */}
-                        <div className="mt-8 w-full px-4 flex flex-col">
+                        <div className="mt-4 w-full px-2 sm:px-6 flex flex-col">
                             <img
                                 src={image_section_6}
                                 alt="Homecare illustration"
-                                className="w-full h-auto"
+                                className="w-full h-auto rounded-lg shadow-md"
                             />
-                            <div className="mt-2 text-center">
-                                <p className="font-roboto font-normal text-[16px] text-[#307694] inline-block text-left">
+                            <div className="mt-3 text-center">
+                                <p className="font-roboto font-normal text-[14px] sm:text-[16px] text-[#307694] inline-block text-left">
                                     <sup>1</sup> Fast, 2009<br />
                                     <sup>2</sup> Canadian Home Care Association, 2018
                                 </p>
@@ -289,9 +289,9 @@ const MainPage = () => {
 
                 {/* Desktop layout - hidden on small screens */}
                 <div className="hidden md:block w-full bg-white min-h-[40.2vh]">
-                    <div className="max-w-7xl mx-auto px-4 py-8 h-full flex flex-col items-center">
+                    <div className="max-w-7xl mx-auto px-4 md:py-8 lg:py-10 h-full flex flex-col items-center">
                         <h2
-                            className="font-roboto font-medium text-[40px] md:text-[45px] lg:text-[50px] leading-[150%] tracking-[0%] text-center text-[#307694] mb-4 w-full"
+                            className="font-roboto font-medium text-[40px] md:text-[45px] lg:text-[50px] leading-[150%] tracking-[0%] text-center text-[#307694] mb-4 md:mb-6 lg:mb-8 w-full"
                             style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }}
                         >
                             Why Homecare?
@@ -300,26 +300,26 @@ const MainPage = () => {
                         {/* Container with positioning context for absolute elements */}
                         <div className="flex flex-row w-full relative">
                             {/* Text content - on the left */}
-                            <div className="w-[55%] pr-6">
-                                <p className="font-roboto font-normal text-[18px] md:text-[19px] lg:text-[20px] leading-[150%] tracking-[0%] text-[#307694] mb-4 text-left">
+                            <div className="w-[55%] pr-4 md:pr-5 lg:pr-6">
+                                <p className="font-roboto font-normal text-[17px] md:text-[18px] lg:text-[20px] leading-[150%] tracking-[0%] text-[#307694] mb-4 text-left">
                                     Homecare provides patients with a level of comfort and privacy that are hard to come by in an external care environment. However, about 80% of care is typically provided by informal caregivers like family, friends and neighbors<sup>1</sup>, and they simply don't have the time or financial resources to make prolonged homecare a reality. While 75% of Canadians state that they would prefer to die at home, 42% ultimately die in acute care hospitals<sup>2</sup>.
                                 </p>
                             </div>
 
                             {/* Right side container with flex to position image */}
-                            <div className="w-[45%] pl-4 flex flex-col justify-center">
-                                <div className="mb-16 flex justify-center"> {/* Center horizontally and add space below */}
+                            <div className="w-[45%] pl-3 md:pl-4 flex flex-col justify-center">
+                                <div className="mb-16 md:mb-20 flex justify-center"> {/* Center horizontally and add space below */}
                                     <img
                                         src={image_section_6}
                                         alt="Homecare illustration"
-                                        className="w-[90%] h-auto rounded-lg"
+                                        className="w-[90%] md:w-[85%] lg:w-[80%] h-auto rounded-lg shadow-md"
                                     />
                                 </div>
                             </div>
 
                             {/* Citations positioned at bottom right */}
-                            <div className="absolute bottom-0 right-0 pb-2 pr-2">
-                                <p className="font-roboto font-normal text-[16px] text-[#307694] text-left">
+                            <div className="absolute bottom-0 right-0 pb-1 md:pb-2 pr-1 md:pr-2">
+                                <p className="font-roboto font-normal text-[14px] md:text-[15px] lg:text-[16px] text-[#307694] text-left">
                                     <sup>1</sup> Fast, 2009<br />
                                     <sup>2</sup> Canadian Home Care Association, 2018
                                 </p>
