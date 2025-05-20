@@ -276,7 +276,7 @@ const MainPage = () => {
                         {/* Learn more button */}
                         <button
                             onClick={handleNavigateToLearnMore}
-                            className="bg-[#307694] text-white px-8 py-3 rounded-md shadow-md hover:bg-[#246079] transition text-lg font-medium">
+                            className="bg-[#307694] text-white px-6 py-2 md:px-8 md:py-3 lg:px-10 lg:py-4 h-[40px] md:h-[50px] lg:h-[60px] rounded-[10px] shadow-md hover:bg-[#246079] transition text-base md:text-lg lg:text-xl font-medium flex items-center justify-center">
                             Learn more
                         </button>
                     </div>
@@ -321,7 +321,9 @@ const MainPage = () => {
                                         report shows that critically ill Canadians are falling through the cracks when it comes to palliative care.
                                     </p>
                                     <div className="flex justify-end">
-                                        <button className="bg-[#307694] text-white px-6 py-2 rounded-md shadow-md hover:bg-[#246079] transition">
+                                        <button
+                                            onClick={handleNavigateToLearnMore}
+                                            className="bg-[#307694] text-white px-6 py-2 md:px-8 md:py-3 lg:px-10 lg:py-4 h-[40px] md:h-[50px] lg:h-[60px] rounded-[10px] shadow-md hover:bg-[#246079] transition text-base md:text-lg lg:text-xl font-medium flex items-center justify-center">
                                             Learn more
                                         </button>
                                     </div>
@@ -361,13 +363,6 @@ const MainPage = () => {
                     </div>
                 </div>
             </section>
-
-
-
-
-
-
-
 
             {/* Fifth section - Why Palliative? */}
             <section>
