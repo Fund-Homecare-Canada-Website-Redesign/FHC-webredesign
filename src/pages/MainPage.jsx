@@ -5,6 +5,12 @@ import image_section_1 from "../assets/images/MainPage/Home_Hero-2.png";
 import image_section_3 from "../assets/images/MainPage/img_sec3.png";
 import image_section_6 from "../assets/images/MainPage/img_sec6.png";
 import fhcLogo from "../assets/images/Logos/FHC_NoBgrd_Logo.png";
+import image_section_4 from "../assets/images/MainPage/img_sec4_1.png";
+import image_stat_1 from "../assets/images/MainPage/img_sec4_2.png";
+import image_stat_2 from "../assets/images/MainPage/img_sec4_3.png";
+import image_stat_3 from "../assets/images/MainPage/img_sec4_4.png";
+import image_stat_4 from "../assets/images/MainPage/img_sec4_5.png";
+
 
 const MainPage = () => {
     const navigate = useNavigate();
@@ -21,6 +27,11 @@ const MainPage = () => {
     // Handler for Donate Today button click
     const handleNavigateToDonate = () => {
         navigate("/donate");
+    };
+
+    // Handler for Learn More button click
+    const handleNavigateToLearnMore = () => {
+        navigate("/about-us");
     };
 
     return (
@@ -202,7 +213,161 @@ const MainPage = () => {
                 </div>
             </section>
 
-            {/* Fourth section */}
+            {/* Fourth section - Why Cancer? */}
+            <section>
+                {/* Mobile layout - only visible on small screens */}
+                <div className="block md:hidden w-full bg-[#ADD8E6] py-8 px-5">
+                    <div className="flex flex-col items-center">
+                        {/* Title */}
+                        <h2 className="font-roboto font-medium text-[38px] text-[#307694] text-center mb-6"
+                            style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.5)' }}>
+                            Why Cancer?
+                        </h2>
+
+                        {/* Stat boxes */}
+                        {/* Stat 1 - image on right */}
+                        <div className="bg-[#307694] w-full rounded-xl px-6 py-8 mb-4 flex items-center justify-between text-white shadow-md min-h-[120px]">
+                            <div className="flex-1 pr-4 flex items-center justify-center">
+                                <p className="font-roboto font-medium text-center px-2 py-1" style={{ textShadow: '0px 1px 2px rgba(0, 0, 0, 0.3)' }}>1 in 2 Canadians will be diagnosed with cancer in their lifetime</p>
+                            </div>
+                            <div className="w-20 h-20 flex items-center justify-center">
+                                <img src={image_stat_1} alt="Cancer diagnosis statistic" className="w-full h-full object-contain" />
+                            </div>
+                        </div>
+
+                        {/* Stat 2 - image on left */}
+                        <div className="bg-[#307694] w-full rounded-xl px-6 py-8 mb-4 flex items-center justify-between text-white shadow-md min-h-[120px]">
+                            <div className="w-20 h-20 flex items-center justify-center">
+                                <img src={image_stat_2} alt="Cancer mortality statistic" className="w-full h-full object-contain" />
+                            </div>
+                            <div className="flex-1 pl-4 flex items-center justify-center">
+                                <p className="font-roboto font-medium text-center px-2 py-1" style={{ textShadow: '0px 1px 2px rgba(0, 0, 0, 0.3)' }}>1 in 4 will die from cancer</p>
+                            </div>
+                        </div>
+
+                        {/* Stat 3 - image on right */}
+                        <div className="bg-[#307694] w-full rounded-xl px-6 py-8 mb-4 flex items-center justify-between text-white shadow-md min-h-[120px]">
+                            <div className="flex-1 pr-4 flex items-center justify-center">
+                                <p className="font-roboto font-medium text-center px-2 py-1" style={{ textShadow: '0px 1px 2px rgba(0, 0, 0, 0.3)' }}>Cancer is the second leading health condition requiring care</p>
+                            </div>
+                            <div className="w-20 h-20 flex items-center justify-center">
+                                <img src={image_stat_3} alt="Care requirements statistic" className="w-full h-full object-contain" />
+                            </div>
+                        </div>
+
+                        {/* Stat 4 - image on left */}
+                        <div className="bg-[#307694] w-full rounded-xl px-6 py-8 mb-6 flex items-center justify-between text-white shadow-md min-h-[120px]">
+                            <div className="w-20 h-20 flex items-center justify-center">
+                                <img src={image_stat_4} alt="Palliative care statistic" className="w-full h-full object-contain" />
+                            </div>
+                            <div className="flex-1 pl-4 flex items-center justify-center">
+                                <p className="font-roboto font-medium text-center px-2 py-1" style={{ textShadow: '0px 1px 2px rgba(0, 0, 0, 0.3)' }}>Canadians with cancer are 3x more likely to receive palliative care than other conditions</p>
+                            </div>
+                        </div>
+
+                        {/* Text */}
+                        <div className="w-full mb-6">
+                            <p className="font-montserrat text-[16px] leading-[150%] text-black text-center">
+                                Cancer touches all of our lives in some way, shape or form. Tragically, a Canadian Cancer Society
+                                report shows that critically ill Canadians are falling through the cracks when it comes to palliative care.
+                            </p>
+                        </div>
+
+                        {/* Learn more button */}
+                        <button
+                            onClick={handleNavigateToLearnMore}
+                            className="bg-[#307694] text-white px-8 py-3 rounded-md shadow-md hover:bg-[#246079] transition text-lg font-medium">
+                            Learn more
+                        </button>
+                    </div>
+                </div>
+
+
+                {/* Desktop layout - hidden on small screens */}
+                <div className="hidden md:block">
+                    {/* Upper half */}
+                    <div className="relative bg-[#ADD8E6] overflow-hidden">
+                        {/* Right 1/3 white background */}
+                        <div className="absolute top-0 bottom-0 right-0 w-1/3 bg-white"></div>
+                        <div className="flex justify-center items-center px-6">
+                            {/* Content container with positioning context */}
+                            <div className="relative max-w-7xl w-full flex items-center">
+                                {/* Left position marker - for calculating the semicircle position */}
+                                <div id="leftMarker" className="absolute left-1/4 top-0 bottom-0 w-0"></div>
+
+                                {/* White background with semicircle on left edge, extending to the right */}
+                                <div className="absolute top-0 bottom-0 left-1/4 right-0 bg-white z-0"
+                                    style={{
+                                        borderTopLeftRadius: "9999px",
+                                        borderBottomLeftRadius: "9999px"
+                                    }}>
+                                </div>
+
+                                {/* Left Image - positioned precisely at left edge of semicircle */}
+                                <div className="absolute z-20" style={{ left: "25%", transform: "translateX(-50%)" }}>
+                                    <img
+                                        src={image_section_4}
+                                        alt="Palliative Care"
+                                        className="rounded-full w-40 h-40 md:w-72 md:h-72 object-cover"
+                                    />
+                                </div>
+
+                                {/* Content card - starts exactly at 25% from left with padding for image */}
+                                <div className="w-3/4 ml-[25%] p-6 md:p-12 pl-24 md:pl-40 z-10">
+                                    <h2 className="font-roboto font-medium text-[40px] md:text-[45px] lg:text-[50px] leading-[150%] text-[#307694] mb-4"
+                                        style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }}>Why Cancer?</h2>
+                                    <p className="font-roboto font-normal text-[18px] md:text-[19px] lg:text-[20px] leading-[150%] text-black mb-6">
+                                        Cancer touches all of our lives in some way, shape or form. Tragically, a Canadian Cancer Society
+                                        report shows that critically ill Canadians are falling through the cracks when it comes to palliative care.
+                                    </p>
+                                    <div className="flex justify-end">
+                                        <button className="bg-[#307694] text-white px-6 py-2 rounded-md shadow-md hover:bg-[#246079] transition">
+                                            Learn more
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* Lower half */}
+                    <div className="bg-[#ADD8E6]">
+                        <div className="max-w-7xl mx-auto px-4 py-8">
+                            <div className="flex flex-wrap justify-center gap-4">
+                                {/* Stat 1 */}
+                                <div className="bg-[#307694] w-56 h-64 rounded-lg p-5 flex flex-col items-center justify-center text-center text-white shadow-md">
+                                    <img src={image_stat_1} alt="Cancer diagnosis statistic" className="w-20 h-20 mb-3" />
+                                    <p className="font-roboto font-medium text-sm">1 in 2 Canadians will be diagnosed with cancer in their lifetime</p>
+                                </div>
+
+                                {/* Stat 2 */}
+                                <div className="bg-[#307694] w-56 h-64 rounded-lg p-5 flex flex-col items-center justify-center text-center text-white shadow-md">
+                                    <img src={image_stat_2} alt="Cancer mortality statistic" className="w-20 h-20 mb-3" />
+                                    <p className="font-roboto font-medium text-sm">1 in 4 will die from cancer</p>
+                                </div>
+
+                                {/* Stat 3 */}
+                                <div className="bg-[#307694] w-56 h-64 rounded-lg p-5 flex flex-col items-center justify-center text-center text-white shadow-md">
+                                    <img src={image_stat_3} alt="Care requirements statistic" className="w-20 h-20 mb-3" />
+                                    <p className="font-roboto font-medium text-sm">Cancer is the second leading health condition requiring care</p>
+                                </div>
+
+                                {/* Stat 4 */}
+                                <div className="bg-[#307694] w-56 h-64 rounded-lg p-5 flex flex-col items-center justify-center text-center text-white shadow-md">
+                                    <img src={image_stat_4} alt="Palliative care statistic" className="w-20 h-20 mb-3" />
+                                    <p className="font-roboto font-medium text-sm">Canadians with cancer are 3x more likely to receive palliative care than other conditions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
 
             {/* Fifth section - Why Palliative? */}
             <section>
