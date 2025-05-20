@@ -118,15 +118,15 @@ const MainPage = () => {
                 <div className="block md:hidden w-full bg-[#3A92A0] py-8 px-5">
                     <div className="flex flex-col items-center">
                         {/* Title: We need your help - reduced size for mobile */}
-                        <h2 className="font-montserrat font-medium text-[32px] sm:text-[36px] leading-[150%] text-white text-center">
+                        <h2 className="font-montserrat font-medium text-[32px] sm:text-[36px] leading-[150%] text-white text-center mb-2">
                             We Need Your Help
                         </h2>
 
                         {/* Divider line */}
-                        <div className="h-[1px] w-3/4 bg-white my-4"></div>
+                        <div className="h-[1px] w-3/4 bg-white mt-1 mb-3"></div>
 
                         {/* Subtitle: Supporting Those In Need */}
-                        <h3 className="font-montserrat font-normal text-[22px] sm:text-[24px] leading-[150%] text-white text-center mb-6">
+                        <h3 className="font-montserrat font-normal text-[20px] sm:text-[24px] leading-[150%] text-white text-center mb-6">
                             Supporting Those In Need
                         </h3>
 
@@ -211,18 +211,18 @@ const MainPage = () => {
                     <div className="flex flex-col items-center">
                         {/* Title */}
                         <h2
-                            className="font-roboto font-medium text-[60px] leading-[150%] text-white text-center"
+                            className="font-roboto font-medium text-[38px] sm:text-[42px] leading-[150%] text-white text-center mb-2"
                             style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }}
                         >
                             Why Palliative?
                         </h2>
 
                         {/* Divider line */}
-                        <div className="h-[1px] w-3/4 bg-white my-4"></div>
+                        <div className="h-[1px] w-3/4 bg-white mt-1 mb-3"></div>
 
                         {/* Content */}
                         <div className="w-full max-w-[500px] mx-auto">
-                            <p className="font-roboto font-normal text-[23px] leading-[150%] text-white text-left mb-4">
+                            <p className="font-roboto font-light text-[16px] sm:text-[18px] leading-[150%] text-white text-left mb-4">
                                 Palliative care can significantly enhance the quality of life of patients with progressive, life-altering illness, offering them comfort and dignity in a place of their choosing. Furthermore, research shows that assistance with palliative care not only gives respite to the patient, but alleviates the degree of emotional, social and financial stress for loved ones who may care for a patient. Unfortunately, Canada's patchwork of palliative care services is costly and inconsistent, which harms patients and the sustainability of our healthcare system.
                             </p>
                         </div>
@@ -231,15 +231,15 @@ const MainPage = () => {
 
                 {/* Desktop layout - hidden on small screens */}
                 <div className="hidden md:block w-full bg-[#307694] min-h-[40.2vh]">
-                    <div className="max-w-7xl mx-auto px-4 py-8 h-full flex flex-col">
+                    <div className="max-w-7xl mx-auto px-4 py-8 md:py-10 lg:py-12 h-full flex flex-col">
                         <h2
-                            className="font-roboto font-medium text-[50px] leading-[150%] tracking-[0%] text-left text-white mb-4"
+                            className="font-roboto font-medium text-[40px] md:text-[45px] lg:text-[50px] leading-[150%] tracking-[0%] text-left text-white mb-4"
                             style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }}
                         >
                             Why Palliative?
                         </h2>
                         <div>
-                            <p className="font-roboto font-normal text-[20px] leading-[150%] tracking-[0%] text-white mb-4 text-left">
+                            <p className="font-roboto font-normal text-[18px] md:text-[19px] lg:text-[20px] leading-[150%] tracking-[0%] text-white mb-4 text-left">
                                 Palliative care can significantly enhance the quality of life of patients with progressive, life-altering illness, offering them comfort and dignity in a place of their choosing. Furthermore, research shows that assistance with palliative care not only gives respite to the patient, but alleviates the degree of emotional, social and financial stress for loved ones who may care for a patient. Unfortunately, Canada's patchwork of palliative care services is costly and inconsistent, which harms patients and the sustainability of our healthcare system.
                             </p>
                         </div>
