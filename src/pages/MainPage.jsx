@@ -77,39 +77,39 @@ const MainPage = () => {
                 <div className="block md:hidden w-full bg-white">
                     <div className="max-w-7xl mx-auto px-4 py-8">
                         <div className="text-center mb-6">
-                            <img src={fhcLogo} alt="Fund Homecare Canada" className="h-24 mx-auto mb-4" />
-                            <h2 className="font-roboto font-medium text-[24px] leading-tight text-black">
+                            <h2 className="font-roboto font-medium text-[24px] sm:text-[30px] leading-tight text-black">
                                 About Fund Homecare Canada
                             </h2>
                             <div className="h-0.5 bg-black w-3/4 mx-auto mt-2 mb-6"></div>
+                            {/* Logo moved below the line */}
+                            <img src={fhcLogo} alt="Fund Homecare Canada" className="h-20 sm:h-24 mx-auto mb-4" />
                         </div>
-                        <p className="font-roboto font-normal text-[18px] leading-normal text-black">
+                        <p className="font-roboto font-normal text-[16px] sm:text-[18px] leading-normal text-black text-center">
                             In-home palliative care can have a profound impact on patients' end of life experience, offering a more comfortable and dignified quality of life. Unfortunately, the high cost of homecare puts it out of reach for many in need. We believe that palliative homecare should be accessible for all, which is why we created Fund Homecare Canada: a Canadian registered charitable, non-profit organization that provides financial support to cancer patients with in-home palliative care needs.
                         </p>
                     </div>
                 </div>
+
                 {/* Desktop layout - hidden on small screens */}
                 <div className="hidden md:block w-full bg-white min-h-[40vh]">
-                    <div className="max-w-7xl mx-auto px-4 py-16 h-full flex items-center">
-
+                    <div className="max-w-7xl mx-auto px-4 py-10 md:py-12 lg:py-16 h-full flex items-center">
                         <div className="max-w-[40%] my-auto">
                             <div className="grid grid-cols-4 grid-rows-4">
-                                <div className="col-span-2 font-roboto font-medium text-[60px] leading-none text-black">About</div>
-                                <div className="col-span-2 col-start-1 row-start-2 font-roboto font-medium text-[60px] leading-none text-black">Fund</div>
+                                <div className="col-span-2 font-roboto font-medium text-[40px] md:text-[50px] lg:text-[60px] leading-none text-black">About</div>
+                                <div className="col-span-2 col-start-1 row-start-2 font-roboto font-medium text-[40px] md:text-[50px] lg:text-[60px] leading-none text-black">Fund</div>
                                 <div className="col-span-2 row-span-2 col-start-3 row-start-1">
-                                    <img src={fhcLogo} alt="Fund Homecare Canada" className="max-h-36 h-auto w-auto" />
+                                    <img src={fhcLogo} alt="Fund Homecare Canada" className="max-h-28 md:max-h-32 lg:max-h-36 h-auto w-auto" />
                                 </div>
-                                <div className="col-span-4 row-start-3 font-roboto font-medium text-[60px] leading-none text-black">Homecare</div>
-                                <div className="col-span-4 row-start-4 font-roboto font-medium text-[60px] leading-none text-black">Canada</div>
+                                <div className="col-span-4 row-start-3 font-roboto font-medium text-[40px] md:text-[50px] lg:text-[60px] leading-none text-black">Homecare</div>
+                                <div className="col-span-4 row-start-4 font-roboto font-medium text-[40px] md:text-[50px] lg:text-[60px] leading-none text-black">Canada</div>
                             </div>
                         </div>
 
-                        <div className="flex-1 pl-8 font-roboto font-normal text-[23px] leading-10 text-black text-right">
+                        <div className="flex-1 pl-6 md:pl-8 font-roboto font-normal text-[18px] md:text-[20px] lg:text-[23px] leading-8 md:leading-9 lg:leading-10 text-black text-right">
                             <p>In-home palliative care can have a profound impact on patients' end of life experience, offering a more comfortable and dignified quality of life. Unfortunately, the high cost of homecare puts it out of reach for many in need. We believe that palliative homecare should be accessible for all, which is why we created Fund Homecare Canada: a Canadian registered charitable, non-profit organization that provides financial support to cancer patients with in-home palliative care needs.</p>
                         </div>
                     </div>
                 </div>
-
             </section>
 
             {/* Third section - different layouts for mobile/desktop */}
