@@ -41,25 +41,25 @@ const MainPage = () => {
                         <div className="md:pl-4 flex flex-col items-center md:items-start space-y-2">
                             {/* "Fund Homecare Canada" */}
                             <div>
-                                <h1 className="font-roboto font-bold text-[28px] md:text-[60px] leading-none text-white">
+                                <h1 className="font-roboto font-bold text-[42px] sm:text-[45px] md:text-[52px] lg:text-[60px] leading-none text-white">
                                     Fund Homecare
                                 </h1>
                             </div>
                             <div>
-                                <h1 className="font-roboto font-bold text-[28px] md:text-[60px] leading-none text-white">
+                                <h1 className="font-roboto font-bold text-[42px] sm:text-[45px] md:text-[52px] lg:text-[60px] leading-none text-white">
                                     Canada
                                 </h1>
                             </div>
 
                             {/* "Give. Fund. Care" */}
-                            <p className="font-roboto font-normal text-[15px] md:text-[25.45px] leading-[140%] text-white">
+                            <p className="font-roboto font-normal text-[24px] sm:text-[24px] md:text-[25px] lg:text-[25.45px] leading-[140%] text-white">
                                 Give. Fund. Care
                             </p>
 
                             {/* "Our Events" button */}
                             <button
                                 onClick={handleNavigateToEvents}
-                                className="font-roboto font-medium text-[10px] md:text-[17.78px] leading-none tracking-[0.44%] border-3 border-white rounded-[10px] bg-transparent w-[87px] h-[25px] md:w-[163px] md:h-[50px] flex items-center justify-center mt-4 cursor-pointer p-0 relative z-20 text-white transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-white hover:bg-opacity-10 active:scale-95 group"
+                                className="font-roboto font-medium text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17.78px] leading-none tracking-[0.44%] border-2 sm:border-3 border-white rounded-[10px] bg-transparent w-[140px] h-[40px] sm:w-[145px] sm:h-[42px] md:w-[155px] md:h-[46px] lg:w-[163px] lg:h-[50px] flex items-center justify-center mt-4 cursor-pointer p-0 relative z-20 text-white transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-white hover:bg-opacity-10 active:scale-95 group"
                             >
                                 <span className="transition-transform duration-300 group-hover:translate-x-1">
                                     Our Events →
