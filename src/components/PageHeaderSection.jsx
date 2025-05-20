@@ -10,7 +10,7 @@ const PageHeaderSection = ({ title, backgroundImage }) => {
       }}
     >
       <div className="bg-white/80 px-10 py-8 rounded-2xl shadow-2xl text-center max-w-xl">
-        <h1 className="text-4xl font-bold text-gray-800">{"Upcoming Events"}</h1>
+      <h1 className="text-4xl font-bold text-gray-800">{title}</h1>
       </div>
     </div>
   );

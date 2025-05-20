@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import UpcomingEventsCard from "../components/UpcomingEventsCardNoFormIntegration.jsx";
-import NavBar from "../components/Navbar.jsx";
-import Footer from "../components/Footer.jsx";
 import PageHeaderSection from "../components/PageHeaderSection.jsx";
 
 
@@ -36,17 +34,19 @@ const UpcomingEvents = () => {
 
   return (
     <>
-      <PageHeaderSection />
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-2xl font-semibold mb-4 text-gray-800">Make an Impact</h2>
-          <p className="text-gray-700 leading-relaxed">
-            All proceeds from the event will go toward supporting palliative cancer patients—
-            giving them comfort, dignity, and precious time with their loved ones. Over the years,
-            our galas have raised an average of $20,000 per event, enabling us to provide essential
-            PSW (Personal Support Worker) services to 15 beneficiaries. This year, we aim to go even
-            further—with your support, we can make a greater impact.
-          </p>
+      <PageHeaderSection title = "Upcoming Events"/>
+      <div className="bg-[#CFE6EF]">
+        <div className="container mx-auto px-4 py-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-2xl font-semibold mb-4 text-gray-800">Make an Impact</h2>
+            <p className="text-gray-700 leading-relaxed">
+              All proceeds from the event will go toward supporting palliative cancer patients—
+              giving them comfort, dignity, and precious time with their loved ones. Over the years,
+              our galas have raised an average of $20,000 per event, enabling us to provide essential
+              PSW (Personal Support Worker) services to 15 beneficiaries. This year, we aim to go even
+              further—with your support, we can make a greater impact.
+            </p>
+          </div>
         </div>
 
 

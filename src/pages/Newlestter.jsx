@@ -1,21 +1,26 @@
 import React, { useEffect } from "react";
-import colours from "../assets/styles/BrandColours";
+// import colours from "../assets/styles/BrandColours";
 import NewsletterCard from "../components/NewsletterCard";
-import NavbarComponent from "../components/Navbar";
-import Footer from "../components/Footer";
+import PageHeaderSection from "../components/PageHeaderSection";
 //import ImageSlider from "../components/MainTopSection";
 
 const Newlestter = () => {
     useEffect(() => {
-        document.title = "Newsletter";
+      document.title = "Newsletter";
     }, []);
+  
     return (
-        <div className="bg-[#CFE6EF]">
-            <div className="flex justify-center">
-                <NewsletterCard poster="../assets/images/CommunityEvents/CateringForACause.jpeg" date="August 2024" />
+      <>
+        <PageHeaderSection title="Our Newsletters" />
+        <div className="bg-[#CFE6EF] py-12">
+            <div className="container mx-auto px-4">
+                {/* Your content here */}
+                <h2 className="text-2xl font-bold text-center mb-6">Newsletter Archive</h2>
+                {/* etc. */}
             </div>
         </div>
+      </>
     );
-};
+  };
 
 export default Newlestter;

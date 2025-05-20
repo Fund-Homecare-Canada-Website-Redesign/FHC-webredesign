@@ -19,7 +19,7 @@ const UpcomingEventsCardWithFormIntegration = ({
   return (
     <div
       className="relative flex flex-col md:flex-row items-start border shadow-lg p-3 md:p-5 m-2 text-left w-full md:max-w-[90%] lg:max-w-[80%] xl:max-w-[70%] rounded-lg transition-all duration-300"
-      style={{ backgroundColor: "#a3cdd7" }}
+      style={{ backgroundColor: "#3A92A0" }}
     >
       {/* Main content container */}
       <div className="flex-1 flex flex-col w-full">
