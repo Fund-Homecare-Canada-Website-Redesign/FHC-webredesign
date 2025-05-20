@@ -17,7 +17,7 @@ function PastEventsCard() {
     <div className="flex justify-center w-full px-4">
       <div
         className="relative flex flex-col md:flex-row items-start border shadow-lg p-3 md:p-5 m-2 text-left w-full md:max-w-[90%] lg:max-w-[80%] xl:max-w-[70%] rounded-lg transition-all duration-300"
-        style={{ backgroundColor: "#a3cdd7" }}
+        style={{ backgroundColor: "#3A92A0" }}
       >
         {/* Main content container */}
         <div className="flex-1 flex flex-col w-full">
@@ -25,10 +25,10 @@ function PastEventsCard() {
             <h2 className="text-base md:text-lg font-bold mb-1 text-black">
               Event Name
             </h2>
-            <h3 className="text-sm md:text-base font-bold text-gray-600">
+            <h3 className="text-sm md:text-base font-bold text-black">
               Date + Time
             </h3>
-            <p className="text-xs md:text-sm text-gray-600 max-w-full">
+            <p className="text-xs md:text-sm text-white-600 max-w-full">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
@@ -41,7 +41,7 @@ function PastEventsCard() {
             } overflow-hidden`}
           >
             <div className="pt-2">
-              <p className="text-xs md:text-sm text-gray-600 max-w-full mb-2">
+              <p className="text-xs md:text-sm text-white-600 max-w-full mb-2">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse
                 cillum dolore eu fugiat nulla pariatur.
               </p>
@@ -56,7 +56,8 @@ function PastEventsCard() {
           {/* Button container */}
           <div className="mt-2">
             <button
-              className="flex flex-row items-center text-white px-3 py-1.5 text-sm rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
+              className="flex flex-row items-center text-white px-3 py-1.5 text-sm rounded-lg shadow-md hover:shadow-xl transform hover:scale-[1.05] transition duration-300 ease-in-out cursor-pointer
+ "
               style={{ backgroundColor: "#54749D" }}
               onClick={toggleExpand}
             >

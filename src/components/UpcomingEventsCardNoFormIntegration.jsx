@@ -18,7 +18,7 @@ function UpcomingEventsCard() {
   return (
     <div className="w-full flex justify-center px-4">
       <div
-        className="flex flex-col items-center bg-[#a3cdd7] border shadow-lg rounded-lg p-6 w-full max-w-4xl text-center"
+        className="flex flex-col items-center bg-[#3A92A0] border shadow-lg rounded-lg p-6 w-full max-w-4xl text-center"
       >
         {/* Image */}
         <img
@@ -30,8 +30,8 @@ function UpcomingEventsCard() {
         {/* Content */}
         <div className="flex flex-col items-center">
           <h2 className="text-lg font-bold text-black mb-1">Event Name</h2>
-          <h3 className="text-sm font-semibold text-gray-700 mb-2">Date + Time</h3>
-          <p className="text-sm text-gray-700 mb-3 max-w-2xl">
+          <h3 className="text-sm font-semibold text-white-700 mb-2">Date + Time</h3>
+          <p className="text-sm text-white-700 mb-3 max-w-2xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
 
@@ -54,16 +54,17 @@ function UpcomingEventsCard() {
           </div>
 
           {/* Expand Button */}
-          <div className="mt-4">
+          <div className="mt-2">
             <button
+              className="flex flex-row items-center text-white px-3 py-1.5 text-sm rounded-lg shadow-md hover:shadow-xl transform hover:scale-[1.05] transition duration-300 ease-in-out cursor-pointer"
+              style={{ backgroundColor: "#54749D" }}
               onClick={toggleExpand}
-              className="flex items-center bg-[#54749D] text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors shadow-md"
             >
               {isExpanded ? "View Less Details" : "View More Details"}
               <FaArrowDown
-                className={`ml-2 transition-transform duration-300 ${
-                  isExpanded ? "rotate-180" : ""
-                }`}
+                className={`text-white text-lg ml-2 ${
+                isExpanded ? "transform rotate-180" : ""
+                } transition-transform duration-300`}
               />
             </button>
           </div>
