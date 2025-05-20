@@ -291,25 +291,34 @@ const MainPage = () => {
                 <div className="hidden md:block w-full bg-white min-h-[40.2vh]">
                     <div className="max-w-7xl mx-auto px-4 py-8 h-full flex flex-col items-center">
                         <h2
-                            className="font-roboto font-medium text-[50px] leading-[150%] tracking-[0%] text-center text-[#307694] mb-4"
+                            className="font-roboto font-medium text-[40px] md:text-[45px] lg:text-[50px] leading-[150%] tracking-[0%] text-center text-[#307694] mb-4 w-full"
                             style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' }}
                         >
                             Why Homecare?
                         </h2>
-                        <div className="w-full max-w-[75%]">
-                            <p className="font-roboto font-normal text-[20px] leading-[150%] tracking-[0%] text-[#307694] mb-4 text-left">
-                                Homecare provides patients with a level of comfort and privacy that are hard to come by in an external care environment. However, about 80% of care is typically provided by informal caregivers like family, friends and neighbors<sup>1</sup>, and they simply don't have the time or financial resources to make prolonged homecare a reality. While 75% of Canadians state that they would prefer to die at home, 42% ultimately die in acute care hospitals<sup>2</sup>.
-                            </p>
-                        </div>
 
-                        {/* Desktop layout - image and citations */}
-                        <div className="mt-8 flex flex-col items-center w-full">
-                            <img
-                                src={image_section_6}
-                                alt="Homecare illustration"
-                                className="max-w-[95%] h-auto"
-                            />
-                            <div className="w-full max-w-[75%] mt-2">
+                        {/* Container with positioning context for absolute elements */}
+                        <div className="flex flex-row w-full relative">
+                            {/* Text content - on the left */}
+                            <div className="w-[55%] pr-6">
+                                <p className="font-roboto font-normal text-[18px] md:text-[19px] lg:text-[20px] leading-[150%] tracking-[0%] text-[#307694] mb-4 text-left">
+                                    Homecare provides patients with a level of comfort and privacy that are hard to come by in an external care environment. However, about 80% of care is typically provided by informal caregivers like family, friends and neighbors<sup>1</sup>, and they simply don't have the time or financial resources to make prolonged homecare a reality. While 75% of Canadians state that they would prefer to die at home, 42% ultimately die in acute care hospitals<sup>2</sup>.
+                                </p>
+                            </div>
+
+                            {/* Right side container with flex to position image */}
+                            <div className="w-[45%] pl-4 flex flex-col justify-center">
+                                <div className="mb-16 flex justify-center"> {/* Center horizontally and add space below */}
+                                    <img
+                                        src={image_section_6}
+                                        alt="Homecare illustration"
+                                        className="w-[90%] h-auto rounded-lg"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Citations positioned at bottom right */}
+                            <div className="absolute bottom-0 right-0 pb-2 pr-2">
                                 <p className="font-roboto font-normal text-[16px] text-[#307694] text-left">
                                     <sup>1</sup> Fast, 2009<br />
                                     <sup>2</sup> Canadian Home Care Association, 2018
