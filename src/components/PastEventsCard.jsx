@@ -1,83 +1,100 @@
-import React, { useState } from "react";
-import image1 from "../assets/images/PastEvents/Ways-to-Give_Events.png";
+import { useState, useEffect, useRef } from "react";
 import { FaArrowDown } from "react-icons/fa";
-import SponsorSlider from "./SponsorSlider.jsx";
-import PastEventsPictureSlider from "./PastEventsPictureSlider.jsx";
+import PastEventsPictureSlider from "./PastEventsPictureSlider";
 import GoogleMapComponent from "./GoogleMap.jsx";
+import SponsorSlider from "./SponsorSlider";
 
-
-function PastEventsCard() {
+function PastEventsCard({ event }) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const toggleExpand = () => setIsExpanded(!isExpanded);
+  const expandedRef = useRef(null);
 
-  const toggleExpand = () => {
-    setIsExpanded(!isExpanded);
-  };
+  useEffect(() => {
+    if (!isExpanded || !expandedRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          setIsExpanded(false); // Collapse when not visible
+        }
+      },
+      {
+        root: null,
+        threshold: 0.1, // Trigger when less than 10% is visible
+      }
+    );
+
+    observer.observe(expandedRef.current);
+
+    return () => {
+      if (expandedRef.current) observer.unobserve(expandedRef.current);
+    };
+  }, [isExpanded]);
 
   return (
-    <div className="flex justify-center w-full px-4">
-      <div
-        className="relative flex flex-col md:flex-row items-start border shadow-lg p-3 md:p-5 m-2 text-left w-full md:max-w-[90%] lg:max-w-[80%] xl:max-w-[70%] rounded-lg transition-all duration-300"
-        style={{ backgroundColor: "#3A92A0" }}
-      >
-        {/* Main content container */}
-        <div className="flex-1 flex flex-col w-full">
-          <div className="mb-2">
-            <h2 className="text-base md:text-lg font-bold mb-1 text-black">
-              Event Name
-            </h2>
-            <h3 className="text-sm md:text-base font-bold text-black">
-              Date + Time
-            </h3>
-            <p className="text-xs md:text-sm text-white-600 max-w-full">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+    <div className="flex justify-center w-full">
+      <div className="bg-white overflow-hidden border shadow-lg rounded-xl p-8 w-full md:max-w-[90%] lg:max-w-[80%] xl:max-w-[75%] transition-all duration-300">
+        
+        {/* Flex container */}
+        <div className="flex flex-col md:flex-row gap-6 items-start">
+          {/* Image First on Mobile */}
+          <div className="order-1 md:order-2 w-full max-w-[400px] md:max-w-[650px] md:w-[350px] mx-auto md:mx-0 flex-shrink-0">
+            <img
+              src={event.image || "/placeholder.svg"}
+              alt={`${event.name}`}
+              className="w-full rounded-md object-cover shadow-md"
+            />
           </div>
 
-          {/* Expandable content container */}
-          <div
-            className={`transition-all duration-300 ${
-              isExpanded ? "max-h-[2000px]" : "max-h-0"
-            } overflow-hidden`}
-          >
-            <div className="pt-2">
-              <p className="text-xs md:text-sm text-white-600 max-w-full mb-2">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.
-              </p>
-              <div className="space-y-3">
-                <PastEventsPictureSlider />
-                <GoogleMapComponent />
-                <SponsorSlider />
-              </div>
+          {/* Content */}
+          <div className="order-2 md:order-1 flex-1">
+            <h2 className="text-2xl font-bold text-black mb-2">{event.name}</h2>
+            <h3 className="text-lg font-medium text-gray-700 mb-3">{event.date}</h3>
+
+            <div className="text-gray-600 mb-4 space-y-3 whitespace-pre-line">
+              {event.description.split("\n\n").map((para, idx) => (
+                <p key={idx}>{para}</p>
+              ))}
             </div>
-          </div>
 
-          {/* Button container */}
-          <div className="mt-2">
             <button
-              className="flex flex-row items-center text-white px-3 py-1.5 text-sm rounded-lg shadow-md hover:shadow-xl transform hover:scale-[1.05] transition duration-300 ease-in-out cursor-pointer
- "
-              style={{ backgroundColor: "#54749D" }}
               onClick={toggleExpand}
+              className="flex items-center text-white px-5 py-2 rounded-lg shadow-md hover:shadow-xl transform hover:scale-[1.02] transition duration-300 ease-in-out"
+              style={{ backgroundColor: "#54749D" }}
             >
               {isExpanded ? "View Less Details" : "View More Details"}
               <FaArrowDown
-                className={`text-white text-lg ml-2 ${
-                  isExpanded ? "transform rotate-180" : ""
-                } transition-transform duration-300`}
+                className={`text-white ml-2 transition-transform duration-300 ${isExpanded ? "rotate-180" : ""}`}
               />
             </button>
           </div>
         </div>
 
-        {/* Image container (inside the card) */}
-        <div className="mt-4 md:mt-0 md:ml-4">
-          <img
-            src={image1}
-            alt="Event Logo"
-            className="w-20 h-20 md:w-24 md:h-24 border shadow-md rounded-md object-cover"
-          />
+        {/* Expandable content */}
+        <div
+          ref={expandedRef}
+          className={`transition-all duration-500 overflow-hidden ${
+            isExpanded ? "max-h-[2000px] opacity-100 mt-6" : "max-h-0 opacity-0"
+          }`}
+        >
+          {event.gallery?.length > 0 && (
+            <div className="mt-6">
+              <h4 className="text-lg font-semibold text-gray-800 mb-3">Event Photos</h4>
+              <PastEventsPictureSlider images={event.gallery} />
+            </div>
+          )}
+
+          <div className="mt-6">
+            <h4 className="text-lg font-semibold text-gray-800 mb-3">Event Location</h4>
+            <GoogleMapComponent location={event.location} />
+          </div>
+
+          {event.sponsors?.length > 0 && (
+            <div className="mt-6">
+              <h4 className="text-lg font-semibold text-gray-800 mb-3">Our Sponsors For This Event</h4>
+              <SponsorSlider sponsors={event.sponsors} />
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -85,3 +102,4 @@ function PastEventsCard() {
 }
 
 export default PastEventsCard;
+

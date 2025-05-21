@@ -95,38 +95,57 @@
 // Still waiting on API key from FHC...
 
 //Google map integration for event pages
-import React from "react";
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-import colours from "../assets/styles/BrandColours";
+// import React from "react";
+// import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+// import colours from "../assets/styles/BrandColours";
 
-const mapContainerStyle = {
-    width: '100vw',
-    height: '100vh'
-};
+// const mapContainerStyle = {
+//     width: '100vw',
+//     height: '100vh'
+// };
 
-const center = {
-    lat: 43.64360313523152,
-    lng: -79.62108298790584 // Location set to Pearl Banquet & Convention Centre
-};
+// const center = {
+//     lat: 43.64360313523152,
+//     lng: -79.62108298790584 // Location set to Pearl Banquet & Convention Centre
+// };
 
-function GoogleMapComponent() {
+// function GoogleMapComponent() {
 
+//     return (
+//         <LoadScript
+//             googleMapsApiKey="API_KEY" // Replace with API key
+//         >
+//             <GoogleMap
+//                 mapContainerStyle={mapContainerStyle}
+//                 center={center}
+//                 zoom={10} // Sets initial zoom level
+//             >
+//                 <Marker position={center} />
+//             </GoogleMap>
+
+//         </LoadScript>
+
+//     )
+
+// }
+
+// export default GoogleMapComponent;
+
+const GoogleMapComponent = ({ location }) => {
+    const locationQuery = encodeURIComponent(location || "Speranza Banquet Hall, Brampton")
     return (
-        <LoadScript
-            googleMapsApiKey="API_KEY" // Replace with API key
-        >
-            <GoogleMap
-                mapContainerStyle={mapContainerStyle}
-                center={center}
-                zoom={10} // Sets initial zoom level
-            >
-                <Marker position={center} />
-            </GoogleMap>
-
-        </LoadScript>
-
+      <div className="w-full h-[300px] rounded-lg overflow-hidden shadow">
+        <iframe
+          title="Event Map"
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          style={{ border: 0 }}
+          src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyAKiat5oBTkox9Hs369ztp6Kx6TSIGIids&q=${locationQuery}`}
+          allowFullScreen
+        ></iframe>
+      </div>
     )
-
-}
-
-export default GoogleMapComponent;
+  }
+  
+  export default GoogleMapComponent
