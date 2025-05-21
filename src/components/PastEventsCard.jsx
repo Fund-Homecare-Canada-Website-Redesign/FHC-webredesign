@@ -42,6 +42,7 @@ function PastEventsCard({ event }) {
             <img
               src={event.image || "/placeholder.svg"}
               alt={`${event.name}`}
+              loading="lazy"
               className="w-full rounded-md object-cover shadow-md"
             />
           </div>
