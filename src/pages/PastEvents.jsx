@@ -97,9 +97,6 @@ import SpringGala2022Image3 from "../assets/images/PastEvents/SpringGala2022/Pho
 import SpringGala2022Image4 from "../assets/images/PastEvents/SpringGala2022/Photos/image4.jpg";
 import SpringGala2022Image5 from "../assets/images/PastEvents/SpringGala2022/Photos/image5.jpg";
 import SpringGala2022Image6 from "../assets/images/PastEvents/SpringGala2022/Photos/image6.jpg";
-import SpringGala2022Image7 from "../assets/images/PastEvents/SpringGala2022/Photos/image7.jpg";
-import SpringGala2022Image8 from "../assets/images/PastEvents/SpringGala2022/Photos/image8.jpg";
-import SpringGala2022Image9 from "../assets/images/PastEvents/SpringGala2022/Photos/image9.jpg";
 
 // Spring Gala 2022 - Sponsors
 import SpringGala2022Sponsor1 from "../assets/images/PastEvents/SpringGala2022/Sponsors/EverestHHC.jpg";
