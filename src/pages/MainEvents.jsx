@@ -1,8 +1,5 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaCalendarAlt, FaHistory, FaEnvelope } from "react-icons/fa";
-import NavBar from "../components/Navbar.jsx";
-import Footer from "../components/Footer.jsx";
 import PageHeaderSection from "../components/PageHeaderSection.jsx";
 import upcomingImage from "../assets/images/PastEvents/SpringGala2022/Photos/MainPicture.jpg";
 import pastImage from "../assets/images/MainPage/Ways-to-Give_Hero-Image.png";
