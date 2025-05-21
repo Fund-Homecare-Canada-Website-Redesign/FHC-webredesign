@@ -42,14 +42,14 @@ const PastEventsPictureSlider = ({ images = [] }) => {
             }}
           >
 
-            <img
-              src={images[currentIndex]}
-              alt={`Slide ${currentIndex + 1}`}
-              className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-[1000ms] ease-in-out ${
-                fade ? "opacity-100" : "opacity-0"
-              }`}
-            />
-
+          <img
+            src={images[currentIndex]}
+            alt={`Slide ${currentIndex + 1}`}
+            loading="lazy"
+            className={`absolute top-0 left-0 w-full h-full object-cover rounded-md shadow-md transition-opacity duration-[1000ms] ease-in-out ${
+              fade ? "opacity-100" : "opacity-0"
+            }`}
+          />
           </div>
 
           {/* Right Arrow */}
