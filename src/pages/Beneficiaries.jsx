@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import BeneficiaryCard from "../components/BeneficiaryCard";
 import CustomizableButton from "../components/CustomizableButton";
@@ -15,6 +15,9 @@ const beneficiaryObject = {
 }
 
 const Beneficiary = () => {
+  useEffect(() => {
+    document.title = "Beneficiaries";
+  }, []);
   return (
     <>
       <div className="h-full font-[Montserrat]">

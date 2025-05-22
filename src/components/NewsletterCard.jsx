@@ -1,26 +1,41 @@
 import React from "react";
-//import colours from "../assets/styles/BrandColours";
-// import React, { useState } from "react";
-// import { Document, Page } from "react-pdf";
-import "react-pdf/dist/esm/Page/TextLayer.css";
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import Accordion from 'react-bootstrap/Accordion';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const NewsletterCard = ({date, pdfUrl}) => {
-  
-    return ( 
-      <div className="bg-[#ABCCD6] rounded-lg shadow-lg overflow-hidden w-[839px]">
-        {/* Month Year Header */}
-        <div className="bg-[#54749D] text-white text-center py-3 mr-[145px] ml-[145px] mt-12 rounded-lg">
-          <h2 className="text-lg font-[Montserrat] text-[36px]">{date}</h2>
+function NewsletterCard({ newsletters }) {
+  return (
+    <Accordion defaultActiveKey={null} className="w-full max-w-4xl mx-auto my-12">
+      {newsletters.map((newsletter, index) => (
+        <div
+          key={index}
+          className="transition duration-300 ease-in-out transform hover:scale-[1.02] hover:shadow-xl rounded-lg"
+        >
+          <Accordion.Item eventKey={index.toString()} style={{ backgroundColor: '#ABCCD6' }}>
+            <Accordion.Header>
+              <span style={{ color: '#54749D', fontWeight: 'bold' }}>{newsletter.date}</span>
+            </Accordion.Header>
+            <Accordion.Body>
+              <div className="flex justify-center">
+                <iframe
+                  src={newsletter.pdfUrl}
+                  width="100%"
+                  height="700"
+                  style={{
+                    border: 'none',
+                    borderRadius: '8px',
+                    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+                    maxWidth: '800px'
+                  }}
+                  title={`Newsletter - ${newsletter.date}`}
+                />
+              </div>
+            </Accordion.Body>
+          </Accordion.Item>
         </div>
-
-        {/* Poster PDF Viewer */}
-        <div className="flex flex-col items-center p-4 mb-12">
-          <iframe src={pdfUrl} width="600" height="700" style={{ border: 'none' }}></iframe>
-        </div>
-      </div>
-    
-    );
-};
+      ))}
+    </Accordion>
+  );
+}
 
 export default NewsletterCard;
+

@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import colours from "../assets/styles/BrandColours";
 
 const Admin = () => {
+    useEffect(() => {
+        document.title = "Admin";
+    }, []);
     return (
         <div>
             <h1>Admin</h1>
