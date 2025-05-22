@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@react-google-maps/api": "^2.20.6",
     "@tailwindcss/cli": "^4.0.6",
     "bootstrap": "^5.3.3",
