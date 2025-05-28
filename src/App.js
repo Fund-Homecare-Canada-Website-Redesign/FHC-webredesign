@@ -8,7 +8,6 @@ import NavbarComponent from './components/Navbar';
 import Footer from './components/Footer';
 // Import pages
 import AboutUs from './pages/AboutUs';
-import Admin from './pages/Admin';
 import MainEvents from './pages/MainEvents';
 import Beneficiaries from './pages/Beneficiaries';
 import UpcomingEvents from './pages/UpcomingEvents';
@@ -26,7 +25,6 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/admin" element={<Admin />} />
         <Route path="/events" element={<MainEvents />} />
         <Route path="/events/upcoming" element={<UpcomingEvents />} />
         <Route path="/events/past" element={<PastEvents />} />
