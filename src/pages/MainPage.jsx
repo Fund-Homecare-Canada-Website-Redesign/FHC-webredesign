@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import colours from "../assets/styles/BrandColours";
 import image_section_1 from "../assets/images/MainPage/Home_Hero-2.png";
 import image_section_3 from "../assets/images/MainPage/img_sec3.png";
 import image_section_6 from "../assets/images/MainPage/img_sec6.png";

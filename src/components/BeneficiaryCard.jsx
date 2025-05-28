@@ -1,58 +1,111 @@
-import React from "react";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion"
-import colours from "../assets/styles/BrandColours";
+import React, { useState } from "react";
+// Remove motion and AnimatePresence if you're not using them elsewhere in this component
+// If you still use them for the description collapse, keep them.
+// For simplicity, I'll assume you only need them for the description now.
+import { motion, AnimatePresence } from "framer-motion";
+import { Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
+
+// import colours from "../assets/styles/BrandColours";
 import ProgressBar from "./DonationProgressBar";
+import FhcFullLogoTransparent from '../assets/images/Logos/FHC_Full_Logo_Transparent.png';
 
 const BeneficiaryCard = ({ beneficiary }) => {
-    const [expand, setExpand] = useState(false);
+    // const [expandDonation, setExpandDonation] = useState(false); // REMOVE THIS STATE
+    const [showFullDescription, setShowFullDescription] = useState(false);
 
-    const expandOnClick = () => {
-      setExpand((prev) => !prev);
-    }
+    const navigate = useNavigate(); // Initialize useNavigate
+
+    // REMOVE toggleDonationExpand function
+    // const toggleDonationExpand = () => {
+    //     setExpandDonation((prev) => !prev);
+    // };
+
+    const toggleDescription = () => {
+        setShowFullDescription((prev) => !prev);
+    };
+
+    // New handler for the Donate button
+    const handleDonateClick = () => {
+      // Pass the beneficiary's ID and/or name as state to the /donate route
+      navigate('/donate', { state: { selectedBeneficiaryId: beneficiary.id, selectedBeneficiaryName: beneficiary.beneficiaryName } });
+  };
+
+    // Calculate progress percentage
+    const progressPercentage = beneficiary.goal > 0
+        ? Math.min(100, (beneficiary.raised / beneficiary.goal) * 100)
+        : 0;
+
+    // Check if description is too long for collapse (adjust threshold as needed)
+    const DESCRIPTION_MAX_LENGTH = 200; // Example: show "read more" if > 200 chars
+    const isDescriptionTooLong = beneficiary.description.length > DESCRIPTION_MAX_LENGTH;
 
     return (
-      <div className={`beneficiary-card font-[Montserrat] w-5/6 mx-auto bg-[#3A92A0]/30 rounded-lg shadow-[10px_10px_0_rgba(0,0,0,0.25)] p-4 flex flex-column gap-4`}>
-        <div className="beneficiary-info flex flex-col lg:flex-row bg-[#D9D9D9]/50 p-4 justify-center items-start gap-4">
-          <div className="beneficiary-info-left w-full lg:w-1/2">
-            <img src={beneficiary.imageSrc} className="min-w-full min-h-full object-cover"></img>
-          </div>
-          <div className="beneficiary-info-right w-full lg:w-1/2">
-            <h1 className="font-[Frutiger]">{beneficiary.fundName}</h1> 
-            <h2 className="text-[#757575] font-[Frutiger]">{beneficiary.beneficiaryName}</h2>
-            <p>{beneficiary.description}</p>
-          </div>
+        <div className="beneficiary-card font-[Montserrat] w-full max-w-3xl mx-auto bg-white rounded-xl shadow-lg flex flex-col">
+            {/* Top Section: Image and Basic Info */}
+            <div className="relative p-6 flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                {/* Image / Logo Container */}
+                <div className="flex-shrink-0 w-36 h-36 sm:w-48 sm:h-48 bg-gray-100 flex items-center justify-center p-2 rounded-md shadow-inner">
+                    <img
+                        src={beneficiary.imageUrl || FhcFullLogoTransparent}
+                        alt={beneficiary.fundName || "Fund Homecare Logo"}
+                        className="w-full h-full object-contain"
+                    />
+                </div>
+
+                {/* Text Info */}
+                <div className="flex-grow text-center sm:text-left">
+                    <h2 className="font-roboto font-bold text-2xl text-gray-800">{beneficiary.fundName}</h2>
+                    <p className="text-xl text-[#757575] mb-4">{beneficiary.beneficiaryName}</p>
+                    <div className="text-gray-700 leading-relaxed text-base">
+                        {isDescriptionTooLong && !showFullDescription ? (
+                            <>
+                                {beneficiary.description.substring(0, DESCRIPTION_MAX_LENGTH)}...
+                                <button
+                                    onClick={toggleDescription}
+                                    className="text-[#54749D] hover:underline ml-1 font-medium"
+                                >
+                                    Read More
+                                </button>
+                            </>
+                        ) : (
+                            <>
+                                {beneficiary.description}
+                                {isDescriptionTooLong && (
+                                    <button
+                                        onClick={toggleDescription}
+                                        className="text-[#54749D] hover:underline ml-1 font-medium"
+                                    >
+                                        Read Less
+                                    </button>
+                                )}
+                            </>
+                        )}
+                    </div>
+                </div>
+            </div>
+
+            {/* Progress Bar and Donation Info */}
+            <div className="px-6 pb-6 pt-2">
+                <div className="mb-4">
+                    <ProgressBar progress={progressPercentage} />
+                </div>
+                <div className="flex justify-between items-center text-gray-700 mb-4">
+                    <h3 className="font-bold text-2xl text-[#30AFAA]">${beneficiary.raised.toLocaleString()} Raised</h3>
+                    <p className="text-lg text-gray-600">${beneficiary.goal.toLocaleString()} Goal • {beneficiary.donations.toLocaleString()} Donations</p>
+                </div>
+
+                {/* Donate Button */}
+                <div className="text-center">
+                    <button
+                        onClick={handleDonateClick} // Now sends to donate page with state
+                        className="bg-[#54749D] text-white px-8 py-3 rounded-full hover:bg-[#435e7d] transform hover:scale-[1.02] transition duration-300 ease-in-out"
+                    >
+                        Donate Now
+                    </button>
+                </div>
+            </div>
         </div>
-        <ProgressBar fraction={`${beneficiary.progress}`}/>
-        <div className="beneficiary-donate-div flex flex-column gap-2">
-          <div className="benefiary-donate-info">
-            <h1 className="font-[Frutiger]">${beneficiary.raised} Raised</h1>
-            <h2 className="text-[#757575] font-[Frutiger]">${beneficiary.goal} Goal · {beneficiary.donations} Donations</h2>
-          </div>
-          <div className="beneficiary-donate-buttons flex gap-4">
-            <button onClick={expandOnClick} className="bg-[#54749D] text-white p-2 w-20 rounded-full hover:opacity-75">Donate</button>
-          </div>
-        </div>
-        <AnimatePresence>
-          {expand && (
-              <motion.section
-                key="content"
-                initial="collapsed"
-                animate="open"
-                exit="collapsed"
-                variants={
-                  {
-                    open: { opacity: 1, height: "auto" },
-                    collapsed: { opacity: 0, height: 0 }
-                  }
-                }
-                transition={{ duration: 0.1 }}
-              >
-              </motion.section>
-            )
-          }
-        </AnimatePresence>
-      </div>
     );
 };
 
