@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import BeneficiaryCard from "../components/BeneficiaryCard";
-import CustomizableButton from "../components/CustomizableButton";
+import image_section_1 from '../assets/images/MainPage/Home_Hero-2.png';
+
 
 const beneficiaryObject = {
   imageSrc: "",
@@ -20,13 +21,46 @@ const Beneficiary = () => {
   }, []);
   return (
     <>
+      <section>
+                <div
+                    className="w-full h-[66.7vh] bg-cover bg-center relative"
+                    style={{ backgroundImage: `url(${image_section_1})` }}
+                >
+                    {/* Blue overlay with transparency */}
+                    <div
+                        className="absolute inset-0 bg-[#307694] opacity-90 mix-blend-overlay"
+                    ></div>
+
+                    {/* Content container with max w-7xl that match navbar/footer */}
+                    <div className="max-w-7xl mx-auto px-4 h-full flex flex-col justify-center relative z-10">
+                        <div className="md:pl-4 flex flex-col items-center md:items-start space-y-2">
+                            {/* Title for Beneficiaries Page */}
+                            <div>
+                                <h1 className="font-roboto font-bold text-[42px] sm:text-[45px] md:text-[52px] lg:text-[60px] leading-none text-white">
+                                    Our Beneficiaries
+                                </h1>
+                            </div>
+                            <p className="font-roboto font-normal text-[24px] sm:text-[24px] md:text-[25px] lg:text-[25.45px] leading-[140%] text-white mb-4">
+                                Those We Serve, Lives We Touch
+                            </p>
+
+                            {/* "Apply" Button - adapted to the new header style */}
+                            <Link
+                                to="/beneficiaries/apply"
+                                className="font-roboto font-medium text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17.78px] leading-none tracking-[0.44%] border-2 sm:border-3 border-white rounded-[10px] bg-transparent
+                                w-auto px-6 py-3  // Removed fixed widths/heights, added auto-width with padding
+                                flex items-center justify-center cursor-pointer relative z-20 text-white
+                                transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-white hover:bg-opacity-10 active:scale-95 group no-underline whitespace-nowrap" // Added whitespace-nowrap
+                            >
+                                <span className="transition-transform duration-300 group-hover:translate-x-1">
+                                    Apply to be a Beneficiary →
+                                </span>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
       <div className="h-full font-[Montserrat]">
-        <div className="bg-[url('assets/images/Beneficiary/beneficiary.png')] bg-no-repeat bg-center bg-cover h-screen flex justify-center items-center">
-          <div className="w-1/2 h-25 bg-[#D9D9D9]/80 flex flex-column justify-center items-center rounded-5">
-            <h1 className="text-white text-center font-bold">Our Beneficiaries</h1>
-            <Link to="/beneficiaries/apply" className="bg-[#54749D] text-white p-2.5 w-42 rounded-5 hover:opacity-75">Apply to be a Beneficiary</Link>
-          </div>
-        </div>
         <div className="pt-5 pb-5">
           <BeneficiaryCard beneficiary={beneficiaryObject} />
         </div>

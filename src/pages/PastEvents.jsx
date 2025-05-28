@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import PastEventsCard from "../components/PastEventsCard";
-import PageHeaderSection from "../components/PageHeaderSection.jsx";
+import image_section_1 from '../assets/images/MainPage/Home_Hero-2.png';
 
 
 // Spring Gala 2025
@@ -276,18 +276,47 @@ const PastEvents = () => {
 
   return (
     <>
-      <PageHeaderSection title="Past Events" />
+      {/* New Header Section */}
+      <section>
+          <div
+              className="w-full h-[66.7vh] bg-cover bg-center relative"
+              style={{ backgroundImage: `url(${image_section_1})` }}
+          >
+              {/* Blue overlay with transparency */}
+              <div
+                  className="absolute inset-0 bg-[#307694] opacity-90 mix-blend-overlay"
+              ></div>
+
+              {/* Content container with max w-7xl that match navbar/footer */}
+              <div className="max-w-7xl mx-auto px-4 h-full flex flex-col justify-center relative z-10">
+                  <div className="md:pl-4 flex flex-col items-center md:items-start space-y-2">
+                      {/* Title for Newsletter Page */}
+                      <div>
+                          <h1 className="font-roboto font-bold text-[42px] sm:text-[45px] md:text-[52px] lg:text-[60px] leading-none text-white">
+                              Past Events
+                          </h1>
+                      </div>
+                      <p className="font-roboto font-normal text-[24px] sm:text-[24px] md:text-[25px] lg:text-[25.45px] leading-[140%] text-white mb-4">
+                      A Look Back at Our Impactful Gatherings
+                      </p>
+
+                      {/* No button here unless you specifically need one for this page (e.g., scroll to archive) */}
+                  </div>
+              </div>
+          </div>
+      </section>
       <div className="bg-[#CFE6EF]">
         <div className="max-w-7xl mx-auto px-4 py-12">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-2xl font-semibold mb-4 text-gray-800">Make an Impact</h2>
-            <p className="text-gray-700 leading-relaxed">
+          <h2 className="text-3xl font-bold mb-4 text-gray-800">Make an Impact</h2> {/* Slightly larger and bolder font */}
+          <div className="h-0.5 bg-gray-400 w-1/5 mx-auto mb-8"></div> {/* Thin line */}
+          <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto"> {/* Adjusted text size and constrained width for readability */}
               All proceeds from the event will go toward supporting palliative cancer patients—
               giving them comfort, dignity, and precious time with their loved ones. Over the years,
               our galas have raised an average of $20,000 per event, enabling us to provide essential
               PSW (Personal Support Worker) services to 15 beneficiaries. This year, we aim to go even
               further—with your support, we can make a greater impact.
-            </p>
+          </p>
           </div>
 
           <div className="space-y-10 max-w-7xl mx-auto px-4">
