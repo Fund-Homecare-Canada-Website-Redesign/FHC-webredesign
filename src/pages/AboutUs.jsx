@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import colours from "../assets/styles/BrandColours";
-import NavbarComponent from "../components/Navbar"
+
+import image_section_1 from '../assets/images/MainPage/Home_Hero-2.png';
 
 import homeIcon from "../assets/images/AboutUs/OurGoals/homeIcon.png";
 import visibilityIcon from "../assets/images/AboutUs/OurGoals/360Degree.png";
@@ -14,23 +14,50 @@ import Nikita from "../assets/images/AboutUs/WhoAreWe/Nikita.jpg";
 import Ricky from "../assets/images/AboutUs/WhoAreWe/Ricky.png";
 import Sangeeta from "../assets/images/AboutUs/WhoAreWe/Sangeeta.png";
 
-import Footer from "../components/Footer";
 
 function AboutUs() {
     useEffect(() => {
         document.title = "About Us";
     }, []);
     return (
+        <>
+            {/* New Header Section for About Us */}
+            <section>
+                <div
+                    className="w-full h-[66.7vh] bg-cover bg-center relative"
+                    style={{ backgroundImage: `url(${image_section_1})` }}
+                >
+                    {/* Blue overlay with transparency */}
+                    <div
+                        className="absolute inset-0 bg-[#307694] opacity-90 mix-blend-overlay"
+                    ></div>
 
-        <div>
-            {/* <div>
-                <NavbarComponent />
-            </div> */}
+                    {/* Content container with max w-7xl that match navbar/footer */}
+                    <div className="max-w-7xl mx-auto px-4 h-full flex flex-col justify-center relative z-10">
+                        <div className="md:pl-4 flex flex-col items-center md:items-start space-y-2">
+                            {/* Title for About Us Page */}
+                            <div>
+                                <h1 className="font-roboto font-bold text-[42px] sm:text-[45px] md:text-[52px] lg:text-[60px] leading-none text-white">
+                                    About Us
+                                </h1>
+                            </div>
+                            <p className="font-roboto font-normal text-[24px] sm:text-[24px] md:text-[25px] lg:text-[25.45px] leading-[140%] text-white mb-4">
+                                Our Mission, Vision, and Impact
+                            </p>
+
+                            {/* No button here unless you specifically need one for this page */}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* The rest of your About Us content */}
             <div className="bg-[#CFE6EF] pt-10 pb-10">
                 {/* Who We Are Section */}
                 <section className="bg-[#54749D] text-white p-6 md:p-10 rounded-[40px] mb-10 max-w-4xl mx-auto">
-                    <h2 className="text-3xl md:text-4xl font-[Montserrat]font-bold mb-4">Who We Are</h2>
-                    <p className="text-base md:text-lg font-[Montserrat] leading-relaxed">
+                    {/* Corrected font class: `font-[Montserrat]` should be `font-['Montserrat']` or just `font-montserrat` if configured in tailwind.config.js */}
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Who We Are</h2>
+                    <p className="text-base md:text-lg leading-relaxed">
                         Fund Homecare Canada is a Canadian registered charitable, not-for-profit organization dedicated to making in-home care accessible to palliative cancer patients—a critical and prevalent need that is unfortunately out of reach for many.
                         <br /><br />
                         We created Fund Homecare Canada to address this discrepancy by providing financial support to help cancer patients and their families with in-home palliative care needs. Our funding goes towards personal care, housekeeping services, meals, nursing, and shopping assistance.
@@ -39,13 +66,14 @@ function AboutUs() {
 
                 {/* Our Goals Section */}
                 <section className="bg-[#54749D] text-white p-6 md:p-10 rounded-[40px] mb-10 max-w-4xl mx-auto">
-                    <h2 className="text-3xl md:text-4xl font-[Montserrat]font-bold mb-4 ml-12">Our Goals</h2>
+                    {/* Corrected font class */}
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 ml-12">Our Goals</h2>
 
                     <div className="space-y-6">
                         {/* Goal 1 */}
                         <div className="flex items-start gap-4">
                             <img src={homeIcon} alt="home icon" className="w-10 h-10 mt-1" />
-                            <p className="text-base md:text-lg font-[Montserrat] leading-relaxed">
+                            <p className="text-base md:text-lg leading-relaxed">
                                 Funding <strong>home-based palliative care</strong> for cancer patients residing in Ontario.
                             </p>
                         </div>
@@ -53,7 +81,7 @@ function AboutUs() {
                         {/* Goal 2 */}
                         <div className="flex items-start gap-4">
                             <img src={visibilityIcon} alt="360 visibility icon" className="w-12 h-12 mt-1" />
-                            <p className="text-base md:text-lg font-[Montserrat] leading-relaxed">
+                            <p className="text-base md:text-lg leading-relaxed">
                                 Maintain a 360 degree monitoring mechanism to <strong>provide visibility</strong> for our sponsors and clients.
                             </p>
                         </div>
@@ -61,7 +89,7 @@ function AboutUs() {
                         {/* Goal 3 */}
                         <div className="flex items-start gap-4">
                             <img src={fundingIcon} alt="funding icon" className="w-12 h-12 mt-1" />
-                            <p className="text-base md:text-lg font-[Montserrat] leading-relaxed">
+                            <p className="text-base md:text-lg leading-relaxed">
                                 Channel funding specifically toward <strong>palliative cancer patients</strong> who do not qualify for government or any other funding for home-based care.
                             </p>
                         </div>
@@ -69,7 +97,7 @@ function AboutUs() {
                         {/* Goal 4 */}
                         <div className="flex items-start gap-4">
                             <img src={communicationIcon} alt="communication icon" className="w-10 h-10 mt-1" />
-                            <p className="text-base md:text-lg font-[Montserrat] leading-relaxed">
+                            <p className="text-base md:text-lg leading-relaxed">
                                 Utilize <strong>communication channels</strong> including direct outreach, social media campaigns, and fundraising events to encourage corporate giving, crowdfunding, and personal donations.
                             </p>
                         </div>
@@ -77,10 +105,11 @@ function AboutUs() {
                 </section>
             </div>
 
-            <div className="bg-[#307694] py-20 px-20">
-                <h2 className="text-white font-[Montserrat] text-5xl font-bold mb-10">Meet Our Team</h2>
+            {/* Meet Our Team Section */}
+            <div className="bg-[#307694] py-20 px-4 sm:px-10 lg:px-20"> {/* Adjusted px for better responsiveness */}
+                <h2 className="text-white font-bold text-4xl sm:text-5xl mb-10 text-center">Meet Our Team</h2> {/* Added text-center */}
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto"> {/* Added max-w-7xl mx-auto for grid */}
                     <OurTeamCard
                         name="Rohit Bhalla"
                         role="Co-Founder"
@@ -127,8 +156,8 @@ function AboutUs() {
                     />
                 </div>
             </div>
-        </div>
-    )
+        </>
+    );
 }
 
 export default AboutUs;

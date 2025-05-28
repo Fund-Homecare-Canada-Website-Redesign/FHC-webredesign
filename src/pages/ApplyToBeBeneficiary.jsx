@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import colours from "../assets/styles/BrandColours";
 import { Form, Row, Col, Button } from "react-bootstrap";
 import emailjs from '@emailjs/browser';
+
+import image_section_1 from '../assets/images/MainPage/Home_Hero-2.png';
 
 const ApplyToBeBeneficiary = () => {
   useEffect(() => {
@@ -163,80 +164,154 @@ const ApplyToBeBeneficiary = () => {
   };
   return (
     <>
-      <div className="h-full font-[Montserrat]">
-        <div className="bg-[url('assets/images/Beneficiary/beneficiary.png')] bg-no-repeat bg-center bg-cover h-screen flex justify-center items-center">
-          <div className="w-1/2 h-25 bg-[#D9D9D9]/80 flex flex-column justify-center items-center rounded-5">
-            <h1 className="text-white text-center font-bold m-0">Apply to be a Beneficiary</h1>
-          </div>
-        </div>
-        <div>
-          <div className={`beneficiary-card mt-5 font-[Montserrat] w-5/6 mx-auto bg-[#3A92A0]/30 rounded-lg shadow-[10px_10px_0_rgba(0,0,0,0.25)] p-4 flex flex-column gap-4`}>
-            <div className="beneficiary-info flex flex-col lg:flex-row p-4 justify-center items-start gap-4">
-              <Form onSubmit={handleSubmit}>
-                <Form.Group controlId="formContactPref">
-                  <Form.Label>How would you like us to contact you?</Form.Label>
-                  <Form.Check type="radio" name="contactPref" label="Email" value="email" checked={formData.contactPref === 'email'} onChange={handleChange} />
-                  <Form.Check type="radio" name="contactPref" label="Phone" value="phone" checked={formData.contactPref === 'phone'} onChange={handleChange} />
-                  {errors.contactPref && <p className="text-red-500 text-sm">{errors.contactPref}</p>}
-                </Form.Group>
-                <br></br>
-                <Row>
-                  <Col>
-                    <Form.Group controlId="formFirstName">
-                      <Form.Label>First Name</Form.Label>
-                      <Form.Control type="text" placeholder="First Name" name="firstName" value={formData.firstName} onChange={handleChange} />
-                      {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName}</p>}
-                    </Form.Group>
-                  </Col>
-                  <Col>
-                    <Form.Group controlId="formLastName">
-                      <Form.Label>Last Name</Form.Label>
-                      <Form.Control type="text" placeholder="Last Name" name="lastName" value={formData.lastName} onChange={handleChange} />
-                      {errors.lastName && <p className="text-red-500 text-sm">{errors.lastName}</p>}
-                    </Form.Group>
-                  </Col>
-                </Row>
-                <br></br>
-                <Row>
+        {/* New Hero Header Section for Apply to be a Beneficiary */}
+        <section>
+            <div
+                className="w-full h-[66.7vh] bg-cover bg-center relative"
+                style={{ backgroundImage: `url(${image_section_1})` }}
+            >
+                {/* Blue overlay with transparency */}
+                <div
+                    className="absolute inset-0 bg-[#307694] opacity-90 mix-blend-overlay"
+                ></div>
+
+                {/* Content container with max w-7xl that match navbar/footer */}
+                <div className="max-w-7xl mx-auto px-4 h-full flex flex-col justify-center relative z-10">
+                    <div className="md:pl-4 flex flex-col items-center md:items-start space-y-2">
+                        {/* Title for Apply to be a Beneficiary Page */}
+                        <div>
+                            <h1 className="font-roboto font-bold text-[42px] sm:text-[45px] md:text-[52px] lg:text-[60px] leading-none text-white">
+                                Apply for Support
+                            </h1>
+                        </div>
+                        <p className="font-roboto font-normal text-[24px] sm:text-[24px] md:text-[25px] lg:text-[25.45px] leading-[140%] text-white mb-4">
+                            Complete Our Application Form
+                        </p>
+
+                        {/* No button here, as the page is the form itself */}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* The rest of your application form content */}
+        <div className="pt-10 pb-10 bg-[#CFE6EF]"> {/* Added bg-color for consistency and padding */}
+          <div className={`beneficiary-card mt-5 font-[Montserrat] w-5/6 mx-auto bg-white rounded-lg p-4 flex flex-column gap-4 shadow-xl`}>
+             {/* Replaced bg-[#3A92A0]/30 with bg-white for a cleaner look consistent with other forms */}
+             {/* Removed the `beneficiary-info` div as it seems redundant here or could be styled differently if needed */}
+
+            <Form onSubmit={handleSubmit}>
+              <Form.Group controlId="formContactPref">
+                <Form.Label className="d-flex justify-content-start text-gray-700">How would you like us to contact you?</Form.Label>
+                <Form.Check type="radio" name="contactPref" label="Email" value="email" checked={formData.contactPref === 'email'} onChange={handleChange} />
+                <Form.Check type="radio" name="contactPref" label="Phone" value="phone" checked={formData.contactPref === 'phone'} onChange={handleChange} />
+                {errors.contactPref && <p className="text-red-500 text-sm d-flex justify-content-start">{errors.contactPref}</p>}
+              </Form.Group>
+              <br></br>
+              <Row className="mb-3"> {/* Added mb-3 for spacing */}
+                <Col md> {/* Use md for responsive column sizing */}
+                  <Form.Group controlId="formFirstName">
+                    <Form.Label className="d-flex justify-content-start text-gray-700">First Name</Form.Label>
+                    <Form.Control
+                        type="text"
+                        placeholder="First Name"
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleChange}
+                        isInvalid={!!errors.firstName} // Apply validation styling
+                        className="border border-gray-300 focus:border-[#54749D] focus:ring-[#547499D] rounded-md"
+                    />
+                    <Form.Control.Feedback type="invalid" className="d-flex justify-content-start">{errors.firstName}</Form.Control.Feedback>
+                  </Form.Group>
+                </Col>
+                <Col md>
+                  <Form.Group controlId="formLastName">
+                    <Form.Label className="d-flex justify-content-start text-gray-700">Last Name</Form.Label>
+                    <Form.Control
+                        type="text"
+                        placeholder="Last Name"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleChange}
+                        isInvalid={!!errors.lastName}
+                        className="border border-gray-300 focus:border-[#54749D] focus:ring-[#547499D] rounded-md"
+                    />
+                    <Form.Control.Feedback type="invalid" className="d-flex justify-content-start">{errors.lastName}</Form.Control.Feedback>
+                  </Form.Group>
+                </Col>
+              </Row>
+
+              <Row className="mb-3">
+                <Col md>
                   <Form.Group controlId="formEmailAddress">
-                    <Form.Label>Email Address</Form.Label>
-                    <Form.Control type="email" placeholder="someone@website.com" name="emailAddress" value={formData.emailAddress} onChange={handleChange} />
-                    {errors.emailAddress && <p className="text-red-500 text-sm">{errors.emailAddress}</p>}
+                    <Form.Label className="d-flex justify-content-start text-gray-700">Email Address</Form.Label>
+                    <Form.Control
+                        type="email"
+                        placeholder="someone@website.com"
+                        name="emailAddress"
+                        value={formData.emailAddress}
+                        onChange={handleChange}
+                        isInvalid={!!errors.emailAddress}
+                        className="border border-gray-300 focus:border-[#54749D] focus:ring-[#547499D] rounded-md"
+                    />
+                    <Form.Control.Feedback type="invalid" className="d-flex justify-content-start">{errors.emailAddress}</Form.Control.Feedback>
                   </Form.Group>
-                </Row>
-                <br></br>
-                <Row>
+                </Col>
+                <Col md>
                   <Form.Group controlId="formPhoneNumber">
-                    <Form.Label>Phone Number</Form.Label>
-                    <Form.Control type="tel" placeholder="(123) 456-7890" name="phoneNumber" value={formData.phoneNumber} onChange={handlePhoneChange} />
-                    {errors.phoneNumber && <p className="text-red-500 text-sm">{errors.phoneNumber}</p>}
+                    <Form.Label className="d-flex justify-content-start text-gray-700">Phone Number</Form.Label>
+                    <Form.Control
+                        type="tel"
+                        placeholder="(123) 456-7890"
+                        name="phoneNumber"
+                        value={formData.phoneNumber}
+                        onChange={handlePhoneChange}
+                        isInvalid={!!errors.phoneNumber}
+                        className="border border-gray-300 focus:border-[#54749D] focus:ring-[#547499D] rounded-md"
+                    />
+                    <Form.Control.Feedback type="invalid" className="d-flex justify-content-start">{errors.phoneNumber}</Form.Control.Feedback>
                   </Form.Group>
-                </Row>
-                <br></br>
-                <Row>
-                  <Form.Group controlId="formRequestDetails">
-                    <Form.Label>Please provide us with some more details around your request for contact</Form.Label>
-                    <Form.Control as="textarea" name="requestDetails" value={formData.requestDetails} onChange={handleChange} />
-                    {errors.requestDetails && <p className="text-red-500 text-sm">{errors.requestDetails}</p>}
-                  </Form.Group>
-                </Row>
-                <br></br>
-                <Form.Group controlId="formConsent">
-                  <Form.Check type="radio" name="consent" label="I consent to be contacted by Fund Homecare Canada by phone or email and agree to the Privacy Policy so as to let them collect my name, contact information, and comments."
+                </Col>
+              </Row>
+
+              <Form.Group controlId="formRequestDetails" className="mb-3">
+                <Form.Label className="d-flex justify-content-start text-gray-700">Please provide us with some more details around your request for contact</Form.Label>
+                <Form.Control
+                    as="textarea"
+                    name="requestDetails"
+                    value={formData.requestDetails}
+                    onChange={handleChange}
+                    isInvalid={!!errors.requestDetails}
+                    className="border border-gray-300 focus:border-[#54749D] focus:ring-[#547499D] rounded-md"
+                    rows={5} // Added rows for better textarea appearance
+                />
+                <Form.Control.Feedback type="invalid" className="d-flex justify-content-start">{errors.requestDetails}</Form.Control.Feedback>
+              </Form.Group>
+
+              <Form.Group controlId="formConsent" className="mb-4"> {/* Added mb-4 */}
+                <Form.Check
+                    type="checkbox" // Changed to checkbox as it's typically a single consent
+                    name="consent"
+                    label="I consent to be contacted by Fund Homecare Canada by phone or email and agree to the Privacy Policy so as to let them collect my name, contact information, and comments."
                     checked={formData.consent}
                     onChange={handleChange}
-                  />
-                  {errors.consent && <p className="text-red-500 text-sm">{errors.consent}</p>}
-                </Form.Group>
-                <br></br>
-                <div className="text-center">
-                  <Button variant="primary" type="submit" className="bg-[#30AFAA]">Submit Application</Button>
-                </div>
-              </Form>
-            </div>
+                    isInvalid={!!errors.consent}
+                />
+                <Form.Control.Feedback type="invalid" className="d-flex justify-content-start">{errors.consent}</Form.Control.Feedback>
+              </Form.Group>
+
+              <div className="text-center">
+                <Button
+                    variant="primary"
+                    type="submit"
+                    className="bg-[#30AFAA] hover:bg-[#258C8C] text-white px-8 py-3 rounded-md transition-all duration-300 ease-in-out" // Added more styling
+                >
+                    Submit Application
+                </Button>
+              </div>
+            </Form>
           </div>
         </div>
-      </div>
     </>
   );
 };
