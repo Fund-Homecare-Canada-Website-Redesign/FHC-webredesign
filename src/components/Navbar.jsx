@@ -92,7 +92,11 @@ function NavbarComponent() {
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id="offcanvasNavbarLabel" style={{ fontFamily: 'Montserrat', fontWeight: 'bold' }}>
-                Menu
+                <img
+                  src={require('../assets/images/Logos/FHC_Title_Logo_NoBgrd.png')}
+                  alt="Fund Homecare Canada"
+                  style={{ height: '30px' }}
+                />
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body className="px-lg-3 px-4">
