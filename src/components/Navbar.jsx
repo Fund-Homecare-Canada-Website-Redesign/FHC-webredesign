@@ -23,6 +23,15 @@ function NavbarComponent() {
           width: 280px !important;
         }
         
+        /* Remove border from hamburger menu button */
+        .navbar-toggler {
+          border: none !important;
+        }
+        
+        .navbar-toggler:focus {
+          box-shadow: none !important;
+        }
+        
         /* Mobile-specific styling */
         @media (max-width: 991.98px) {
           .offcanvas .nav-link {
