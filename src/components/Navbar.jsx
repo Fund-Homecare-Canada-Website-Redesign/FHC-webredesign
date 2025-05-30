@@ -115,7 +115,7 @@ function NavbarComponent() {
               {/* Donate Button */}
               <div className="mt-lg-0 mt-4">
                 <Link to="/donate">
-                  <Button style={{ fontFamily: 'Montserrat', backgroundColor: '#30AFAA', color: '#000000', border: '#30AFAA' }} className="font-bold py-2 px-2.5 rounded-md ml-lg-3 ml-0 shadow-md">
+                  <Button style={{ fontFamily: 'Montserrat', backgroundColor: '#30AFAA', color: '#000000', border: '#30AFAA' }} className="font-bold py-2 px-2.5 rounded-md ml-lg-3 ml-0 shadow-md transition hover:!bg-[#2A9B96]">
                     Donate to Us
                   </Button>
                 </Link>
