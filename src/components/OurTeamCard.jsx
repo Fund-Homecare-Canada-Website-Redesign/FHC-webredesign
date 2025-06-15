@@ -1,72 +1,78 @@
-import React, { useState } from "react";
-import Card from 'react-bootstrap/Card';
+// src/components/OurTeamCard.js
+import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import colours from "../assets/styles/BrandColours";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
-function OurTeamCard ({name, role, image, bio}) {
-    // modal state
+const OurTeamCard = ({ image, name, role, bio }) => {
     const [showModal, setShowModal] = useState(false);
 
-    return(
+    return (
         <>
-        <div 
-        className="w-full sm:w-96 md:w-80 lg:w-72 h-64 sm:h-80 md:h-96 lg:h-48 card bg-white rounded-lg shadow-lg hover:shadow-2xl
-                transform hover:scale-105 transition duration-300 ease-in-out cursor-pointer overflow-hidden"
-        onClick={() => setShowModal(true)} // Opens modal on click
-        >
-            {/* image section*/}
-            <div className='w-full h-2/3 flex justify-center'>
-            <img
-                src={image}
-                alt={name + " About Us"}
-                
-                className= 'w-full h-full object-cover'
-            />
+            {/* Responsive Card - Now more flexible across screen sizes */}
+            <div
+                className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition duration-300 ease-in-out cursor-pointer overflow-hidden
+                flex flex-col w-full mx-2 my-4" // Removed minHeight to allow content to dictate height, flex-col ensures stack
+                onClick={() => setShowModal(true)}
+            >
+                {/* Image Section - Increased size, focus on object-center for general portraits */}
+                <div className="w-full aspect-[4/3] bg-gray-100 flex items-center justify-center overflow-hidden">
+                    <img
+                        src={image || "/placeholder.svg"}
+                        alt={`${name} Profile`}
+                        className="w-full h-full object-cover object-center"
+                        loading="lazy"
+                    />
+                </div>
+
+                {/* Name/Role Section - Clear and distinct, with proper padding */}
+                <div className="p-4 md:p-5 flex-shrink-0 flex flex-col justify-center items-center text-center"> {/* Added flex-shrink-0 to ensure it doesn't compress */}
+                    <h5 className="mb-1 font-bold text-xl sm:text-2xl lg:text-3xl text-gray-900 leading-tight" style={{ fontFamily: 'Montserrat' }}>
+                        {name}
+                    </h5>
+                    <p className="text-gray-600 italic text-base sm:text-lg lg:text-xl leading-tight" style={{ fontFamily: 'Montserrat' }}>
+                        {role}
+                    </p>
+                </div>
             </div>
 
-            {/* Card Content */}
-            <div className="p-3 h-1/3 flex flex-col items-left leading-tight">
+            {/* Enhanced Modal */}
+            <Modal
+                show={showModal}
+                onHide={() => setShowModal(false)}
+                centered
+                size="xl"
+                dialogClassName="my-modal" // For custom styling if needed
+            >
+                <div style={{ backgroundColor: '#CFE6EF' }} className="rounded-lg shadow-lg">
+                    <Modal.Header closeButton className="border-0"></Modal.Header>
+                    <Modal.Body className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 p-4 md:p-8 rounded-lg">
+                        {/* Left Side Image */}
+                        <div className="flex items-center justify-center">
+                            <img
+                                src={image}
+                                alt={`${name} About Us`}
+                                className="w-full max-w-md h-auto object-cover rounded-lg shadow-md"
+                            />
+                        </div>
 
-                <h5 className="mb-0 font-bold text-lg text-gray-900" style={{fontFamily: 'Montserrat'}} >
-                    {name}
-                </h5>
-
-                <p className="mt-0 mb-0 text-gray-600 italic" style={{fontFamily: 'Montserrat'}}>
-                {role}
-                </p>
-        </div>
-    </div>
-
-        {/* Bootstrap Modal that opens on click and closes when close button is clicked*/}
-        <Modal show={showModal} onHide={() => setShowModal(false)} centered size="lg">
-        <div style={{backgroundColor: '#CFE6EF'}} className='rounded-lg shadow-lg'>
-            <Modal.Header closeButton> </Modal.Header>
-            <Modal.Body className = 'rounded-lg grid grid-cols-2'> 
-            {/* Image Section (Left Side) */}
-            <div className="flex items-center justify-center">
-                <img
-                    src={image}
-                    alt={name + " About Us"}
-                    className="w-60 h-auto object-cover rounded-lg"
-                />
-            </div>
-
-            {/* Text Section (Right Side) */}
-            <div className="flex-1 max-h-96 overflow-y-auto p-2">
-                <h2 style={{fontFamily: 'Montserrat'}}className="text-4xl font-bold text-gray-900">{name}</h2>
-                <p style={{fontFamily: 'Montserrat'}} className="text-gray-600 italic text-lg mb-3">{role}</p>
-                <p style={{fontFamily: 'Montserrat'}} className="text-gray-800 text-sm leading-relaxed whitespace-pre-line">
-                {bio}
-                </p>
-            </div>
-            </Modal.Body>
-        </div>
-        </Modal>
-    </>
-
-    )
-
-} 
+                        {/* Right Side Text */}
+                        <div className="flex flex-col max-h-[70vh] overflow-y-auto p-2 md:p-4">
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2 md:mb-4" style={{ fontFamily: 'Montserrat' }}>
+                                {name}
+                            </h2>
+                            <p className="text-gray-600 italic text-lg sm:text-xl md:text-2xl mb-3 md:mb-6" style={{ fontFamily: 'Montserrat' }}>
+                                {role}
+                            </p>
+                            <p className="text-gray-800 text-base sm:text-lg md:text-xl leading-relaxed whitespace-pre-line" style={{ fontFamily: 'Montserrat' }}>
+                                {bio}
+                            </p>
+                        </div>
+                    </Modal.Body>
+                </div>
+            </Modal>
+        </>
+    );
+};
 
 export default OurTeamCard;
+
+
