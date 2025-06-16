@@ -444,12 +444,38 @@ const ContactUsPage = () => {
                                 data-eventkey={index.toString()}
                                 className="transition duration-300 ease-in-out transform hover:scale-[1.02] hover:shadow-xl rounded-lg mb-4"
                             >
-                                <Accordion.Item eventKey={index.toString()} style={{ backgroundColor: '#ABCCD6', borderRadius: '8px' }}>
-                                    <Accordion.Header>
-                                        <span style={{ color: '#54749D', fontWeight: 'bold' }}>{faq.question}</span>
+                                <Accordion.Item 
+                                    eventKey={index.toString()} 
+                                    className="rounded-lg overflow-hidden border-0"
+                                >
+                                    <Accordion.Header 
+                                        style={{
+                                            backgroundColor: '#ABCCD6'
+                                        }}
+                                    >
+                                        <span style={{
+                                            color: '#54749D',
+                                            fontWeight: 'bold',
+                                            opacity: 1,
+                                            visibility: 'visible'
+                                        }}>
+                                            {faq.question}
+                                        </span>
                                     </Accordion.Header>
-                                    <Accordion.Body>
-                                        <p style={{ color: 'black' }}>{faq.answer}</p>
+                                    <Accordion.Body 
+                                        style={{
+                                            backgroundColor: '#3A92A04D',
+                                            color: 'black',
+                                            opacity: 1,
+                                            visibility: 'visible'
+                                        }}
+                                    >
+                                        <div style={{
+                                            opacity: 1,
+                                            visibility: 'visible'
+                                        }}>
+                                            {faq.answer}
+                                        </div>
                                     </Accordion.Body>
                                 </Accordion.Item>
                             </div>
