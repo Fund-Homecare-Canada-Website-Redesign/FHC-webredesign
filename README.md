@@ -12,6 +12,37 @@ This project is a comprehensive redesign of the FHC website. The primary goal is
 *   **Email:** EmailJS for contact forms
 *   **Maps:** React Google Maps API
 
+## Table of Contents
+
+- [FHC Website Redesign](#fhc-website-redesign)
+  - [React Project Setup Guide](#react-project-setup-guide)
+    - [Prerequisites](#prerequisites)
+    - [Environment Variables](#environment-variables)
+  - [Installation Instructions](#installation-instructions)
+  - [Available Scripts](#available-scripts)
+    - [`npm start`](#npm-start)
+    - [`npm test`](#npm-test)
+    - [`npm run build`](#npm-run-build)
+    - [`npm run eject`](#npm-run-eject)
+  - [Project Structure](#project-structure)
+  - [Developing Components and Pages](#developing-components-and-pages)
+    - [Components](#components)
+    - [Pages](#pages)
+    - [Adding New Pages and Routes](#adding-new-pages-and-routes)
+  - [Styling](#styling)
+  - [Asset Management](#asset-management)
+    - [Using the `src/assets` Directory](#using-the-srcassets-directory)
+    - [Using the `public` Directory](#using-the-public-directory)
+  - [Deployment](#deployment)
+  - [Contribution Guidelines](#contribution-guidelines)
+    - [Branching Notes](#branching-notes)
+  - [Creating a Branch and Pushing Your Code](#creating-a-branch-and-pushing-your-code)
+- [Google Analytics Integration](#google-analytics-integration)
+- [Contributors & Thanks](#contributors--thanks)
+- [README Documentation Authors](#readme-documentation-authors)
+
+
+
 ## React Project Setup Guide
 
 ### Prerequisites
@@ -29,7 +60,7 @@ Install these before doing anything:
 
 1. Clone the Repository
 ```bash
-git clone https://github.com/noahkostesku/FHC-webredesign.git
+git clone https://github.com/Fund-Homecare-Canada-Website-Redesign/FHC-webredesign.git
 cd FHC-webredesign
 ```
 2. Install Dependencies
@@ -42,7 +73,7 @@ npm install
 npm start
 ```
 
-### 3. Environment Variables
+### Environment Variables
 
 This project uses environment variables for configuration, such as API keys. Create a `.env` file in the root of the project by copying the example:
 
@@ -60,8 +91,6 @@ REACT_APP_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
 REACT_APP_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
 # Add any other environment variables here
 ```
-**Note:** You will need to create an `.env.example` file if one doesn't exist, with placeholder values. For now, this instruction assumes one will be created or asks the developer to create their `.env` directly.
-
 ## Available Scripts
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -116,7 +145,7 @@ Here's an overview of the key directories and files in this project:
     *   **`index.js`**: The entry point for the React application. It renders the root `App` component into the DOM.
     *   **`tailwind.config.js`**: Configuration file for Tailwind CSS, allowing customization of themes, plugins, and more.
 *   **`package.json`**: Lists project dependencies, scripts, and other metadata.
-*   **`.env` (or `.env.local`)**: Stores environment-specific variables (API keys, etc.). This file is not committed to version control. (See "Environment Variables" section for setup).
+*   **`.env` **: Stores environment-specific variables (API keys, etc.). This file is not committed to version control. (See "Environment Variables" section for setup).
 *   **`README.md`**: This file - providing an overview and guide for the project.
 
 ## Developing Components and Pages
@@ -174,20 +203,63 @@ This section provides guidelines for creating and managing components and pages 
 
 This project uses a combination of Tailwind CSS and Bootstrap for styling, with Tailwind CSS being the primary framework.
 
-*   **Tailwind CSS**:
-    *   The main styling approach relies on Tailwind's utility classes.
-    *   Configuration for Tailwind (e.g., custom themes, plugins) can be found in `tailwind.config.js` at the root of the project.
-    *   It's recommended to leverage Tailwind's utility classes as much as possible before writing custom CSS.
-*   **Bootstrap**:
-    *   Bootstrap is also included in the project (`bootstrap/dist/css/bootstrap.min.css` is imported in `App.js` and `index.js`).
-    *   It can be used for components or styles where Bootstrap provides a convenient solution. Be mindful of potential style conflicts between Tailwind and Bootstrap; Tailwind's utilities are generally applied last or with higher specificity if prefixes are used or layers are configured, but care should be taken.
-*   **Brand Colors**:
-    *   Predefined brand colors are available in `src/assets/styles/BrandColours.js`. These can be imported and used in your components' style props or potentially integrated into the Tailwind config.
-*   **Global Styles & Custom CSS**:
-    *   Global styles or custom CSS that cannot be achieved with utility classes can be added to `src/index.css` or `src/App.css`.
-    *   When adding custom CSS, try to keep it minimal and scoped to specific components if not truly global.
-*   **Responsive Design**:
-    *   Utilize Tailwind's responsive prefixes (e.g., `sm:`, `md:`, `lg:`) for creating responsive layouts.
+### Tailwind CSS
+
+- The main styling approach relies on Tailwind's utility classes.
+- Configuration for Tailwind (e.g., custom themes, plugins) can be found in `tailwind.config.js` at the root of the project.
+- Leverage Tailwind's utility classes as much as possible before writing custom CSS.
+
+### Bootstrap
+
+- Bootstrap is also included (`bootstrap/dist/css/bootstrap.min.css` is imported in `App.js` and `index.js`).
+- Use Bootstrap selectively when it offers convenient components.
+- Be mindful of conflicts — Tailwind generally wins in specificity, but avoid overlapping classes when possible.
+
+### Brand Colors
+
+- Predefined brand colors are available in `src/assets/styles/BrandColours.js`.
+- These can be imported directly into components or optionally added to the Tailwind config.
+
+### Global Styles & Custom CSS
+
+- Use `src/index.css` or `src/App.css` for any global styles that cannot be accomplished with utility classes.
+- Keep custom CSS minimal and scoped to components when possible.
+
+### Responsive Design
+
+- Use Tailwind’s responsive prefixes (`sm:`, `md:`, `lg:`, `xl:`, `2xl:`) to ensure mobile and desktop compatibility.
+
+---
+
+### TailwindCSS Design Standards
+
+> Feel free to extend or refine these standards as needed. If changes are made, please commit with a descriptive message so others can follow updates.
+
+#### Border Radius
+
+| Component           | Tailwind Class |
+|---------------------|----------------|
+| Buttons             | `rounded-md`   |
+| Cards / Sections    | `rounded-lg`   |
+| Modals & Containers | `rounded-lg`   |
+| Avatars             | `rounded-xl`   |
+| Icons               | `rounded-xl`   |
+
+#### Typography
+
+- Use `font-montserrat` for all text.
+- Apply `font-bold`, `font-semibold`, or `font-medium` based on visual hierarchy and emphasis needs.
+
+#### Responsive Design
+
+- Always apply breakpoints where applicable:
+  - `sm:` (≥640px)
+  - `md:` (≥768px)
+  - `lg:` (≥1024px)
+  - `xl:` (≥1280px)
+  - `2xl:` (≥1536px)
+- Adjust layout, padding, font size, etc., using these breakpoints to improve responsiveness across devices.
+
 
 ## Asset Management
 
@@ -220,13 +292,36 @@ This section describes how to manage static assets like images, fonts, and PDFs.
 
 **Note**: Refer to the Create React App documentation for more details on using assets in the `public` folder versus `src`. Generally, prefer importing assets into `src` when possible for better optimization and management.
 
+## Deployment
+
+This project is set up for automatic deployment to Vercel. Once changes are committed to the main branch, Vercel will automatically detect the new commit, trigger a build process, and deploy the updated application.
+
+**Deployment Process:**
+
+1.  **Commit to main**: Ensure your changes are thoroughly tested and reviewed.
+2.  **Push to GitHub**: Push your committed changes to the main branch on GitHub.
+3.  **Vercel Integration**: Vercel is configured to monitor the main branch of this repository. Upon a new push to main, Vercel will:
+    *   Pull the latest code.
+    *   Install dependencies.
+    *   Run the `npm run build` command to create a production build.
+    *   Deploy the `build` folder as the new version of the website.
+
 ## Contribution Guidelines
 
 ### Branching Notes
 
-#### If no one else has modified main, there's no need to pull from main
+Use clear, descriptive names for branches that reflect the purpose of your changes. Follow this naming convention:
 
-#### If main has been updated since you created your branch, pulling ensures you have the latest changes:
+- `feature/your-feature-name` – for new components or functionality
+- `fix/your-fix-description` – for minor fixes and patches
+- `bug/your-bug-description` – for resolving reported bugs
+- `docs/your-doc-update` – for updates to README or documentation
+
+Use **kebab-case**, keep branch names concise, and avoid spaces or special characters.
+
+#### *Note: If no one else has modified main, there's no need to pull from main (even though it's safe to do so)*
+
+#### *Note: If main has been updated since you created your branch, pulling ensures you have the latest changes:*
 -> *do this when you are about to create a new branch and the remote repo has been changed since you last modified it*
 ```bash
 git checkout main
@@ -251,10 +346,11 @@ Create a new branch for your feature:
 # ALWAYS create a branch
 git checkout -b feature-name
 ```
+(Do some work)
 
 Commit your changes:
 ```bash
-# add all chnages in current directory and sub-directories
+# add all changes in current directory and sub-directories
 git add .
 ```
 OR
@@ -273,10 +369,45 @@ Push to GitHub:
 git push origin feature-name
 ```
 
-**IMPORTANT**: 
+**IMPORTANT**:
+*Please try to avoid merging to main from the command line. For safety open a pull request and assign a reviewer to review your changes.*
+
 Open a Pull Request on GitHub:
 
 - Go to your repository on GitHub.
 - Click Pull Requests > New Pull Request.
 - Select `<feature-name>` as the compare branch and main as the base branch.
 - Add a title and description, then request a review.
+
+## Google Analytics Integration
+
+## Contributors & Thanks
+
+This project was built with care and collaboration by the Tech for Social Impact team at Western University. Thank you again for the opportunity to take part in a project for a better cause.
+
+**Contributors**
+- **Noah Kostesku**: Project Manager & Developer - Website Redesign
+- **Stephanie Li**: Project Manager - Website Redesign
+- **David Liu**: Project Manager - Google Analytics
+- **Parneet Baidwan**: Project Manager - Google Analytics
+- **Zekai Zhao**: Developer
+- **Johnathan Lam**: Developer
+- **Sam Humphrey**: Developer
+
+We extend our deepest thanks to **Fund Homecare Canada** for trusting us with their digital platform. It’s been an honour to contribute to a mission supporting in-home palliative care for cancer patients.
+
+## README Documentation Authors
+
+The following team members contributed to writing and maintaining this README:
+
+- **Noah Kostesku**: Author for the "Website Redesign" section and its subsections, as well as the "Contributors & Thanks" and "README Documentation Authors" sections 
+- **David Liu**:
+- **Zekai Zhao**: 
+
+This documentation was created to ensure future developers and contributors can confidently navigate and maintain the Fund Homecare Canada website.
+
+---
+
+*With support from the Western University Tech for Social Impact Initiative.*
+
+
