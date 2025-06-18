@@ -54,9 +54,9 @@ const DonateFormContent = () => {
     // Pre-created Payment Links from Stripe Dashboard
     const paymentLinks = {
         onetime: {
-            50: 'https://donate.stripe.com/test_28EaEZ5Hx2Kf3lK7mJcEw02',
-            100: 'https://donate.stripe.com/test_eVq9AV9XN3Oj5tSgXjcEw04',
-            200: 'https://donate.stripe.com/test_28EaEZ5Hx2Kf3lK7mJcEw02',
+            50: 'https://donate.stripe.com/test_28EaEZ5Hx2Kf3lK7mJcEw02', // Redirect to http://localhost:3000/donation-thank-you
+            100: 'https://donate.stripe.com/test_eVq9AV9XN3Oj5tSgXjcEw04', // Redirect to https://fhc-webredesign.vercel.app/donation-thank-you
+            200: 'https://donate.stripe.com/test_00wcN73zp0C74pOgXjcEw05', // Redirect to https://fhc-webredesign.vercel.app/donation-thank-you
             custom: 'https://donate.stripe.com/test_aFa6oJee32Kf2hGbCZcEw03',
         },
         weekly: {
