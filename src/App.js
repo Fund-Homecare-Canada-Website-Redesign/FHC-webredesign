@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -17,8 +17,19 @@ import ApplyToBeBeneficiary from './pages/ApplyToBeBeneficiary';
 import ContactUs from './pages/ContactUs';
 import Donate from './pages/Donate';
 import MainPage from './pages/MainPage';
+import DonationThankYou from './pages/DonationThankYou';
+import { extractUTMParams, storeUTMParams } from './services/utmUtils';
 
 function App() {
+  // Capture UTM parameters on app initialization
+  useEffect(() => {
+    const utmParams = extractUTMParams();
+    if (Object.keys(utmParams).length > 0) {
+      storeUTMParams(utmParams);
+      console.log('UTM parameters captured:', utmParams);
+    }
+  }, []);
+
   return (
     <Router>
       <NavbarComponent />
@@ -33,6 +44,7 @@ function App() {
         <Route path="/beneficiaries/apply" element={<ApplyToBeBeneficiary />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/donate" element={<Donate />} />
+        <Route path="/donation-thank-you" element={<DonationThankYou />} />
       </Routes>
       <Footer />
     </Router>
