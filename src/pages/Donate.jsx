@@ -41,6 +41,9 @@ import React, { useEffect, useState } from "react";
 import { Form, Button } from 'react-bootstrap';
 import image_section_1 from '../assets/images/MainPage/Home_Hero-2.png';
 
+// Import UTM utilities
+import { addUTMParamsToUrl } from '../services/utmUtils';
+
 const DonateFormContent = () => {
     const [formData, setFormData] = useState({
         donationAmount: 50.00,
@@ -51,9 +54,9 @@ const DonateFormContent = () => {
     // Pre-created Payment Links from Stripe Dashboard
     const paymentLinks = {
         onetime: {
-            50: 'https://donate.stripe.com/test_28EaEZ5Hx2Kf3lK7mJcEw02',
-            100: 'https://donate.stripe.com/test_28EaEZ5Hx2Kf3lK7mJcEw02',
-            200: 'https://donate.stripe.com/test_28EaEZ5Hx2Kf3lK7mJcEw02',
+            50: 'https://donate.stripe.com/test_28EaEZ5Hx2Kf3lK7mJcEw02', // Redirect to http://localhost:3000/donation-thank-you
+            100: 'https://donate.stripe.com/test_eVq9AV9XN3Oj5tSgXjcEw04', // Redirect to https://fhc-webredesign.vercel.app/donation-thank-you
+            200: 'https://donate.stripe.com/test_00wcN73zp0C74pOgXjcEw05', // Redirect to https://fhc-webredesign.vercel.app/donation-thank-you
             custom: 'https://donate.stripe.com/test_aFa6oJee32Kf2hGbCZcEw03',
         },
         weekly: {
@@ -84,28 +87,12 @@ const DonateFormContent = () => {
     // Check if custom amount should be available (only for one-time donations, stripe payment links only support one-time donations for custom amounts)
     const showCustomAmount = formData.donationFrequency === 'onetime';
 
-    // Handler for frequency change
-    const handleFrequencyChange = (e) => {
-        setFormData(prevData => ({
-            ...prevData,
-            donationFrequency: e.target.value,
-            ...(e.target.value !== 'onetime' && prevData.isCustomAmount && {
-                isCustomAmount: false,
-                donationAmount: 50.00 // Default to $50 when switching from custom
-            })
-        }));
-        setErrors(prevErrors => ({
-            ...prevErrors,
-            donationFrequency: '',
-        }));
-    };
-
     // Handler for preset donation amount selection buttons
     const handleAmountChange = (amount) => {
         setFormData(prevData => ({
             ...prevData,
             donationAmount: amount,
-            isCustomAmount: false, // Clear custom amount flag
+            isCustomAmount: false,
         }));
         setErrors(prevErrors => ({
             ...prevErrors,
@@ -117,14 +104,29 @@ const DonateFormContent = () => {
     const handleCustomAmountClick = () => {
         setFormData(prevData => ({
             ...prevData,
-            donationAmount: 0, // Set to 0 to indicate custom
+            donationAmount: 0,
             isCustomAmount: true,
-            // Ensure we're on one-time (this should always be true when button is visible)
             donationFrequency: 'onetime',
         }));
         setErrors(prevErrors => ({
             ...prevErrors,
             donationAmount: '',
+        }));
+    };
+
+    // Handler for frequency change
+    const handleFrequencyChange = (e) => {
+        setFormData(prevData => ({
+            ...prevData,
+            donationFrequency: e.target.value,
+            ...(e.target.value !== 'onetime' && prevData.isCustomAmount && {
+                isCustomAmount: false,
+                donationAmount: 50.00
+            })
+        }));
+        setErrors(prevErrors => ({
+            ...prevErrors,
+            donationFrequency: '',
         }));
     };
 
@@ -143,26 +145,31 @@ const DonateFormContent = () => {
         return isValid;
     };
 
-    // Switch payment link based on frequency and amount
+    // Switch payment link based on frequency and amount, with UTM parameters
     const getPaymentLink = () => {
         const frequency = formData.donationFrequency;
         const amount = formData.donationAmount;
 
+        let basePaymentLink;
+
         // For custom amounts, only one-time is supported
         if (formData.isCustomAmount) {
-            return paymentLinks.onetime.custom;
+            basePaymentLink = paymentLinks.onetime.custom;
         }
-
         // Check if it's a standard amount
-        if ([50, 100, 200].includes(amount)) {
-            return paymentLinks[frequency][amount];
+        else if ([50, 100, 200].includes(amount)) {
+            basePaymentLink = paymentLinks[frequency][amount];
+        }
+        // Fallback to custom one-time
+        else {
+            basePaymentLink = paymentLinks.onetime.custom;
         }
 
-        // Fallback to custom one-time
-        return paymentLinks.onetime.custom;
+        // Add UTM parameters to the payment link
+        return addUTMParamsToUrl(basePaymentLink);
     };
 
-    // Main form submission handler
+    // Main form submission handler - ONLY GA4 tracking here
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -170,23 +177,34 @@ const DonateFormContent = () => {
             return;
         }
 
+        // Track donation redirect event - ONLY GA4 event in donate page
+        if (typeof window.gtag !== 'undefined') {
+            window.gtag('event', 'donation_redirect', {
+                event_category: 'donation',
+                event_label: 'proceed_to_payment',
+                donation_type: formData.donationFrequency,
+                is_custom_amount: formData.isCustomAmount
+            });
+        }
+
         setProcessing(true);
 
-        // Get the payment link
-        const paymentLink = getPaymentLink();
+        // Get the payment link with UTM parameters already included
+        const paymentLinkWithUTM = getPaymentLink();
 
-        // Add some metadata as URL parameters if needed
-        const params = new URLSearchParams();
+        // Add metadata as URL parameters to the existing URL (which may already have UTM params)
+        const url = new URL(paymentLinkWithUTM);
+
         if (formData.isCustomAmount) {
-            params.append('metadata[amount_type]', 'custom');
+            url.searchParams.set('metadata[amount_type]', 'custom');
         } else {
-            params.append('metadata[amount]', formData.donationAmount);
+            url.searchParams.set('metadata[amount]', formData.donationAmount);
         }
-        params.append('metadata[frequency]', formData.donationFrequency);
+        url.searchParams.set('metadata[frequency]', formData.donationFrequency);
 
-        const finalPaymentLink = params.toString()
-            ? `${paymentLink}?${params.toString()}`
-            : paymentLink;
+        const finalPaymentLink = url.toString();
+
+        console.log('Redirecting to payment with UTM parameters:', finalPaymentLink);
 
         // Small delay for better UX
         setTimeout(() => {
