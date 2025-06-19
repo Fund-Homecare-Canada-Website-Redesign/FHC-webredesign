@@ -160,8 +160,8 @@ const ApplyToBeBeneficiary = () => {
 
 
       emailjs.send(
-        'service_fs5lb2u', // service ID
-        'template_4rou2e5', // template ID
+        'service_bfru9uv', // service ID
+        'template_kas52fc', // template ID
         {
           contactPref: formData.contactPref,
           requestType: formData.requestType,
@@ -173,7 +173,7 @@ const ApplyToBeBeneficiary = () => {
           requestDetails: formData.requestDetails,
           consent: formData.consent ? 'Yes' : 'No',
         },
-        'x5HHixuKGMchzcE3l' // public key
+        'DXCnR6_5cvP6qeR0n' // public key
       ).then(
         (result) => {
           console.log(result.text);

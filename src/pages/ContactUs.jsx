@@ -143,8 +143,8 @@ const ContactUsPage = () => {
         e.preventDefault();
         if (validateForm()) {
             emailjs.send(
-                'service_fs5lb2u', // service ID
-                'template_4rou2e5', // template ID
+                'service_jhz33ri', // service ID
+                'template_b3cv2hb', // template ID
                 {
                     firstName: formData.firstName,
                     lastName: formData.lastName,
@@ -153,7 +153,7 @@ const ContactUsPage = () => {
                     requestDetails: formData.requestDetails, // This maps to 'inquiry' field in your previous form
                     consent: formData.consent ? 'Yes' : 'No',
                 },
-                'x5HHixuKGMchzcE3l' // public key
+                '-z-tbikZoE0dLBz9k' // public key
             ).then(
                 (result) => {
                     console.log(result.text);
@@ -587,7 +587,7 @@ const ContactUsPage = () => {
                             </Form.Group>
 
                             {/* Consent Checkbox */}
-                            <Form.Group className="mb-4 justify-content-center" controlId="formConsent"> {/* Changed justify-content-start to justify-content-center */}
+                            <Form.Group className="mb-4 justify-content-start" controlId="formConsent">
                                 <Form.Check
                                     type="checkbox"
                                     label="I consent to be contacted by Fund Homecare Canada regarding my inquiry."
@@ -595,6 +595,7 @@ const ContactUsPage = () => {
                                     checked={formData.consent}
                                     onChange={handleChange}
                                     isInvalid={!!errors.consent}
+                                    className="text-start"
                                 />
                                 <Form.Control.Feedback type="invalid" className="d-flex justify-content-center"> {/* Also center the feedback */}
                                     {errors.consent}
