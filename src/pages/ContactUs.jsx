@@ -143,8 +143,8 @@ const ContactUsPage = () => {
         e.preventDefault();
         if (validateForm()) {
             emailjs.send(
-                'service_jhz33ri', // service ID
-                'template_b3cv2hb', // template ID
+                'service_bfru9uv', // service ID
+                'template_rgp0v8r', // template ID
                 {
                     firstName: formData.firstName,
                     lastName: formData.lastName,
@@ -153,7 +153,7 @@ const ContactUsPage = () => {
                     requestDetails: formData.requestDetails, // This maps to 'inquiry' field in your previous form
                     consent: formData.consent ? 'Yes' : 'No',
                 },
-                '-z-tbikZoE0dLBz9k' // public key
+                'DXCnR6_5cvP6qeR0n' // public key
             ).then(
                 (result) => {
                     console.log(result.text);
