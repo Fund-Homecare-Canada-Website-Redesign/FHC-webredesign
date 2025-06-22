@@ -12,8 +12,8 @@ import SpringGala2025 from "../assets/images/PastEvents/SpringGala2025/Invite/Ma
 import SpringGala2025Sponsor1 from "../assets/images/PastEvents/SpringGala2025/Sponsors/Amica_CRM.jpg";
 import SpringGala2025Sponsor2 from "../assets/images/PastEvents/SpringGala2025/Sponsors/Angie_Joe.png";
 import SpringGala2025Sponsor3 from "../assets/images/PastEvents/SpringGala2025/Sponsors/Drayton.png";
-import SpringGala2025Sponsor4 from "../assets/images/PastEvents/SpringGala2025/Sponsors/Enerta Digital.jpg";
-import SpringGala2025Sponsor5 from "../assets/images/PastEvents/SpringGala2025/Sponsors/Sabor Dance.jpg";
+import SpringGala2025Sponsor4 from "../assets/images/PastEvents/SpringGala2025/Sponsors/Enerta_Digital.jpg";
+import SpringGala2025Sponsor5 from "../assets/images/PastEvents/SpringGala2025/Sponsors/Sabor_Dance.jpg";
 import SpringGala2025Sponsor6 from "../assets/images/PastEvents/SpringGala2025/Sponsors/Scentsy.jpeg";
 import SpringGala2025Sponsor7 from "../assets/images/PastEvents/SpringGala2025/Sponsors/TSOlogo.jpg";
 import SpringGala2025Sponsor8 from "../assets/images/PastEvents/SpringGala2025/Sponsors/cc-horizontal-logo-2.png";
