@@ -1,39 +1,22 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { FaArrowDown } from "react-icons/fa";
 import GoogleMapComponent from "./GoogleMap.jsx";
-import SponsorSlider from "./SponsorSlider";
+import SponsorSlider from "./SponsorSlider.jsx";
 
 function UpcomingEventsCard({ event }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const toggleExpand = () => setIsExpanded(!isExpanded);
   const expandedRef = useRef(null);
 
-  useEffect(() => {
-    if (!isExpanded || !expandedRef.current) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) {
-          setIsExpanded(false);
-        }
-      },
-      { root: null, threshold: 0.1 }
-    );
-
-    observer.observe(expandedRef.current);
-    return () => {
-      if (expandedRef.current) observer.unobserve(expandedRef.current);
-    };
-  }, [isExpanded]);
-
   return (
-    <div className="flex justify-center w-full">
-      <div className="bg-white overflow-hidden border shadow-lg rounded-xl p-8 w-full md:max-w-[90%] lg:max-w-[80%] xl:max-w-[75%] transition-all duration-300">
+    <div className="flex justify-center w-full px-4 sm:px-6 md:px-8"> {/* Added horizontal padding for smaller screens */}
+      <div className="bg-white overflow-hidden border shadow-lg rounded-xl p-6 sm:p-8 w-full md:max-w-[90%] lg:max-w-[80%] xl:max-w-[75%]"> {/* Adjusted padding */}
         
         {/* Flex container */}
         <div className="flex flex-col md:flex-row gap-6 items-start">
           {/* Image */}
-          <div className="order-1 md:order-2 w-full max-w-[500px] md:max-w-[700px] md:w-[400px] mx-auto md:mx-0 flex-shrink-0">
+          {/* Changed fixed width on md to a flex-basis to allow more flexibility */}
+          <div className="order-1 md:order-2 w-full max-w-[500px] md:w-2/5 lg:w-1/2 xl:w-2/5 mx-auto md:mx-0 flex-shrink-0">
             <img
               src={event.image || "/placeholder.svg"}
               alt={`${event.name}`}
@@ -43,7 +26,8 @@ function UpcomingEventsCard({ event }) {
           </div>
 
           {/* Content */}
-          <div className="order-2 md:order-1 flex-1">
+          {/* Ensured content takes remaining space and has min-width for text wrapping */}
+          <div className="order-2 md:order-1 flex-1 min-w-0"> 
             <h2 className="text-2xl font-bold text-black mb-2">{event.name}</h2>
             <h3 className="text-lg font-medium text-gray-700 mb-3">{event.date}</h3>
 
@@ -73,7 +57,7 @@ function UpcomingEventsCard({ event }) {
             isExpanded ? "max-h-[2000px] opacity-100 mt-6" : "max-h-0 opacity-0"
           }`}
         >
-          {/* 📦 Eventbrite Integration instead of photo slider */}
+          {/* Eventbrite Integration instead of photo slider */}
           <div className="mt-6">
             <h4 className="text-lg font-semibold text-gray-800 mb-3">Register Now</h4>
             <div className="w-full">
