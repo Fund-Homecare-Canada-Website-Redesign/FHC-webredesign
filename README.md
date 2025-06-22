@@ -388,8 +388,6 @@ This project was built with care and collaboration by the Tech for Social Impact
 **Contributors**
 - **Noah Kostesku**: Project Manager & Developer - Website Redesign
 - **Stephanie Li**: Project Manager - Website Redesign
-- **David Liu**: Project Manager - Google Analytics
-- **Parneet Baidwan**: Project Manager - Google Analytics
 - **Zekai Zhao**: Developer
 - **Johnathan Lam**: Developer
 - **Sam Humphrey**: Developer
@@ -400,9 +398,7 @@ We extend our deepest thanks to **Fund Homecare Canada** for trusting us with th
 
 The following team members contributed to writing and maintaining this README:
 
-- **Noah Kostesku**: Author for the "Website Redesign" section and its subsections, as well as the "Contributors & Thanks" and "README Documentation Authors" sections 
-- **David Liu**:
-- **Zekai Zhao**: 
+- **Noah Kostesku**: Sole author and maintainer of the entire README.
 
 This documentation was created to ensure future developers and contributors can confidently navigate and maintain the Fund Homecare Canada website.
 
