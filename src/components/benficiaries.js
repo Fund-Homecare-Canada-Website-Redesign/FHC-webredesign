@@ -13,7 +13,7 @@ const beneficiariesData = [
   },
   // when you add one of these it adds a card to the page
   {
-    id: 'mr-johnson',
+    id: 'mr-johnson', // Add a unique ID
     imageSrc: FhcFullLogoTransparent,
     fundName: "Elderly Care Initiative",
     beneficiaryName: "Mr. Johnson",
@@ -23,7 +23,7 @@ const beneficiariesData = [
     donations: 30,
   },
   {
-    id: 'mr-johnson',
+    id: 'mr-johnson', // Add a unique ID
     imageSrc: FhcFullLogoTransparent,
     fundName: "Elderly Care Initiative",
     beneficiaryName: "Mr. Black",

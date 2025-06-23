@@ -106,6 +106,11 @@ import SpringGala2022Sponsor4 from "../assets/images/PastEvents/SpringGala2022/S
 import SpringGala2022Sponsor5 from "../assets/images/PastEvents/SpringGala2022/Sponsors/KOC.png";
 import SpringGala2022Sponsor6 from "../assets/images/PastEvents/SpringGala2022/Sponsors/SunilSainiRealEstate.png";
 
+// Community Events -> Now Past Events
+import CateringForACause from "../assets/images/CommunityEvents/CateringForACause.jpeg";
+import FashionBazaar from "../assets/images/CommunityEvents/FashionBazzaar.jpeg";
+import GargageSale2024 from "../assets/images/CommunityEvents/GarageSale2024.jpg";
+import KaraokeThursdays from "../assets/images/CommunityEvents/KaraokeThursdays.jpeg";
 
 
 const PastEvents = () => {
@@ -153,6 +158,27 @@ const PastEvents = () => {
     },
     {
       id: 3,
+      name: "Fund Homecare Fashion Bazaar",
+      date: "August 3rd, 2024",
+      description: "Get ready for an exciting Fashion Bazaar on August 3, 2024, from 2 to 6 PM! Join us for an afternoon of style and fun, featuring a stunning collection of clothing, accessories, and more, all at unbeatable prices.\n\nEvery dollar raised will go directly to Fund Homecare Canada, helping to provide funding for families needing homecare-based services for Palliative Cancer patients in Ontario.",
+      image: FashionBazaar,
+    },
+    {
+      id: 4,
+      name: "Catering For A Cause",
+      date: "July 28th, 2024",
+      description: "Indulge in the flavors of Jamaica with our Delivered Jamaican Dishes! Treat yourself to a mouthwatering meal delivered right to your door, featuring two delicious options.\n\nOur Non-Vegetarian dish includes Jerk Chicken, Rice & Peas, and Coleslaw, while our Vegetarian option offers Cabbage Vegetable, Rice & Peas, and Sweet Potato.\n\nEach meal is only $20 and supports Fund Homecare Canada, helping to provide funding for families needing homecare-based services for Palliative Cancer patients in Ontario.",
+      image: CateringForACause,
+    },
+    {
+      id: 5,
+      name: "Fund Homecare Garage Sale",
+      date: "July 27th, 2024",
+      description: "Join us this Saturday for a fantastic garage sale to support Fund Homecare Canada! From 8 AM to 2 PM, we’ll have a wide array of items, including furniture, clothing, electronics, books, and more, all generously donated by our community. Every dollar raised will go directly to Fund Homecare Canada, helping to provide funding for families needing homecare-based services for Palliative Cancer patients in Ontario.",
+      image: GargageSale2024,
+    },   
+    {
+      id: 6,
       name: "Spring Gala 2024",
       date: "May 04, 2024",
       location: "Speranza Banquet Hall, Brampton",
@@ -192,7 +218,14 @@ const PastEvents = () => {
       ]
     },
     {
-      id: 4,
+      id: 7,
+      name: "Karaoke 4th Thursdays",
+      date: "March 14, 2024",
+      description: "Get ready to unleash your inner rock star at Karaoke Night at Lionheart Pub! Join us every 4th Thursday starting at 8 PM for an evening of fun, music, and camaraderie, all while supporting Fund Homecare Canada. Whether you’re a seasoned performer or just looking to have a good time, this is your chance to shine on stage.\n\nEnjoy delicious drinks, great company, and a lively atmosphere as you belt out your favorite tunes. Don’t miss out on the best karaoke experience in town—grab your friends and head to Lionheart Pub for a night to remember and to make a positive impact in our community!",
+      image: KaraokeThursdays,
+    }, 
+    {
+      id: 8,
       name: "Malabar Food Fest",
       date: "July 22, 2023",
       location: "Lawns, 2548 Embleton Rd, Brampton",
@@ -214,7 +247,7 @@ const PastEvents = () => {
       ],
     },
     {
-      id: 5,
+      id: 9,
       name: "Spring Gala 2023",
       date: "May 6, 2023",
       location: "Swagat Banquet Hall, Missisauga",
@@ -247,7 +280,7 @@ const PastEvents = () => {
       ],
     },
     {
-      id: 6,
+      id: 10,
       name: "Spring Gala 2022",
       date: "June 18, 2022",
       location: "Pearl Banquet Hall, Mississauga",
