@@ -339,34 +339,42 @@ Replace `YourFolder` with the relevant image directory, e.g., `MainPage`, `About
 
 This project is set up for automatic deployment to Vercel. Once changes are committed to the main branch, Vercel will automatically detect the new commit, trigger a build process, and deploy the updated application.
 
-**Deployment Process:**
+## Deployment
 
-1.  **Commit to main**: Ensure your changes are thoroughly tested and reviewed.
-2.  **Push to GitHub**: Push your committed changes to the main branch on GitHub.
-3.  **Vercel Integration**: Vercel is configured to monitor the main branch of this repository. Upon a new push to main, Vercel will:
-    *   Pull the latest code.
-    *   Install dependencies.
-    *   Run the `npm run build` command to create a production build.
-    *   Deploy the `build` folder as the new version of the website.
+This project is set up for automatic deployment via Vercel. Once changes are pushed to the `main` branch, Vercel will trigger a new production deployment.
 
-**Custom Domain Configuration:**
+### Recommended Workflow
+
+1. **Test locally**: Run `npm start` in your terminal to verify your changes work as expected.
+2. **Create a feature branch**: Push your changes to a new branch on GitHub.
+3. **Preview build**: Vercel will automatically generate a preview deployment for your branch.
+4. **Review & QA**: Use the preview link to verify layout, functionality, and content.
+5. **Merge to `main`**: Once approved, merge your branch into `main`.
+6. **Monitor production**: Vercel will deploy the new version and provide build logs on the dashboard.
+
+### Deployment Process (via Vercel)
+
+1. **Commit to `main`**: Ensure all changes are reviewed and tested.
+2. **Push to GitHub**: Trigger Vercel’s build hook.
+3. **Vercel Integration**:
+    - Pulls the latest code from `main`
+    - Installs dependencies
+    - Runs `npm run build`
+    - Deploys the output from the `build` folder
+
+### Custom Domain Configuration
 
 - **Primary domain**: `www.fundhomecare.ca`
-- **Redirect**: `fundhomecare.ca` → `www.fundhomecare.ca` (automatic redirect enabled)
+- **Redirect rule**: `fundhomecare.ca` → `www.fundhomecare.ca` (automatically handled by Vercel)
 
-**DNS Settings (at your domain registrar):**
+### DNS Settings (configure at your domain registrar)
 
-- **A Record**
-  - **Type**: `A`
-  - **Name**: `@`
-  - **Value**: `76.76.21.21` (Vercel’s IP address for apex domains)
-- **CNAME Record**
-  - **Type**: `CNAME`
-  - **Name**: `www`
-  - **Value**: `cname.vercel-dns.com`
+| Type  | Name | Value                        |
+|-------|------|------------------------------|
+| A     | @    | 76.76.21.21                  |
+| CNAME | www  | cname.vercel-dns.com         |
 
-These DNS settings ensure your domain is correctly linked to Vercel and all traffic to the root domain is redirected to the `www` version. DNS propagation may take up to 24 hours, though it usually completes faster.
-
+These DNS records connect your domain to Vercel and ensure traffic is properly routed to the live site. DNS propagation may take up to 24 hours (typically completes within a few hours).
 
 ## Contribution Guidelines
 
