@@ -1,41 +1,39 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import UpcomingEventsCard from "../components/UpcomingEventsCardNoFormIntegration.jsx";
+import UpcomingEventsCard from "../components/UpcomingEventsCard.jsx";
 import image_section_1 from '../assets/images/MainPage/Home_Hero-2.png';
 // example import image to display
-// import SpringGala2024Image1 from "../assets/images/PastEvents/SpringGala2024/Photos/image1.jpg";
+import SpringGala2024Image1 from "../assets/images/PastEvents/SpringGala2024/Photos/image1.jpg"; // comment out unused images if needed too
 
 
 const UpcomingEvents = () => {
   // Sample data - replace with actual data that you need
   const upcomingEvents = [
-    // {
-    //   id: 1,
-    //   name: "Summer Gala 2023",
-    //   date: "July 15, 2023",
-    //   time: "6:00 PM - 10:00 PM",
-    //   //location will be embedded in google maps
-    //   location: "Grand Hotel Ballroom",
-    //   description: "Join us for our annual summer gala featuring live music, silent auction, and gourmet dinner.",
-    //   //call the image
-    //   image: SpringGala2024Image1,
-         // your event brite url
-    //   eventbriteEmbedUrl: "https://www.eventbrite.com/e/640449565617?embed=true"
+    { // <--- This entire event object is now commented out
+      id: 1,
+      name: "Summer Gala 2023",
+      date: "July 15, 2023",
+      time: "6:00 PM - 10:00 PM",
+      //location will be embedded in google maps
+      location: "Grand Hotel Ballroom",
+      description: "Join us for our annual summer gala featuring live music, silent auction, and gourmet dinner.",
+      //call the image
+      image: SpringGala2024Image1,
+        //  your event brite url
+      eventbriteEmbedUrl: "https://www.eventbrite.com/e/640449565617?embed=true"
 
-    // },
+    },
 
-    //comment out or delete if you no longer need a card
-
-    // {
-    //   id: 2,
-    //   name: "Community Health Fair",
-    //   date: "August 5, 2023",
-    //   time: "10:00 AM - 4:00 PM",
-    //   location: "Community Center",
-    //   description: "Free health screenings, wellness workshops, and family activities.",
-    //   image: "/path/to/image2.jpg",
-    //   eventbriteEmbedUrl: "https://www.eventbrite.com/e/640449565617?embed=true"
-    // }
+    {
+      id: 2,
+      name: "Community Health Fair",
+      date: "August 5, 2023",
+      time: "10:00 AM - 4:00 PM",
+      location: "Community Center",
+      description: "Free health screenings, wellness workshops, and family activities.",
+      image: "/path/to/image2.jpg",
+      eventbriteEmbedUrl: "https://www.eventbrite.com/e/640449565617?embed=true"
+    }
   ];
 
   useEffect(() => {

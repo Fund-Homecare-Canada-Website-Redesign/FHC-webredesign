@@ -1,9 +1,4 @@
 import React, { useState } from "react";
-// Remove motion and AnimatePresence if you're not using them elsewhere in this component
-// If you still use them for the description collapse, keep them.
-// For simplicity, I'll assume you only need them for the description now.
-import { motion, AnimatePresence } from "framer-motion";
-import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
 
 // import colours from "../assets/styles/BrandColours";
