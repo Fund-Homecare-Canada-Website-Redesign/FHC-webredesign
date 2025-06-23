@@ -16,7 +16,7 @@ import SpringGala2025Sponsor4 from "../assets/images/PastEvents/SpringGala2025/S
 import SpringGala2025Sponsor5 from "../assets/images/PastEvents/SpringGala2025/Sponsors/Sabor_Dance.jpg";
 import SpringGala2025Sponsor6 from "../assets/images/PastEvents/SpringGala2025/Sponsors/Scentsy.jpeg";
 import SpringGala2025Sponsor7 from "../assets/images/PastEvents/SpringGala2025/Sponsors/TSOlogo.jpg";
-import SpringGala2025Sponsor8 from "../assets/images/PastEvents/SpringGala2025/Sponsors/cc-horizontal-logo-2.png";
+import SpringGala2025Sponsor8 from "../assets/images/PastEvents/SpringGala2025/Sponsors/cc-horizontal-logo-2.webp";
 import SpringGala2025Sponsor9 from "../assets/images/PastEvents/SpringGala2025/Sponsors/costco.png";
 import SpringGala2025Sponsor10 from "../assets/images/PastEvents/SpringGala2025/Sponsors/Snap_Click.png";
 
@@ -56,27 +56,27 @@ import SpringGala2024Sponsor15 from "../assets/images/PastEvents/SpringGala2024/
 // Malabar Food Fest 2023
 import InviteMalabar from "../assets/images/PastEvents/MalabarFoodFest2023/Invite/InviteMalabar2023.png";
 // Malabar Food Fest 2023 - Images
-import Malabar2023Image1 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image1.jpg";
-import Malabar2023Image2 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image2.jpg";
-import Malabar2023Image3 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image3.jpg";
-import Malabar2023Image4 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image4.jpg";
-import Malabar2023Image5 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image5.jpg";
-import Malabar2023Image6 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image6.jpg";
-import Malabar2023Image7 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image7.jpeg";
-import Malabar2023Image8 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image8.jpg";
+import Malabar2023Image1 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image1mala.jpg";
+import Malabar2023Image2 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image2mala.jpg";
+import Malabar2023Image3 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image3mala.jpg";
+import Malabar2023Image4 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image4mala.jpg";
+import Malabar2023Image5 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image5mala.jpg";
+import Malabar2023Image6 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image6mala.jpg";
+import Malabar2023Image7 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image7mala.jpeg";
+import Malabar2023Image8 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image8mala.jpg";
 
 // Spring Gala 2023
 import SpringGala2023 from "../assets/images/PastEvents/SpringGala2023/Invite/InviteSG2023.jpg";
 // Speing Gala 2023 - Images
-import SpringGala2023Image1 from "../assets/images/PastEvents/SpringGala2023/Photos/image1.jpg";
-import SpringGala2023Image2 from "../assets/images/PastEvents/SpringGala2023/Photos/image2.jpg";
-import SpringGala2023Image3 from "../assets/images/PastEvents/SpringGala2023/Photos/image3.jpg";
-import SpringGala2023Image4 from "../assets/images/PastEvents/SpringGala2023/Photos/image4.jpg";
-import SpringGala2023Image5 from "../assets/images/PastEvents/SpringGala2023/Photos/image5.jpg";
-import SpringGala2023Image6 from "../assets/images/PastEvents/SpringGala2023/Photos/image6.jpg";
-import SpringGala2023Image7 from "../assets/images/PastEvents/SpringGala2023/Photos/image7.jpg";
-import SpringGala2023Image8 from "../assets/images/PastEvents/SpringGala2023/Photos/image8.jpg";
-import SpringGala2023Image9 from "../assets/images/PastEvents/SpringGala2023/Photos/image9.jpg";
+import SpringGala2023Image1 from "../assets/images/PastEvents/SpringGala2023/Photos/image1sg2023.jpg";
+import SpringGala2023Image2 from "../assets/images/PastEvents/SpringGala2023/Photos/image2sg2023.jpg";
+import SpringGala2023Image3 from "../assets/images/PastEvents/SpringGala2023/Photos/image3sg2023.jpg";
+import SpringGala2023Image4 from "../assets/images/PastEvents/SpringGala2023/Photos/image4sg2023.jpg";
+import SpringGala2023Image5 from "../assets/images/PastEvents/SpringGala2023/Photos/image5sg2023.jpg";
+import SpringGala2023Image6 from "../assets/images/PastEvents/SpringGala2023/Photos/image6sg2023.jpg";
+import SpringGala2023Image7 from "../assets/images/PastEvents/SpringGala2023/Photos/image7sg2023.jpg";
+import SpringGala2023Image8 from "../assets/images/PastEvents/SpringGala2023/Photos/image8sg2023.jpg";
+import SpringGala2023Image9 from "../assets/images/PastEvents/SpringGala2023/Photos/image9sg2023.jpg";
 // Spring Gala 2023 - Sponsors
 import SpringGala2023Sponsor1 from "../assets/images/PastEvents/SpringGala2023/Sponsors/BarNation.png";
 import SpringGala2023Sponsor2 from "../assets/images/PastEvents/SpringGala2023/Sponsors/BhawanaKaushikCPA.png";
@@ -92,11 +92,11 @@ import SpringGala2023Sponsor9 from "../assets/images/PastEvents/SpringGala2023/S
 import SpringGala2022 from "../assets/images/PastEvents/SpringGala2022/Invite/InviteSG2022.jpg";
 
 // Spring Gala 2022 - Images
-import SpringGala2022Image1 from "../assets/images/PastEvents/SpringGala2022/Photos/image1.jpg";
-import SpringGala2022Image3 from "../assets/images/PastEvents/SpringGala2022/Photos/image3.jpg";
-import SpringGala2022Image4 from "../assets/images/PastEvents/SpringGala2022/Photos/image4.jpg";
-import SpringGala2022Image5 from "../assets/images/PastEvents/SpringGala2022/Photos/image5.jpg";
-import SpringGala2022Image6 from "../assets/images/PastEvents/SpringGala2022/Photos/image6.jpg";
+import SpringGala2022Image1 from "../assets/images/PastEvents/SpringGala2022/Photos/image1sg2022.jpg";
+import SpringGala2022Image3 from "../assets/images/PastEvents/SpringGala2022/Photos/image3sg2022.jpg";
+import SpringGala2022Image4 from "../assets/images/PastEvents/SpringGala2022/Photos/image4sg2022.jpg";
+import SpringGala2022Image5 from "../assets/images/PastEvents/SpringGala2022/Photos/image5sg2022.jpg";
+import SpringGala2022Image6 from "../assets/images/PastEvents/SpringGala2022/Photos/image6sg2022.jpg";
 
 // Spring Gala 2022 - Sponsors
 import SpringGala2022Sponsor1 from "../assets/images/PastEvents/SpringGala2022/Sponsors/EverestHHC.jpg";

@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 // import PageHeaderSection from "../components/PageHeaderSection.jsx";
 import image_section_1 from '../assets/images/MainPage/Home_Hero-2.png';
-import upcomingImage from "../compressed/assets/images/MainPicture.jpg";
-import pastImage from "../compressed/assets/images/Ways-to-Give_Hero-Image.png";
-import newsletterImage from "../compressed/assets/images/NewsletterImage.png";
+import upcomingImage from "../assets/images/PastEvents/SpringGala2022/Photos/MainPicture.jpg";
+import pastImage from "../assets/images/PastEvents/Ways-to-Give_Hero-Image.png";
+import newsletterImage from "../assets/images/MonthlyNewletter/NewsletterImage.png";
 
 const MainEvents = () => {
   useEffect(() => {
