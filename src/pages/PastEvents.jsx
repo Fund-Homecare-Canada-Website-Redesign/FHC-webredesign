@@ -12,11 +12,11 @@ import SpringGala2025 from "../assets/images/PastEvents/SpringGala2025/Invite/Ma
 import SpringGala2025Sponsor1 from "../assets/images/PastEvents/SpringGala2025/Sponsors/Amica_CRM.jpg";
 import SpringGala2025Sponsor2 from "../assets/images/PastEvents/SpringGala2025/Sponsors/Angie_Joe.png";
 import SpringGala2025Sponsor3 from "../assets/images/PastEvents/SpringGala2025/Sponsors/Drayton.png";
-import SpringGala2025Sponsor4 from "../assets/images/PastEvents/SpringGala2025/Sponsors/Enerta Digital.jpg";
-import SpringGala2025Sponsor5 from "../assets/images/PastEvents/SpringGala2025/Sponsors/Sabor Dance.jpg";
+import SpringGala2025Sponsor4 from "../assets/images/PastEvents/SpringGala2025/Sponsors/Enerta_Digital.jpg";
+import SpringGala2025Sponsor5 from "../assets/images/PastEvents/SpringGala2025/Sponsors/Sabor_Dance.jpg";
 import SpringGala2025Sponsor6 from "../assets/images/PastEvents/SpringGala2025/Sponsors/Scentsy.jpeg";
 import SpringGala2025Sponsor7 from "../assets/images/PastEvents/SpringGala2025/Sponsors/TSOlogo.jpg";
-import SpringGala2025Sponsor8 from "../assets/images/PastEvents/SpringGala2025/Sponsors/cc-horizontal-logo-2.png";
+import SpringGala2025Sponsor8 from "../assets/images/PastEvents/SpringGala2025/Sponsors/cc-horizontal-logo-2.webp";
 import SpringGala2025Sponsor9 from "../assets/images/PastEvents/SpringGala2025/Sponsors/costco.png";
 import SpringGala2025Sponsor10 from "../assets/images/PastEvents/SpringGala2025/Sponsors/Snap_Click.png";
 
@@ -56,27 +56,27 @@ import SpringGala2024Sponsor15 from "../assets/images/PastEvents/SpringGala2024/
 // Malabar Food Fest 2023
 import InviteMalabar from "../assets/images/PastEvents/MalabarFoodFest2023/Invite/InviteMalabar2023.png";
 // Malabar Food Fest 2023 - Images
-import Malabar2023Image1 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image1.jpg";
-import Malabar2023Image2 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image2.jpg";
-import Malabar2023Image3 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image3.jpg";
-import Malabar2023Image4 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image4.jpg";
-import Malabar2023Image5 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image5.jpg";
-import Malabar2023Image6 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image6.jpg";
-import Malabar2023Image7 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image7.jpeg";
-import Malabar2023Image8 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image8.jpg";
+import Malabar2023Image1 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image1mala.jpg";
+import Malabar2023Image2 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image2mala.jpg";
+import Malabar2023Image3 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image3mala.jpg";
+import Malabar2023Image4 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image4mala.jpg";
+import Malabar2023Image5 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image5mala.jpg";
+import Malabar2023Image6 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image6mala.jpg";
+import Malabar2023Image7 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image7mala.jpeg";
+import Malabar2023Image8 from "../assets/images/PastEvents/MalabarFoodFest2023/Photos/image8mala.jpg";
 
 // Spring Gala 2023
 import SpringGala2023 from "../assets/images/PastEvents/SpringGala2023/Invite/InviteSG2023.jpg";
 // Speing Gala 2023 - Images
-import SpringGala2023Image1 from "../assets/images/PastEvents/SpringGala2023/Photos/image1.jpg";
-import SpringGala2023Image2 from "../assets/images/PastEvents/SpringGala2023/Photos/image2.jpg";
-import SpringGala2023Image3 from "../assets/images/PastEvents/SpringGala2023/Photos/image3.jpg";
-import SpringGala2023Image4 from "../assets/images/PastEvents/SpringGala2023/Photos/image4.jpg";
-import SpringGala2023Image5 from "../assets/images/PastEvents/SpringGala2023/Photos/image5.jpg";
-import SpringGala2023Image6 from "../assets/images/PastEvents/SpringGala2023/Photos/image6.jpg";
-import SpringGala2023Image7 from "../assets/images/PastEvents/SpringGala2023/Photos/image7.jpg";
-import SpringGala2023Image8 from "../assets/images/PastEvents/SpringGala2023/Photos/image8.jpg";
-import SpringGala2023Image9 from "../assets/images/PastEvents/SpringGala2023/Photos/image9.jpg";
+import SpringGala2023Image1 from "../assets/images/PastEvents/SpringGala2023/Photos/image1sg2023.jpg";
+import SpringGala2023Image2 from "../assets/images/PastEvents/SpringGala2023/Photos/image2sg2023.jpg";
+import SpringGala2023Image3 from "../assets/images/PastEvents/SpringGala2023/Photos/image3sg2023.jpg";
+import SpringGala2023Image4 from "../assets/images/PastEvents/SpringGala2023/Photos/image4sg2023.jpg";
+import SpringGala2023Image5 from "../assets/images/PastEvents/SpringGala2023/Photos/image5sg2023.jpg";
+import SpringGala2023Image6 from "../assets/images/PastEvents/SpringGala2023/Photos/image6sg2023.jpg";
+import SpringGala2023Image7 from "../assets/images/PastEvents/SpringGala2023/Photos/image7sg2023.jpg";
+import SpringGala2023Image8 from "../assets/images/PastEvents/SpringGala2023/Photos/image8sg2023.jpg";
+import SpringGala2023Image9 from "../assets/images/PastEvents/SpringGala2023/Photos/image9sg2023.jpg";
 // Spring Gala 2023 - Sponsors
 import SpringGala2023Sponsor1 from "../assets/images/PastEvents/SpringGala2023/Sponsors/BarNation.png";
 import SpringGala2023Sponsor2 from "../assets/images/PastEvents/SpringGala2023/Sponsors/BhawanaKaushikCPA.png";
@@ -92,11 +92,11 @@ import SpringGala2023Sponsor9 from "../assets/images/PastEvents/SpringGala2023/S
 import SpringGala2022 from "../assets/images/PastEvents/SpringGala2022/Invite/InviteSG2022.jpg";
 
 // Spring Gala 2022 - Images
-import SpringGala2022Image1 from "../assets/images/PastEvents/SpringGala2022/Photos/image1.jpg";
-import SpringGala2022Image3 from "../assets/images/PastEvents/SpringGala2022/Photos/image3.jpg";
-import SpringGala2022Image4 from "../assets/images/PastEvents/SpringGala2022/Photos/image4.jpg";
-import SpringGala2022Image5 from "../assets/images/PastEvents/SpringGala2022/Photos/image5.jpg";
-import SpringGala2022Image6 from "../assets/images/PastEvents/SpringGala2022/Photos/image6.jpg";
+import SpringGala2022Image1 from "../assets/images/PastEvents/SpringGala2022/Photos/image1sg2022.jpg";
+import SpringGala2022Image3 from "../assets/images/PastEvents/SpringGala2022/Photos/image3sg2022.jpg";
+import SpringGala2022Image4 from "../assets/images/PastEvents/SpringGala2022/Photos/image4sg2022.jpg";
+import SpringGala2022Image5 from "../assets/images/PastEvents/SpringGala2022/Photos/image5sg2022.jpg";
+import SpringGala2022Image6 from "../assets/images/PastEvents/SpringGala2022/Photos/image6sg2022.jpg";
 
 // Spring Gala 2022 - Sponsors
 import SpringGala2022Sponsor1 from "../assets/images/PastEvents/SpringGala2022/Sponsors/EverestHHC.jpg";
@@ -106,6 +106,11 @@ import SpringGala2022Sponsor4 from "../assets/images/PastEvents/SpringGala2022/S
 import SpringGala2022Sponsor5 from "../assets/images/PastEvents/SpringGala2022/Sponsors/KOC.png";
 import SpringGala2022Sponsor6 from "../assets/images/PastEvents/SpringGala2022/Sponsors/SunilSainiRealEstate.png";
 
+// Community Events -> Now Past Events
+import CateringForACause from "../assets/images/CommunityEvents/CateringForACause.jpeg";
+import FashionBazaar from "../assets/images/CommunityEvents/FashionBazzaar.jpeg";
+import GargageSale2024 from "../assets/images/CommunityEvents/GarageSale2024.jpg";
+import KaraokeThursdays from "../assets/images/CommunityEvents/KaraokeThursdays.jpeg";
 
 
 const PastEvents = () => {
@@ -153,6 +158,27 @@ const PastEvents = () => {
     },
     {
       id: 3,
+      name: "Fund Homecare Fashion Bazaar",
+      date: "August 3rd, 2024",
+      description: "Get ready for an exciting Fashion Bazaar on August 3, 2024, from 2 to 6 PM! Join us for an afternoon of style and fun, featuring a stunning collection of clothing, accessories, and more, all at unbeatable prices.\n\nEvery dollar raised will go directly to Fund Homecare Canada, helping to provide funding for families needing homecare-based services for Palliative Cancer patients in Ontario.",
+      image: FashionBazaar,
+    },
+    {
+      id: 4,
+      name: "Catering For A Cause",
+      date: "July 28th, 2024",
+      description: "Indulge in the flavors of Jamaica with our Delivered Jamaican Dishes! Treat yourself to a mouthwatering meal delivered right to your door, featuring two delicious options.\n\nOur Non-Vegetarian dish includes Jerk Chicken, Rice & Peas, and Coleslaw, while our Vegetarian option offers Cabbage Vegetable, Rice & Peas, and Sweet Potato.\n\nEach meal is only $20 and supports Fund Homecare Canada, helping to provide funding for families needing homecare-based services for Palliative Cancer patients in Ontario.",
+      image: CateringForACause,
+    },
+    {
+      id: 5,
+      name: "Fund Homecare Garage Sale",
+      date: "July 27th, 2024",
+      description: "Join us this Saturday for a fantastic garage sale to support Fund Homecare Canada! From 8 AM to 2 PM, we’ll have a wide array of items, including furniture, clothing, electronics, books, and more, all generously donated by our community. Every dollar raised will go directly to Fund Homecare Canada, helping to provide funding for families needing homecare-based services for Palliative Cancer patients in Ontario.",
+      image: GargageSale2024,
+    },   
+    {
+      id: 6,
       name: "Spring Gala 2024",
       date: "May 04, 2024",
       location: "Speranza Banquet Hall, Brampton",
@@ -192,7 +218,14 @@ const PastEvents = () => {
       ]
     },
     {
-      id: 4,
+      id: 7,
+      name: "Karaoke 4th Thursdays",
+      date: "March 14, 2024",
+      description: "Get ready to unleash your inner rock star at Karaoke Night at Lionheart Pub! Join us every 4th Thursday starting at 8 PM for an evening of fun, music, and camaraderie, all while supporting Fund Homecare Canada. Whether you’re a seasoned performer or just looking to have a good time, this is your chance to shine on stage.\n\nEnjoy delicious drinks, great company, and a lively atmosphere as you belt out your favorite tunes. Don’t miss out on the best karaoke experience in town—grab your friends and head to Lionheart Pub for a night to remember and to make a positive impact in our community!",
+      image: KaraokeThursdays,
+    }, 
+    {
+      id: 8,
       name: "Malabar Food Fest",
       date: "July 22, 2023",
       location: "Lawns, 2548 Embleton Rd, Brampton",
@@ -214,7 +247,7 @@ const PastEvents = () => {
       ],
     },
     {
-      id: 5,
+      id: 9,
       name: "Spring Gala 2023",
       date: "May 6, 2023",
       location: "Swagat Banquet Hall, Missisauga",
@@ -247,7 +280,7 @@ const PastEvents = () => {
       ],
     },
     {
-      id: 6,
+      id: 10,
       name: "Spring Gala 2022",
       date: "June 18, 2022",
       location: "Pearl Banquet Hall, Mississauga",
