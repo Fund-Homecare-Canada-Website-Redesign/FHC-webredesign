@@ -32,6 +32,7 @@ This project is a comprehensive redesign of the FHC website. The primary goal is
   - [Styling](#styling)
   - [Asset Management](#asset-management)
     - [Using the `src/assets` Directory](#using-the-srcassets-directory)
+      - [Image Compression Guide](#image-compression-guide)
     - [Using the `public` Directory](#using-the-public-directory)
   - [Deployment](#deployment)
   - [Contribution Guidelines](#contribution-guidelines)
@@ -292,6 +293,48 @@ This section describes how to manage static assets like images, fonts, and PDFs.
 
 **Note**: Refer to the Create React App documentation for more details on using assets in the `public` folder versus `src`. Generally, prefer importing assets into `src` when possible for better optimization and management.
 
+## Image Compression Guide
+*Note: Image compression was implemented to improve load times, particularly for users on mobile data. While not mandatory, this is considered a best practice for performance optimization.*
+
+To reduce the size of our assets and improve performance for users on mobile data, we use `imagemin` to compress images before committing them. This is especially important for image-heavy pages like **Past Events** or the **Main Page**.
+
+### Tools Used
+
+- [`imagemin`](https://github.com/imagemin/imagemin)
+- [`imagemin-mozjpeg`](https://github.com/imagemin/imagemin-mozjpeg)
+- [`imagemin-pngquant`](https://github.com/imagemin/imagemin-pngquant)
+
+### Installation
+
+You can install the necessary plugins locally using:
+
+```bash
+npm install --save-dev imagemin imagemin-mozjpeg imagemin-pngquant
+```
+
+### Compression Command
+
+Run this command to compress images in a given directory:
+
+```bash
+npx imagemin "src/assets/images/YourFolder/*.{jpg,jpeg,png}" \
+  --plugin=mozjpeg --plugin=pngquant \
+  --out-dir="compressed/src/assets/images/YourFolder"
+```
+
+Replace `YourFolder` with the relevant image directory, e.g., `MainPage`, `AboutUs`, `CommunityEvents`, etc.
+
+### Workflow
+1. Identify directories with large image sizes (e.g., using `du -sh *`).
+2. Compress those directories using the command above.
+3. Manually inspect and copy the compressed images back into the original folder if quality is acceptable.
+4. Commit the changes with a message like:
+
+### Tips
+- Avoid compressing the same image multiple times.
+- Keep original assets elsewhere if quality restoration is needed.
+- Avoid committing `.DS_Store` or unnecessary cache files.
+
 ## Deployment
 
 This project is set up for automatic deployment to Vercel. Once changes are committed to the main branch, Vercel will automatically detect the new commit, trigger a build process, and deploy the updated application.
@@ -305,6 +348,25 @@ This project is set up for automatic deployment to Vercel. Once changes are comm
     *   Install dependencies.
     *   Run the `npm run build` command to create a production build.
     *   Deploy the `build` folder as the new version of the website.
+
+**Custom Domain Configuration:**
+
+- **Primary domain**: `www.fundhomecare.ca`
+- **Redirect**: `fundhomecare.ca` → `www.fundhomecare.ca` (automatic redirect enabled)
+
+**DNS Settings (at your domain registrar):**
+
+- **A Record**
+  - **Type**: `A`
+  - **Name**: `@`
+  - **Value**: `76.76.21.21` (Vercel’s IP address for apex domains)
+- **CNAME Record**
+  - **Type**: `CNAME`
+  - **Name**: `www`
+  - **Value**: `cname.vercel-dns.com`
+
+These DNS settings ensure your domain is correctly linked to Vercel and all traffic to the root domain is redirected to the `www` version. DNS propagation may take up to 24 hours, though it usually completes faster.
+
 
 ## Contribution Guidelines
 
