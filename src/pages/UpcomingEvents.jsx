@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import UpcomingEventsCard from "../components/UpcomingEventsCard.jsx";
 import image_section_1 from '../assets/images/MainPage/Home_Hero-2.png';
 // example import image to display
-import SpringGala2024Image1 from "../assets/images/PastEvents/SpringGala2024/Photos/image1.jpg"; // comment out unused images if needed too
+import SpringGala2024Image1 from "../assets/images/PastEvents/SpringGala2024/Photos/SG2024image1.jpg"; // comment out unused images if needed too
 
 
 const UpcomingEvents = () => {

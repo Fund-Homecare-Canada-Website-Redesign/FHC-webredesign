@@ -22,20 +22,36 @@ import SpringGala2025Sponsor10 from "../assets/images/PastEvents/SpringGala2025/
 
 // Silent Disco 2024
 import SilentDisco from "../assets/images/PastEvents/SilentDisco/Invite/FHC-Event_Silent-Disco.png";
+// Silent Disco 2024 - Images
+import SilentDiscoImage1 from "../assets/images/PastEvents/SilentDisco/Photos/Sdisco1.png";
+import SilentDiscoImage2 from "../assets/images/PastEvents/SilentDisco/Photos/SDisco2.jpg";
+import SilentDiscoImage3 from "../assets/images/PastEvents/SilentDisco/Photos/SDisco3.png";
+import SilentDiscoImage4 from "../assets/images/PastEvents/SilentDisco/Photos/SDisco4.png";
+
+// Fashion Bazzaar 2024 - Images
+import FashionBazaarImage1 from "../assets/images/PastEvents/FashionBazaar2024/Photos/FB2024.jpg";
+import FashionBazaarImage2 from "../assets/images/PastEvents/FashionBazaar2024/Photos/FB2024_2.jpeg";
+import FashionBazaarImage3 from "../assets/images/PastEvents/FashionBazaar2024/Photos/FB2024_3.jpg";
+import FashionBazaarImage4 from "../assets/images/PastEvents/FashionBazaar2024/Photos/FB2024_4.jpg";
+
+// Catering For A Cause 2024 - Images
+import CFCImage1 from "../assets/images/PastEvents/CateringForACause/Photos/CFC1.jpg";
+import CFCImage2 from "../assets/images/PastEvents/CateringForACause/Photos/CFC2.jpg";
+import CFCImage3 from "../assets/images/PastEvents/CateringForACause/Photos/CFC3.jpg";
 
 // Spring Gala 2024
 import SpringGala2024 from "../assets/images/PastEvents/SpringGala2024/Invite/InviteSG2024.jpg";
 
 // Spring Gala 2024 - Images
-import SpringGala2024Image1 from "../assets/images/PastEvents/SpringGala2024/Photos/image1.jpg";
-import SpringGala2024Image2 from "../assets/images/PastEvents/SpringGala2024/Photos/image2.jpg";
-import SpringGala2024Image3 from "../assets/images/PastEvents/SpringGala2024/Photos/image3.jpg";
-import SpringGala2024Image4 from "../assets/images/PastEvents/SpringGala2024/Photos/image4.jpg";
-import SpringGala2024Image5 from "../assets/images/PastEvents/SpringGala2024/Photos/image5.jpg";
-import SpringGala2024Image6 from "../assets/images/PastEvents/SpringGala2024/Photos/image6.jpg";
-import SpringGala2024Image7 from "../assets/images/PastEvents/SpringGala2024/Photos/image7.jpg";
-import SpringGala2024Image8 from "../assets/images/PastEvents/SpringGala2024/Photos/image8.jpg";
-import SpringGala2024Image9 from "../assets/images/PastEvents/SpringGala2024/Photos/image9.jpg";
+import SpringGala2024Image1 from "../assets/images/PastEvents/SpringGala2024/Photos/SG2024image1.jpg";
+import SpringGala2024Image2 from "../assets/images/PastEvents/SpringGala2024/Photos/SG2024image2.jpg";
+import SpringGala2024Image3 from "../assets/images/PastEvents/SpringGala2024/Photos/SG2024image3.jpg";
+import SpringGala2024Image4 from "../assets/images/PastEvents/SpringGala2024/Photos/SG2024image4.jpg";
+import SpringGala2024Image5 from "../assets/images/PastEvents/SpringGala2024/Photos/SG2024image5.jpg";
+import SpringGala2024Image6 from "../assets/images/PastEvents/SpringGala2024/Photos/SG2024image6.jpg";
+import SpringGala2024Image7 from "../assets/images/PastEvents/SpringGala2024/Photos/SG2024image7.jpg";
+import SpringGala2024Image8 from "../assets/images/PastEvents/SpringGala2024/Photos/SG2024image8.jpg";
+
 // Spring Gala 2024 - Sponsors
 import SpringGala2024Sponsor1 from "../assets/images/PastEvents/SpringGala2024/Sponsors/13thStreetWinery.png";
 import SpringGala2024Sponsor2 from "../assets/images/PastEvents/SpringGala2024/Sponsors/ArtGalleryOfOntario.png";
@@ -155,6 +171,12 @@ const PastEvents = () => {
   "Please join us for a night of music, dancing, dinner and games. Together, we’ll make it a night you won’t forget while supporting a great cause.\n\n" +
   "Sincerely,\nThe Fund Homecare Canada team.",
       image: SilentDisco,
+      gallery: [
+        SilentDiscoImage1,
+        SilentDiscoImage2,
+        SilentDiscoImage3,
+        SilentDiscoImage4
+      ],
     },
     {
       id: 3,
@@ -162,6 +184,12 @@ const PastEvents = () => {
       date: "August 3rd, 2024",
       description: "Get ready for an exciting Fashion Bazaar on August 3, 2024, from 2 to 6 PM! Join us for an afternoon of style and fun, featuring a stunning collection of clothing, accessories, and more, all at unbeatable prices.\n\nEvery dollar raised will go directly to Fund Homecare Canada, helping to provide funding for families needing homecare-based services for Palliative Cancer patients in Ontario.",
       image: FashionBazaar,
+      gallery: [
+        FashionBazaarImage1,
+        FashionBazaarImage2,
+        FashionBazaarImage3,
+        FashionBazaarImage4
+      ],
     },
     {
       id: 4,
@@ -169,6 +197,11 @@ const PastEvents = () => {
       date: "July 28th, 2024",
       description: "Indulge in the flavors of Jamaica with our Delivered Jamaican Dishes! Treat yourself to a mouthwatering meal delivered right to your door, featuring two delicious options.\n\nOur Non-Vegetarian dish includes Jerk Chicken, Rice & Peas, and Coleslaw, while our Vegetarian option offers Cabbage Vegetable, Rice & Peas, and Sweet Potato.\n\nEach meal is only $20 and supports Fund Homecare Canada, helping to provide funding for families needing homecare-based services for Palliative Cancer patients in Ontario.",
       image: CateringForACause,
+      gallery: [
+        CFCImage1,
+        CFCImage2,
+        CFCImage3
+      ],
     },
     {
       id: 5,
@@ -195,8 +228,7 @@ const PastEvents = () => {
         SpringGala2024Image5,
         SpringGala2024Image6,
         SpringGala2024Image7,
-        SpringGala2024Image8,
-        SpringGala2024Image9
+        SpringGala2024Image8
 
       ],
       sponsors: [
