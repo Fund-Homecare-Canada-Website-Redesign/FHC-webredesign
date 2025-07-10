@@ -54,30 +54,25 @@ const DonateFormContent = () => {
     // Pre-created Payment Links from Stripe Dashboard
     const paymentLinks = {
         onetime: {
-            50: 'https://donate.stripe.com/test_28EaEZ5Hx2Kf3lK7mJcEw02', // Redirect to http://localhost:3000/donation-thank-you
-            100: 'https://donate.stripe.com/test_eVq9AV9XN3Oj5tSgXjcEw04', // Redirect to https://fhc-webredesign.vercel.app/donation-thank-you
-            200: 'https://donate.stripe.com/test_00wcN73zp0C74pOgXjcEw05', // Redirect to https://fhc-webredesign.vercel.app/donation-thank-you
-            custom: 'https://donate.stripe.com/test_aFa6oJee32Kf2hGbCZcEw03',
+            50: 'https://donate.stripe.com/7sY9AUgwz9Ckf305So63K00',
+            100: 'https://donate.stripe.com/7sY28s94715O6wu2Gc63K01',
+            200: 'https://donate.stripe.com/8x2fZi4NR6q86wufsY63K04',
+            custom: 'https://donate.stripe.com/14AbJ22FJdSAbQO5So63K07',
         },
         weekly: {
-            50: 'https://donate.stripe.com/test_5kQ6oJ4Dt5Wrg8w36tcEw01',
-            100: 'https://donate.stripe.com/test_5kQ6oJ4Dt5Wrg8w36tcEw01',
-            200: 'https://donate.stripe.com/test_5kQ6oJ4Dt5Wrg8w36tcEw01',
+            50: 'https://donate.stripe.com/6oU14o94729S3ki6Ws63K02',
+            100: 'https://donate.stripe.com/dRm5kE6VZcOwdYW6Ws63K03',
+            200: 'https://donate.stripe.com/14AcN61BFdSA2gedkQ63K05',
         },
         monthly: {
-            50: 'https://donate.stripe.com/test_5kQ6oJ4Dt5Wrg8w36tcEw01',
-            100: 'https://donate.stripe.com/test_5kQ6oJ4Dt5Wrg8w36tcEw01',
-            200: 'https://donate.stripe.com/test_5kQ6oJ4Dt5Wrg8w36tcEw01',
-        },
-        quarterly: {
-            50: 'https://donate.stripe.com/test_5kQ6oJ4Dt5Wrg8w36tcEw01',
-            100: 'https://donate.stripe.com/test_5kQ6oJ4Dt5Wrg8w36tcEw01',
-            200: 'https://donate.stripe.com/test_5kQ6oJ4Dt5Wrg8w36tcEw01',
+            50: 'https://donate.stripe.com/9B65kE2FJdSA2geeoU63K06',
+            100: 'https://donate.stripe.com/fZu3cwdkn8yg1cabcI63K08',
+            200: 'https://donate.stripe.com/28EfZi6VZ5m4bQO5So63K09',
         },
         yearly: {
-            50: 'https://donate.stripe.com/test_5kQ6oJ4Dt5Wrg8w36tcEw01',
-            100: 'https://donate.stripe.com/test_5kQ6oJ4Dt5Wrg8w36tcEw01',
-            200: 'https://donate.stripe.com/test_5kQ6oJ4Dt5Wrg8w36tcEw01',
+            50: 'https://donate.stripe.com/bJe3cw8039Ck5sq80w63K0a',
+            100: 'https://donate.stripe.com/cNibJ2947g0If30dkQ63K0b',
+            200: 'https://donate.stripe.com/14A8wQ0xB15O9IG80w63K0c',
         }
     };
 
@@ -244,16 +239,6 @@ const DonateFormContent = () => {
                     label="Monthly"
                     value="monthly"
                     checked={formData.donationFrequency === 'monthly'}
-                    onChange={handleFrequencyChange}
-                    className="custom-radio-button"
-                />
-                <Form.Check
-                    type="radio"
-                    id="freq-quarterly"
-                    name="donationFrequency"
-                    label="Quarterly"
-                    value="quarterly"
-                    checked={formData.donationFrequency === 'quarterly'}
                     onChange={handleFrequencyChange}
                     className="custom-radio-button"
                 />
