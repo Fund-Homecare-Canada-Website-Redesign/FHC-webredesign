@@ -190,7 +190,7 @@ const ContactUsPage = () => {
         "Donor FAQs": [
             {
                 question: "Can I donate through my organization?",
-                answer: "Currently Fund Homecare Canada is funded entirely through corporate sponsors and donors. Fund Home Care is open to all kinds of funding support. To donate through your organization, click here to submit an inquiry and a representative from Fund Homecare will guide you through the process."
+                answer: "Currently Fund Homecare Canada is funded entirely through corporate sponsors and donors. Fund Homecare Canada is open to all kinds of funding support. To donate through your organization, click here to submit an inquiry and a representative from Fund Homecare Canada will guide you through the process."
             },
             {
                 question: "What benefits do I get as a Corporate Sponsor?",
@@ -198,7 +198,7 @@ const ContactUsPage = () => {
             },
             {
                 question: "What can your organization provide personal donors in exchange for their donation?",
-                answer: "Fund HomeCare Canada is a Canadian Federally registered Charitable, Not for Profit organization.  Tax receipts will be provided as per CRA guidelines."
+                answer: "Fund Homecare Canada is a Canadian Federally registered Charitable, Not for Profit organization.  Tax receipts will be provided as per CRA guidelines."
             },
             {
                 question: "How can I donate?",
@@ -288,11 +288,11 @@ const ContactUsPage = () => {
             },
             {
                 question: "Can I hire a family member as a Personal Support Worker (PSW)?",
-                answer: "For Personal Support Worker (PSW) related services, Fund Homecare will only provide funding for services provided by certified Personal Support Workers (PSWs). Proper contractual and financial requirements (receipts) should be met, including but not limited to liability and insurance coverage."
+                answer: "For Personal Support Worker (PSW) related services, Fund Homecare Canada will only provide funding for services provided by certified Personal Support Workers (PSWs). Proper contractual and financial requirements (receipts) should be met, including but not limited to liability and insurance coverage."
             },
             {
                 question: "Does your organization receive any government funding?",
-                answer: "Currently, Fund Homecare Canada does not receive any government funding and is funded entirely through corporate sponsors and donors. Fund Homecare is open to all kinds of funding support."
+                answer: "Currently, Fund Homecare Canada does not receive any government funding and is funded entirely through corporate sponsors and donors. Fund Homecare Canada is open to all kinds of funding support."
             },
             {
                 question: "If I currently receive government funding for homecare do I qualify for supplementary support from your organization?",
@@ -354,7 +354,7 @@ const ContactUsPage = () => {
             },
             {
                 question: "How can I register to provide services to your beneficiaries? (e.g. I am an independent caterer and can prepare meals for your clients.)",
-                answer: "Fund Homecare provides support to enable clients to procure the services they require. We do not provide any services directly to our client base, but as a sponsor your details can be profiled on our website."
+                answer: "Fund Homecare Canada provides support to enable clients to procure the services they require. We do not provide any services directly to our client base, but as a sponsor your details can be profiled on our website."
             }
         ]
     };

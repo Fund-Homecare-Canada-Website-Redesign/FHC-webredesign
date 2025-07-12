@@ -14,6 +14,9 @@ import Nikita from "../assets/images/AboutUs/WhoAreWe/Nikita.jpg";
 import Ricky from "../assets/images/AboutUs/WhoAreWe/Ricky.png";
 import Sangeeta from "../assets/images/AboutUs/WhoAreWe/Sangeeta.png";
 
+import fundsCameFrom from "../assets/images/AboutUs/OurFinances/where-our-funds-came-from.png"
+import fundsWereUsed from "../assets/images/AboutUs/OurFinances/how-our-funds-were-used.png"
+
 
 function AboutUs() {
     useEffect(() => {
@@ -161,6 +164,47 @@ function AboutUs() {
                     </div>
                 </div>
             </div>
+            {/* Our Finances Section */}
+            <section className="bg-white text-[#1A1A1A] py-12 md:py-20">
+                <div className="max-w-7xl mx-auto px-6 md:px-10">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center" style={{ fontFamily: 'Montserrat' }}>
+                        Our Finances
+                    </h2>
+
+                    <div className="mb-12">
+                        <p className="text-lg md:text-xl leading-relaxed mb-4">
+                            Fund Homecare Canada is a volunteer driven organization with no administrative overheads and little operating expenses. This model allows us to maximize funds raised to be used for our goals – <strong>Helping In-home Palliative Cancer patients in Ontario get support and services they need in their time of need.</strong>
+                        </p>
+                        <p className="text-lg md:text-xl leading-relaxed mb-4">
+                            Fund Homecare Canada raises funds through Corporate Sponsorships, Individual donations and via events. Our fund-raising programs are carefully planned for generating funds, raising awareness and growing our network base. All net proceeds from our fund-raising activities after operating expenses, are directly used towards providing services for our beneficiaries.
+                        </p>
+                        <p className="text-lg md:text-xl leading-relaxed mb-4">
+                            In 2022, over 90% of generated funds went towards helping our beneficiaries.
+                        </p>
+                        <p className="text-lg md:text-xl leading-relaxed">
+                            Since our setup in 2021, Fund Homecare Canada has supported 11 beneficiaries (as of Dec 2023).
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                        <div className="flex justify-center">
+                            <img src={fundsCameFrom} alt="Where our funds came from (2022)" className="w-full max-w-md h-auto" />
+                        </div>
+                        <div className="flex justify-center">
+                            <img src={fundsWereUsed} alt="How our funds were used (2022)" className="w-full max-w-md h-auto" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 className="text-3xl md:text-4xl font-bold mb-6 text-center" style={{ fontFamily: 'Montserrat' }}>
+                            Financial Statements
+                        </h3>
+                        <p className="text-lg md:text-xl leading-relaxed mb-4 text-center">
+                            Fund Homecare Canada has a commitment and goal of being fully transparent. Keeping that in mind, we make our financial statements, costs and how funds raised are used, totally transparent. Please find our financial statements <a href="https://apps.cra-arc.gc.ca/ebci/hacc/srch/pub/dsplyQckVw?selectedCharityBn=779061142RR0001&isSingleResult=false&q.stts=0007" target="_blank" rel="noopener noreferrer" className="text-[#307694] hover:underline font-semibold">here</a>.
+                        </p>
+                    </div>
+                </div>
+            </section>
         </>
     );
 }
