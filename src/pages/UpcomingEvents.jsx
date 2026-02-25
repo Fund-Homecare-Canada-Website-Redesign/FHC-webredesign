@@ -3,26 +3,54 @@ import { Link } from "react-router-dom";
 import UpcomingEventsCard from "../components/UpcomingEventsCard.jsx";
 import image_section_1 from '../assets/images/MainPage/Home_Hero-2.png';
 // example import image to display
-import SpringGala2024Image1 from "../assets/images/PastEvents/SpringGala2024/Photos/SG2024image1.jpg"; // comment out unused images if needed too
-
+import SpringGala2026Image1 from "../assets/images/PastEvents/SpringGala2026/Invite/FundHomecare.png"; // comment out unused images if needed too
+import sponsor1 from "../assets/images/PastEvents/SpringGala2026/Sponsors/Ramboblack.png";
+import sponsor2 from "../assets/images/PastEvents/SpringGala2026/Sponsors/DJKaya_1.jpg";
+import sponsor3 from "../assets/images/PastEvents/SpringGala2026/Sponsors/MarkMC.png";
+import sponsor4 from "../assets/images/PastEvents/SpringGala2026/Sponsors/BandEvolution.jpg";
 
 const UpcomingEvents = () => {
   // Sample data - replace with actual data that you need
   const upcomingEvents = [
-    // { // <--- This entire event object is now commented out
-    //   id: 1,
-    //   name: "Summer Gala 2023",
-    //   date: "July 15, 2023",
-    //   time: "6:00 PM - 10:00 PM",
-    //   //location will be embedded in google maps
-    //   location: "Grand Hotel Ballroom",
-    //   description: "Join us for our annual summer gala featuring live music, silent auction, and gourmet dinner.",
-    //   //call the image
-    //   image: SpringGala2024Image1,
-    //     //  your event brite url
-    //   eventbriteEmbedUrl: "https://www.eventbrite.com/e/640449565617?embed=true"
+    { // <--- This entire event object is now commented out
+      id: 1,
+      name: "Fund Homecare Canada – 5th Anniversary Gala",
+      date: "May 23rd, 2026 to May 24th, 2026",
+      time: "5:30 PM - 1:00 AM",
+      //location will be embedded in google maps
+      location: "Canadian Convention Centre",
+      description: `As we mark five meaningful years of bringing hope and comfort to families, Fund Homecare Canada invites you to a truly special evening — our 5th Anniversary Gala.
 
-    // },
+    Join us for an elegant evening filled with heartfelt tributes, beautiful moments, and joyful celebration as we recognize those who shape our lives and communities. Dress in soft florals, elegant pastels, or classic evening attire as we create a warm atmosphere of gratitude and love.
+
+    🌸 An Unforgettable Evening Awaits
+    🎶 Live music, entertainment, and dancing
+    🥂 Dinner & Cash Bar
+    🎟 Raffles, games, and a 50/50 draw
+    🏆 Recognition of our sponsors, supporters, and beneficiaries
+
+    💖 Make an Impact
+    All proceeds from the event will support palliative cancer patients across Ontario who wish to spend their final days at home, surrounded by love and dignity. Your presence helps provide essential Personal Support Worker services to families during their most difficult times.
+
+    As we celebrate five years of compassion and care, your support allows us to continue making a meaningful difference in the lives of those who need it most.
+
+    About Fund Homecare Canada
+    Fund Homecare Canada is a registered charitable, not-for-profit organization dedicated to raising funds for Ontario-based palliative cancer patients who wish to remain at home in comfort and dignity.
+
+    📜 Registered Charity No.: 779061142RR0001
+
+    Join us for an evening of gratitude, celebration, and purpose — as we honour mothers and continue a legacy of care.`,
+      //call the image
+      image: SpringGala2026Image1,
+        //  your event brite url
+      eventbriteEmbedUrl: "https://www.eventbrite.ca/e/fund-homecare-canada-5th-anniversary-gala-tickets-1983683726425?embed=true",
+      sponsors: [
+        sponsor1,
+        sponsor2,
+        sponsor3,
+        sponsor4
+      ]
+    },
 
     // {
     //   id: 2,
