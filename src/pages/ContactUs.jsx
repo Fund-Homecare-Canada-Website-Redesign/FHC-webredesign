@@ -198,7 +198,7 @@ const ContactUsPage = () => {
             },
             {
                 question: "What can your organization provide personal donors in exchange for their donation?",
-                answer: "Fund Homecare Canada is a Canadian Federally registered Charitable, Not for Profit organization.  Tax receipts will be provided as per CRA guidelines."
+                answer: "Fund Homecare Canada is a Canadian Federally registered Charitable, Not for Profit organization. Fund Homecare Canada provides Tax receipts for annual donations over $50 following CRA guidelines."
             },
             {
                 question: "How can I donate?",

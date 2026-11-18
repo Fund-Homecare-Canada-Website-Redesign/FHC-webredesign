@@ -12,7 +12,7 @@ import newsletterAugust2024 from "../assets/pdfs/August2024.pdf";
 import newsletterNovemeber2024 from "../assets/pdfs/November2024.pdf";
 import newsletterDecember2024 from "../assets/pdfs/December2024.pdf";
 import newsletterInfographic from "../assets/pdfs/Infographic.pdf";
-
+import newsletterMay2025 from "../assets/pdfs/MayGala2025Edition.pdf";
 const Newlestter = () => {
   useEffect(() => {
     document.title = "Newsletter";
@@ -31,6 +31,7 @@ const Newlestter = () => {
     { date: "August 2024", pdfUrl: newsletterAugust2024 },
     { date: "July 2024", pdfUrl: newsletterJuly2024 },
     { date: "June 2024", pdfUrl: newsletterJune2024 },
+    { date: "May 2025 Gala Edition", pdfUrl: newsletterMay2025 },
   ];
 
   return (
@@ -93,7 +94,7 @@ const Newlestter = () => {
         {/* Monthly Newsletter Section (Enhanced with a subtle background, different shade) */}
         <div className="max-w-4xl mx-auto mt-16 mb-16 p-8 rounded-lg bg-gray-50 shadow-md"> {/* Added bg-gray-50, padding, rounded, shadow */}
             <div className="text-center">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-2">Monthly Newsletters</h3> {/* Slightly larger heading */}
+                <h3 className="text-2xl font-semibold text-gray-800 mb-2">Newsletters</h3> {/* Slightly larger heading */}
                 <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto"> {/* Adjusted text size and constrained width */}
                   Dive deeper into our monthly updates, stories, and community spotlights.
                 </p>

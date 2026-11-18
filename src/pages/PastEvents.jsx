@@ -128,6 +128,15 @@ import FashionBazaar from "../assets/images/CommunityEvents/FashionBazzaar.jpeg"
 import GargageSale2024 from "../assets/images/CommunityEvents/GarageSale2024.jpg";
 import KaraokeThursdays from "../assets/images/CommunityEvents/KaraokeThursdays.jpeg";
 
+// 5th Anniversary Gala 2026
+import SpringGala2026Image1 from "../assets/images/PastEvents/SpringGala2026/Invite/FundHomecare.png";
+import SpringGala2026sponsor1 from "../assets/images/PastEvents/SpringGala2026/Sponsors/BandEvolution.jpg";
+import SpringGala2026sponsor2 from "../assets/images/PastEvents/SpringGala2026/Sponsors/DJKaya_1.jpg";
+import SpringGala2026sponsor3 from "../assets/images/PastEvents/SpringGala2026/Sponsors/MarkMC.png";
+import SpringGala2026sponsor4 from "../assets/images/PastEvents/SpringGala2026/Sponsors/Ramboblack.png";
+
+import KaraokeBBQ from "../assets/images/PastEvents/Karakoe&BBQ/Karaoke_Oct30_1.jpg";
+import KaraokeBBQImage1 from "../assets/images/PastEvents/Karakoe&BBQ/Karaoke_Oct30_2.jpg";
 
 const PastEvents = () => {
   useEffect(() => {
@@ -336,6 +345,35 @@ const PastEvents = () => {
         SpringGala2022Image6,
       ],
 
+    },
+    {
+      id: 11,
+      name: "5th Anniversary Gala",
+      date: "May 23, 2026",
+      location: "Canadian Convention Centre",
+      description: "Fund Homecare Canada is extremely excited to present our fundraising event towards a great cause. Fund Homecare Canada provides funding for families needing homecare based services for Palliative Cancer patients in Ontario.\n\n" +
+  "Please join us for a night of music, dancing, dinner and games. Together, we’ll make it a night you won’t forget while supporting a great cause.\n\n" +
+  "Sincerely,\nThe Fund Homecare Canada team.",
+      image: SpringGala2026Image1,
+      sponsors: [
+        SpringGala2026sponsor1,
+        SpringGala2026sponsor2,
+        SpringGala2026sponsor3,
+        SpringGala2026sponsor4
+      ]
+    },
+       {
+      id: 12,
+      name: "Karaoke & BBQ Night",
+      date: "Oct 30, 2026",
+      location: "Nessinger Hall at St. John of the Cross Church, Mississauga",
+      description: "Fund Homecare Canada is extremely excited to present our fundraising event towards a great cause. Fund Homecare Canada provides funding for families needing homecare based services for Palliative Cancer patients in Ontario.\n\n" +
+  "Please join us for a night of music, dancing, dinner and games. Together, we’ll make it a night you won’t forget while supporting a great cause.\n\n" +
+  "Sincerely,\nThe Fund Homecare Canada team.",
+      image: KaraokeBBQ,
+      gallery: [
+        KaraokeBBQImage1
+      ]
     },
   ];
 

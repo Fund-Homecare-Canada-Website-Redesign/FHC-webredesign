@@ -60,11 +60,13 @@ const DonateFormContent = () => {
             custom: 'https://donate.stripe.com/14AbJ22FJdSAbQO5So63K07',
         },
         weekly: {
+            10: 'https://buy.stripe.com/bJe6oIfsvg0I8EC5So63K0e',
             50: 'https://donate.stripe.com/6oU14o94729S3ki6Ws63K02',
             100: 'https://donate.stripe.com/dRm5kE6VZcOwdYW6Ws63K03',
             200: 'https://donate.stripe.com/14AcN61BFdSA2gedkQ63K05',
         },
         monthly: {
+            25: 'https://buy.stripe.com/dRmfZibcf29ScUSfsY63K0f',
             50: 'https://donate.stripe.com/9B65kE2FJdSA2geeoU63K06',
             100: 'https://donate.stripe.com/fZu3cwdkn8yg1cabcI63K08',
             200: 'https://donate.stripe.com/28EfZi6VZ5m4bQO5So63K09',

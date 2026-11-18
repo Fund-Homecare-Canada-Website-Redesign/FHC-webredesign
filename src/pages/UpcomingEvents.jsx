@@ -3,53 +3,69 @@ import { Link } from "react-router-dom";
 import UpcomingEventsCard from "../components/UpcomingEventsCard.jsx";
 import image_section_1 from '../assets/images/MainPage/Home_Hero-2.png';
 // example import image to display
-import SpringGala2026Image1 from "../assets/images/PastEvents/SpringGala2026/Invite/FundHomecare.png"; // comment out unused images if needed too
-import sponsor1 from "../assets/images/PastEvents/SpringGala2026/Sponsors/Ramboblack.png";
-import sponsor2 from "../assets/images/PastEvents/SpringGala2026/Sponsors/DJKaya_1.jpg";
-import sponsor3 from "../assets/images/PastEvents/SpringGala2026/Sponsors/MarkMC.png";
-import sponsor4 from "../assets/images/PastEvents/SpringGala2026/Sponsors/BandEvolution.jpg";
+import Image1 from "../assets/images/PastEvents/BollywoodKarakoeNight/HostedbyNikita.jpeg"; // comment out unused images if needed too
+
 
 const UpcomingEvents = () => {
   // Sample data - replace with actual data that you need
   const upcomingEvents = [
     { // <--- This entire event object is now commented out
       id: 1,
-      name: "Fund Homecare Canada – 5th Anniversary Gala",
-      date: "May 23rd, 2026 to May 24th, 2026",
-      time: "5:30 PM - 1:00 AM",
+      name: "Bollywood Karaoke Night @ Boston Pizza Mississauga",
+      date: "December 7, 2026",
+      time: "7:30 PM - 11:00 PM",
       //location will be embedded in google maps
-      location: "Canadian Convention Centre",
+      location: "Boston Pizza - 50 Courtneypark Drive East Mississauga, ON L5T 2Y3",
       description: `As we mark five meaningful years of bringing hope and comfort to families, Fund Homecare Canada invites you to a truly special evening — our 5th Anniversary Gala.
+  Grab the mic for a good cause with your favourite Bollywood hits at a casual, fun, karaoke night in Mississauga. All net proceeds to charity
 
-    Join us for an elegant evening filled with heartfelt tributes, beautiful moments, and joyful celebration as we recognize those who shape our lives and communities. Dress in soft florals, elegant pastels, or classic evening attire as we create a warm atmosphere of gratitude and love.
+  In support of Fund HomeCare Canada.
 
-    🌸 An Unforgettable Evening Awaits
-    🎶 Live music, entertainment, and dancing
-    🥂 Dinner & Cash Bar
-    🎟 Raffles, games, and a 50/50 draw
-    🏆 Recognition of our sponsors, supporters, and beneficiaries
+  Whether you're the star of every karaoke session or just love singing along to your favourite songs, this is your chance to let loose and celebrate the music we all know and love. From timeless classics to iconic Bollywood bangers, come ready to sing your heart out!
 
-    💖 Make an Impact
-    All proceeds from the event will support palliative cancer patients across Ontario who wish to spend their final days at home, surrounded by love and dignity. Your presence helps provide essential Personal Support Worker services to families during their most difficult times.
+  ✨ EVENT DETAILS
 
-    As we celebrate five years of compassion and care, your support allows us to continue making a meaningful difference in the lives of those who need it most.
+  📅 Date: Monday, December 7th, 2026
+  ⏰ Time: 7:30 PM
+  📍 Location: Boston Pizza Courtney Park, Mississauga
+  🎟️ Tickets: Just $5 and includes a mocktail!
 
-    About Fund Homecare Canada
-    Fund Homecare Canada is a registered charitable, not-for-profit organization dedicated to raising funds for Ontario-based palliative cancer patients who wish to remain at home in comfort and dignity.
+  All net proceeds go toward supporting Palliative Cancer Patients in Ontario through Fund Homecare Canada!
 
+  🎵 WHAT TO EXPECT
+
+  🎤 A fun Bollywood karaoke experience
+  🎶 Your favourite Bollywood songs, old and new
+  🥤 A mocktail included with every ticket
+  🎉 A relaxed, social night filled with music, laughter, and good company
+  WHO SHOULD COME?
+
+  Everyone who loves Bollywood music! Whether you know every lyric by heart or just want to enjoy the atmosphere, come with your friends, bring your singing voice, and make it a memorable night.
+
+  No professional singing skills required, just a love for music and a willingness to have fun!
+
+  🎟️ Grab your $5 ticket and join us for a night of Bollywood magic!
+
+  Spots are limited, so get your tickets early.
+
+  Follow @HostedByNikita for more trivia nights, themed events, and fun experiences around the GTA.
+
+  Let's make it a night to remember! 🎤✨
+
+  Please note: the event ticket ($5) will be refundable up to 3 days before the event but the eventbrite fees are non-refundable.
     📜 Registered Charity No.: 779061142RR0001
 
     Join us for an evening of gratitude, celebration, and purpose — as we honour mothers and continue a legacy of care.`,
       //call the image
-      image: SpringGala2026Image1,
+      image: Image1,
         //  your event brite url
-      eventbriteEmbedUrl: "https://www.eventbrite.ca/e/fund-homecare-canada-5th-anniversary-gala-tickets-1983683726425?embed=true",
-      sponsors: [
-        sponsor1,
-        sponsor2,
-        sponsor3,
-        sponsor4
-      ]
+      eventbriteEmbedUrl: "https://www.eventbrite.com/e/bollywood-karaoke-night-boston-pizza-mississauga-courtney-park-tickets-2004266582301?embed=true",
+      // sponsors: [
+      //   sponsor1,
+      //   sponsor2,
+      //   sponsor3,
+      //   sponsor4
+      // ]
     },
 
     // {

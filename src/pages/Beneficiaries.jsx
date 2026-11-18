@@ -42,7 +42,7 @@ const Beneficiary = () => {
       </section>
 
       {/* Beneficiary Cards Section */}
-      <div className="py-10 bg-[#CFE6EF] font-[Montserrat] min-h-[50vh] flex items-center justify-center">
+      {/* <div className="py-10 bg-[#CFE6EF] font-[Montserrat] min-h-[50vh] flex items-center justify-center">
         <div className="max-w-7xl mx-auto px-4">
           {Array.isArray(beneficiariesData) && beneficiariesData.length > 0 ? (
             <div className="flex flex-col gap-8">
@@ -51,12 +51,10 @@ const Beneficiary = () => {
               ))}
             </div>
           ) : (
-            <p className="text-center text-xl sm:text-2xl text-gray-700">
-              There are currently no beneficiaries.
-            </p>
+            <p> </p>
           )}
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
