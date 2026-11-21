@@ -76,14 +76,14 @@ const Newlestter = () => {
           <div className="h-0.5 bg-gray-400 w-1/5 mx-auto mb-8"></div> {/* Subtle line below, adjusted margin-bottom */}
 
           <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto"> {/* Adjusted text size and constrained width */}
-            Stay up-to-date with our monthly newsletters. Browse the archive below to see what we’ve been up to!
+            Stay up-to-date with our newsletters. Browse the archive below to see what we’ve been up to!
           </p>
       </div>
 
         {/* Infographic Section (Enhanced with a subtle background) */}
         <div className="max-w-4xl mx-auto mb-16 p-8 rounded-lg bg-white shadow-md"> {/* Added bg-white, padding, rounded, shadow */}
             <div className="text-center">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-2">Annual Infographic Overview</h3> {/* Slightly larger heading */}
+                <h3 className="text-2xl font-semibold text-gray-800 mb-2">Overview</h3> {/* Slightly larger heading */}
                 <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto"> {/* Adjusted text size and constrained width */}
                 Learn more about who we are, what we stand for, and the mission driving our organization.
                 </p>
@@ -96,7 +96,7 @@ const Newlestter = () => {
             <div className="text-center">
                 <h3 className="text-2xl font-semibold text-gray-800 mb-2">Newsletters</h3> {/* Slightly larger heading */}
                 <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto"> {/* Adjusted text size and constrained width */}
-                  Dive deeper into our monthly updates, stories, and community spotlights.
+                  Dive deeper into our updates, stories, and community spotlights.
                 </p>
             </div>
             <NewsletterCard newsletters={newsletters} />

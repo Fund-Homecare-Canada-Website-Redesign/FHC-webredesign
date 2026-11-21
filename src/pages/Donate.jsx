@@ -154,7 +154,7 @@ const DonateFormContent = () => {
             basePaymentLink = paymentLinks.onetime.custom;
         }
         // Check if it's a standard amount
-        else if ([50, 100, 200].includes(amount)) {
+        else if ([10,25,50, 100, 200].includes(amount)) {
             basePaymentLink = paymentLinks[frequency][amount];
         }
         // Fallback to custom one-time
@@ -258,48 +258,60 @@ const DonateFormContent = () => {
 
             {/* Choose a Donation Amount */}
             <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">Choose a Donation Amount</h3>
-            <div className="flex justify-center items-center flex-wrap gap-4 mb-8">
-                <Button
-                    type="button"
-                    variant={formData.donationAmount === 50.00 && !formData.isCustomAmount ? "primary" : "outline-primary"}
-                    onClick={() => handleAmountChange(50.00)}
-                    className={`px-6 py-3 rounded-md text-lg font-bold transition-all duration-200
-                        ${formData.donationAmount === 50.00 && !formData.isCustomAmount ? 'bg-[#30AFAA] border-[#30AFAA] text-white' : 'bg-transparent border-[#30AFAA] text-[#30AFAA] hover:bg-[#30AFAA] hover:text-white'}`}
-                >
-                    $50.00
-                </Button>
-                <Button
-                    type="button"
-                    variant={formData.donationAmount === 100.00 && !formData.isCustomAmount ? "primary" : "outline-primary"}
-                    onClick={() => handleAmountChange(100.00)}
-                    className={`px-6 py-3 rounded-md text-lg font-bold transition-all duration-200
-                        ${formData.donationAmount === 100.00 && !formData.isCustomAmount ? 'bg-[#30AFAA] border-[#30AFAA] text-white' : 'bg-transparent border-[#30AFAA] text-[#30AFAA] hover:bg-[#30AFAA] hover:text-white'}`}
-                >
-                    $100.00
-                </Button>
-                <Button
-                    type="button"
-                    variant={formData.donationAmount === 200.00 && !formData.isCustomAmount ? "primary" : "outline-primary"}
-                    onClick={() => handleAmountChange(200.00)}
-                    className={`px-6 py-3 rounded-md text-lg font-bold transition-all duration-200
-                        ${formData.donationAmount === 200.00 && !formData.isCustomAmount ? 'bg-[#30AFAA] border-[#30AFAA] text-white' : 'bg-transparent border-[#30AFAA] text-[#30AFAA] hover:bg-[#30AFAA] hover:text-white'}`}
-                >
-                    $200.00
-                </Button>
 
-                {/* Custom Amount Button - Only show for one-time donations */}
-                {showCustomAmount && (
-                    <Button
-                        type="button"
-                        variant={formData.isCustomAmount ? "primary" : "outline-primary"}
-                        onClick={handleCustomAmountClick}
-                        className={`px-6 py-3 rounded-md text-lg font-bold transition-all duration-200
-                            ${formData.isCustomAmount ? 'bg-[#30AFAA] border-[#30AFAA] text-white' : 'bg-transparent border-[#30AFAA] text-[#30AFAA] hover:bg-[#30AFAA] hover:text-white'}`}
-                    >
-                        Custom Amount
-                    </Button>
-                )}
-            </div>
+                <div className="flex justify-center items-center flex-wrap gap-4 mb-8">
+                    {/* $10 - Hide for Monthly */}
+                    {formData.donationFrequency === 'weekly' && (
+                        <Button
+                            type="button"
+                            variant={formData.donationAmount === 10 && !formData.isCustomAmount ? "primary" : "outline-primary"}
+                            onClick={() => handleAmountChange(10)}
+                            className={`px-6 py-3 rounded-md text-lg font-bold transition-all duration-200
+                                ${formData.donationAmount === 10 && !formData.isCustomAmount ? 'bg-[#30AFAA] border-[#30AFAA] text-white' : 'bg-transparent border-[#30AFAA] text-[#30AFAA] hover:bg-[#30AFAA] hover:text-white'}`}
+                        >
+                            $10.00
+                        </Button>
+                    )}
+
+                   
+                    {['weekly', 'monthly'].includes(formData.donationFrequency) && (
+                        <Button
+                            type="button"
+                            variant={formData.donationAmount === 25 && !formData.isCustomAmount ? "primary" : "outline-primary"}
+                            onClick={() => handleAmountChange(25)}
+                            className={`px-6 py-3 rounded-md text-lg font-bold transition-all duration-200
+                                ${formData.donationAmount === 25 && !formData.isCustomAmount ? 'bg-[#30AFAA] border-[#30AFAA] text-white' : 'bg-transparent border-[#30AFAA] text-[#30AFAA] hover:bg-[#30AFAA] hover:text-white'}`}
+                        >
+                            $25.00
+                        </Button>
+                    )}
+
+                    {[50, 100, 200].map(amount => (
+                        <Button
+                            key={amount}
+                            type="button"
+                            variant={formData.donationAmount === amount && !formData.isCustomAmount ? "primary" : "outline-primary"}
+                            onClick={() => handleAmountChange(amount)}
+                            className={`px-6 py-3 rounded-md text-lg font-bold transition-all duration-200
+                                ${formData.donationAmount === amount && !formData.isCustomAmount ? 'bg-[#30AFAA] border-[#30AFAA] text-white' : 'bg-transparent border-[#30AFAA] text-[#30AFAA] hover:bg-[#30AFAA] hover:text-white'}`}
+                        >
+                            ${amount}.00
+                        </Button>
+                    ))}
+
+                    {showCustomAmount && (
+                        <Button
+                            type="button"
+                            variant={formData.isCustomAmount ? "primary" : "outline-primary"}
+                            onClick={handleCustomAmountClick}
+                            className={`px-6 py-3 rounded-md text-lg font-bold transition-all duration-200
+                                ${formData.isCustomAmount ? 'bg-[#30AFAA] border-[#30AFAA] text-white' : 'bg-transparent border-[#30AFAA] text-[#30AFAA] hover:bg-[#30AFAA] hover:text-white'}`}
+                        >
+                            Custom Amount
+                        </Button>
+                    )}
+                </div>
+
 
             {/* Show custom amount info - only when custom amount is selected */}
             {formData.isCustomAmount && (
